@@ -1,167 +1,522 @@
 <?php
-// datos.php
 
-// Definimos un arreglo maestro con toda la información.
-$unidadesAcademicas = [
-    // =================================================================================
-    // UNIDAD COMPLETAMENTE FUNCIONAL (EJEMPLO)
-    // =================================================================================
-    "2deOctubrePuebla" => [
-        "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. 2 de Octubre de 1968",
-        "url_imagen" => "./assets/2_de_octubre.jpeg", 
-        "nombre_completo" => "Preparatoria 2 de Octubre de 1968",
-        "duracion" => "6 Semestres",
+function estructuraBaseUnidad() {
+    return [
+        "categoria" => "",
+        "nombre_corto" => "",
+        "nombre_completo" => "",
+        "plan_estudios_comun" => [],
+        "tronco_comun" => [],
+        "areas_propedeuticas" => [],
+        "porque_estudiar" => "",
+        "perfil_ingreso" => [],
+        "perfil_egreso" => [],
         "ubicacion" => [
-            "nombre" => "BUAP Preparatoria 2 De Octubre de 1968",
-            "lat" => 19.0328774,
-            "lng" => -98.2261384
+            "nombre" => "",
+            "lat" => null,
+            "lng" => null
         ],
-        // Plan de estudios: Tronco Común (1ro a 4to) - Se mantiene igual según tu base
-        "plan_estudios_comun" => [
-            "1er Semestre" => [
-                "Álgebra", "Cultura Física I", "Emprendimiento I", "Habilidades digitales",
-                "Historia Universal", "Lengua Extranjera I", "Lenguaje y Procesos comunicativos",
-                "Lógica y Argumentación", "Psicología en la adolescencia I", "Química I", "Tutoría I"
-            ],
-            "2do Semestre" => [
-                "Cultura Física II", "Emprendimiento II", "Filosofía Práctica",
-                "Geometría Plana y Trigonometría Plana", "Historia siglo XX", "Lengua Extranjera II",
-                "Lenguaje y Medios de Expresión", "Psicología en la adolescencia II", "Química II",
-                "Sistematización de Datos", "Tutoría II"
-            ],
-            "3er Semestre" => [
-                "Biología I: del Átomo al Hombre", "Cultura Física III", "Emprendimiento III",
-                "Fundamentos del Arte", "Geometría Analítica", "Historia de la Identidad Mexicana",
-                "Lengua Extranjera III", "Lenguaje y Procesos de Escritura para la Investigación",
-                "Manejo de Datos y Comunicaciones", "Psicología Educativa: Vocacional", "Tutoría III"
-            ],
-            "4to Semestre" => [
-                "Apreciación del Arte", "Biología II: del Hombre a la Biosfera", "Cultura Física IV",
-                "Emprendimiento IV", "Entornos de Desarrollo a través de las Tecnologías Digitales",
-                "Funciones", "Historia de la Sociedad Mexicana", "Lengua Extranjera IV",
-                "Lenguaje y Difusión de la Investigación", "Psicología Educativa: Profesiográfica", "Tutoría IV"
-            ]
-        ],
-
-        // Tronco Común obligatorio para 5to y 6to (Extraído de Source 3 - Áreas Disciplinares y Formación Integral)
-        "tronco_comun" => [
-            "5to Semestre" => [
-                "Cálculo", 
-                "Física I", 
-                "Narrativa Literaria", 
-                "Lengua Extranjera V", 
-                "Innovación de Aplicaciones", 
-                "Introducción a la Economía",
-                "Cultura Física V",
-                "Emprendimiento V",
-                "Tutoría V"
-            ],
-            "6to Semestre" => [
-                "Análisis de Eventos", 
-                "Física II", 
-                "Expresión Literaria", 
-                "Lengua Extranjera VI", 
-                "Desarrollo de Habilidades Digitales a Través de Dispositivos Autónomos", 
-                "Problemas Socioeconómicos de México",
-                "Cultura Física VI",
-                "Emprendimiento VI",
-                "Tutoría VI"
-            ]
-        ],
-
-        // Áreas seriadas para 5to y 6to (Extraído de Source 14)
-        "areas_propedeuticas" => [
-            "Matemáticas e Ingenierías" => [
-                "5to" => [
-                    "Física para Ingenierías", 
-                    "Temas Selectos de Física I", 
-                    "Temas Selectos de Química", 
-                    "Temas Selectos de Matemáticas"
-                ],
-                "6to" => [
-                    "Física para Ingenierías II", 
-                    "Temas Selectos de Física II", 
-                    "Química de Materiales", 
-                    "Cálculo Diferencial e Integral Aplicado a su Entorno"
-                ]
-            ],
-            "Ciencias Experimentales" => [
-                "5to" => [
-                    "Microbiología", 
-                    "Biología Celular", 
-                    "Bioquímica I"
-                ],
-                "6to" => [
-                    "Investigación en Campo y Laboratorio", 
-                    "Ciencias de la Salud", 
-                    "Bioquímica II"
-                ]
-            ],
-            "Ciencias Sociales y Económico Administrativas" => [
-                "5to" => [
-                    "Introducción a las Ciencias Sociales", 
-                    "Globalización y Sus Tendencias Económicas y Políticas I", 
-                    "Procesos Económicos Administrativos y Contables I", 
-                    "Introducción al Derecho"
-                ],
-                "6to" => [
-                    "Metodología de Investigación de las Ciencias Sociales", 
-                    "Globalización y sus Tendencias Económicas y Políticas II", 
-                    "Procesos Económicos Administrativos y Contables II", 
-                    "Introducción a las Ciencias Políticas"
-                ]
-            ],
-            "Humanidades" => [
-                "5to" => [
-                    "Arte y Sociedad", 
-                    "Introducción a la Psicología", 
-                    "Problemas del Conocimiento", 
-                    "Comunidad Filosófica de Indagación"
-                ],
-                "6to" => [
-                    "Arte y Tecnología", 
-                    "Psicología", 
-                    "Filosofía del Hombre", 
-                    "Bioética"
-                ]
-            ],
-            "Comunicación" => [
-                "5to" => [
-                    "Habilidades Digitales para la Comunicación", 
-                    "Lingüística y Análisis del Discurso", 
-                    "Comprensión y Producción de Textos en Lengua Extranjera I"
-                ],
-                "6to" => [
-                    "Tecnologías Innovadoras de Comunicación y Expresión Digital", 
-                    "Literatura y Periodismo", 
-                    "Comprensión y Producción de Textos en Lengua Extranjera II"
-                ]
-            ]
-        ],
-
-        "galeria" => [
-            "./assets/2_de_octubre.jpeg",
-            "./assets/2_de_octubre.jpeg",
-            "./assets/2_de_octubre.jpeg"
-        ],
+        "galeria" => [],
         "redes" => [
-            "facebook" => "https://www.facebook.com/prepa2deoctubre?locale=es_LA",
-            "instagram" => "https://www.instagram.com/prepa2deoctubrebuap/?hl=es",
-            "web" => "https://prepa2deoctubrebuap.blogspot.com/?fbclid=IwY2xjawOlY_JleHRuA2FlbQIxMABicmlkETFXeXJUQUNsWWJQQjVTOXNHc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHoXFsPMysskQYE23dN5iPxDCbBEgvQr2Wj5zMuBFYKcUy4ScNT4rbm1KIklS_aem_S0YPSzs24MTlUZkOfORJ-w"
+            "facebook" => null,
+            "instagram" => null,
+            "web" => null,
         ],
-        "perfil_ingreso" => [
-            "Certificado de secundaria concluida.",
-            "Habilidad para el estudio independiente.",
-            "Interés en las ciencias y humanidades."
-        ],
-    ],
+    ];
+}
 
-    // =================================================================================
-    // OTRAS UNIDADES (CON IMÁGENES DE RELLENO)
-    // =================================================================================
-    
-    // --- CATEGORÍA: PREPARATORIA ---
+/* =====================================================
+    PLANES GENERALES COMPARTIDOS
+===================================================== */
+
+$PLAN_ESTUDIOS_COMUN = [
+    "1er Semestre" => [
+        "Álgebra", "Cultura Física I", "Emprendimiento I", "Habilidades digitales",
+        "Historia Universal", "Lengua Extranjera I", "Lenguaje y Procesos comunicativos",
+        "Lógica y Argumentación", "Psicología en la adolescencia I", "Química I", "Tutoría I"
+    ],
+    "2do Semestre" => [
+        "Cultura Física II", "Emprendimiento II", "Filosofía Práctica",
+        "Geometría Plana y Trigonometría Plana", "Historia siglo XX", "Lengua Extranjera II",
+        "Lenguaje y Medios de Expresión", "Psicología en la adolescencia II", "Química II",
+        "Sistematización de Datos", "Tutoría II"
+    ],
+    "3er Semestre" => [
+        "Biología I: del Átomo al Hombre", "Cultura Física III", "Emprendimiento III",
+        "Fundamentos del Arte", "Geometría Analítica", "Historia de la Identidad Mexicana",
+        "Lengua Extranjera III", "Lenguaje y Procesos de Escritura para la Investigación",
+        "Manejo de Datos y Comunicaciones", "Psicología Educativa: Vocacional", "Tutoría III"
+    ],
+    "4to Semestre" => [
+        "Apreciación del Arte", "Biología II: del Hombre a la Biosfera", "Cultura Física IV",
+        "Emprendimiento IV", "Entornos de Desarrollo a través de las Tecnologías Digitales",
+        "Funciones", "Historia de la Sociedad Mexicana", "Lengua Extranjera IV",
+        "Lenguaje y Difusión de la Investigación", "Psicología Educativa: Profesiográfica", "Tutoría IV"
+    ]
+];
+
+$TRONCO_COMUN_GENERAL = [
+    "5to Semestre" => [
+        "Cálculo", "Física I", "Narrativa Literaria", "Lengua Extranjera V",
+        "Innovación de Aplicaciones", "Introducción a la Economía",
+        "Cultura Física V", "Emprendimiento V", "Tutoría V"
+    ],
+    "6to Semestre" => [
+        "Análisis de Eventos", "Física II", "Expresión Literaria", "Lengua Extranjera VI",
+        "Desarrollo de Habilidades Digitales a Través de Dispositivos Autónomos",
+        "Problemas Socioeconómicos de México",
+        "Cultura Física VI", "Emprendimiento VI", "Tutoría VI"
+    ]
+];
+
+$AREAS_PROPEDUTICAS_GENERALES = [
+    "Matemáticas e Ingenierías" => [
+        "5to" => [
+            "Física para Ingenierías", 
+            "Temas Selectos de Física I", 
+            "Temas Selectos de Química", 
+            "Temas Selectos de Matemáticas"
+        ],
+        "6to" => [
+            "Física para Ingenierías II", 
+            "Temas Selectos de Física II", 
+            "Química de Materiales", 
+            "Cálculo Diferencial e Integral Aplicado a su Entorno"
+        ]
+    ],
+    "Ciencias Experimentales" => [
+        "5to" => [
+            "Microbiología", 
+            "Biología Celular", 
+            "Bioquímica I"
+        ],
+        "6to" => [
+            "Investigación en Campo y Laboratorio", 
+            "Ciencias de la Salud", 
+            "Bioquímica II"
+        ]
+    ],
+    "Ciencias Sociales y Económico Administrativas" => [
+        "5to" => [
+            "Introducción a las Ciencias Sociales", 
+            "Globalización y Sus Tendencias Económicas y Políticas I", 
+            "Procesos Económicos Administrativos y Contables I", 
+            "Introducción al Derecho"
+        ],
+        "6to" => [
+            "Metodología de Investigación de las Ciencias Sociales", 
+            "Globalización y sus Tendencias Económicas y Políticas II", 
+            "Procesos Económicos Administrativos y Contables II", 
+            "Introducción a las Ciencias Políticas"
+        ]
+    ],
+    "Humanidades" => [
+        "5to" => [
+            "Arte y Sociedad", 
+            "Introducción a la Psicología", 
+            "Problemas del Conocimiento", 
+            "Comunidad Filosófica de Indagación"
+        ],
+        "6to" => [
+            "Arte y Tecnología", 
+            "Psicología", 
+            "Filosofía del Hombre", 
+            "Bioética"
+        ]
+    ],
+    "Comunicación" => [
+        "5to" => [
+            "Habilidades Digitales para la Comunicación", 
+            "Lingüística y Análisis del Discurso", 
+            "Comprensión y Producción de Textos en Lengua Extranjera I"
+        ],
+        "6to" => [
+            "Tecnologías Innovadoras de Comunicación y Expresión Digital", 
+            "Literatura y Periodismo", 
+            "Comprensión y Producción de Textos en Lengua Extranjera II"
+        ]
+    ]
+];
+
+
+$unidadesAcademicas = [
+
+    // --- CATEGORÍA: PREPARATORIAS URBANAS ---
+
+    "2deOctubrePuebla" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. 2 de Octubre de 1968",
+            "nombre_completo" => "Preparatoria 2 de Octubre de 1968",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria 2 De Octubre de 1968",
+                "lat" => 19.025621511002914,
+                "lng" => -98.23040757401687
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-1.jpeg",
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-2.jpeg",
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-3.jpeg"
+            ],
+            "redes" => [
+                "facebook" => null,
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
+
+    "LazaroCardenasPuebla" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Gral. Lázaro Cárdenas del Río",
+            "nombre_completo" => "Prep. Gral. Lázaro Cárdenas del Río",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Los aspirantes a nivel medio superior deberían elegir la Preparatoria “Gral. Lázaro Cárdenas del Río” de la Benemérita Universidad Autónoma de Puebla porque representa una opción educativa sólida, con prestigio institucional, formación integral y compromiso con la excelencia académica. Como parte de la BUAP, una de las universidades públicas más reconocidas del país, la preparatoria brinda a sus estudiantes acceso a programas educativos actualizados, docentes capacitados y una estructura académica alineada con estándares de calidad que favorecen el desarrollo del pensamiento crítico, científico y humanista. La Unidad Académica se distingue por promover una formación integral que va más allá del aprendizaje en el aula. A través de actividades académicas, culturales, deportivas y de divulgación científica, como la participación en programas institucionales, ferias profesiográficas y proyectos de investigación, los estudiantes fortalecen sus habilidades, descubren sus intereses vocacionales y construyen un proyecto de vida sólido. Además, cuenta con programas de tutorías y acompañamiento académico que favorecen la permanencia, el bienestar estudiantil y la orientación oportuna para la toma de decisiones académicas y profesionales.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "Preparatoria Gral. Lázaro Cárdenas del Río BUAP",
+                "lat" => 19.074280512331573,
+                "lng" => -98.21979723921858
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-1.jpeg",
+                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-2.jpeg",
+                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-3.jpeg",
+                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-4.jpeg",
+                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-5.jpeg",
+                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-6.jpeg",
+                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-7.jpeg",
+                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-8.jpeg",
+            ],
+            "redes" => [
+                "facebook" => null,
+                "instagram" => "https://www.instagram.com/prepa.lazarocr?igsh=MTN6MnlldDJnbnU3cA==",
+                "web" => null,
+            ],
+        ]
+    ),
+
+    "PrepaCuetzalan" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Nororiental (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Cuetzalan",
+            "nombre_completo" => "Preparatoria Cuetzalan",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "La Preparatoria BUAP Cuetzalan es una excelente opción para estudiar el bachillerato. Estudiar en esta preparatoria es elegir una formación académica de calidad en un entorno con valores, que propicia el conocimiento, la diversidad cultural y el desarrollo integral de sus estudiantes. Contamos con un excelente nivel académico, el personal docente está altamente capacitado: La BUAP es una de las universidades más reconocidas de México, y su preparatoria en Cuetzalan no es la excepción. Contamos con instalaciones modernas y bien equipadas, incluyendo biblioteca, laboratorios de cómputo e idiomas, jardines, espacios deportivos y talleres de ajedrez, música y danza. Además, promovemos un ambiente seguro e inclusivo, con tecnología actualizada, áreas de estudio colaborativo, mantenimiento constante y personal capacitado que impulsa el aprendizaje integral, la creatividad y la convivencia sana. Aquí se fomenta el pensamiento crítico, la responsabilidad y el compromiso social, preparando a los jóvenes para continuar sus estudios de nivel superior o integrarse con éxito a distintos ámbitos profesionales. Al ser una institución pública la Preparatoria BUAP Cuetzalan ofrece costos accesibles, convirtiéndose en la opción educativa más económica de la región en un ambiente de calidad y calidez. Se promueve la enseñanza y el aprendizaje de lenguas originarias, lo que es ideal para aquellos interesados en preservar y promover la cultura local, es una institución donde convergen estudiantes de diferentes municipios, culturas y etnias (Escuela multicultural) lo que enriquece la experiencia educativa y fomenta el respeto y la tolerancia. En esta institución la prioridad es la atención a los y las estudiantes. Aquí encontrarán acompañamiento académico, un ambiente seguro y las herramientas necesarias para construir su futuro.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Cuetzalan",
+                "lat" => 20.020809203128575,  // sustituir con coordenadas reales
+                "lng" => -97.52525733408416  // sustituir con coordenadas reales
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaCuetzalan/imagen-1.jpeg",
+                "./assets/unidades_academicas/PrepaCuetzalan/imagen-2.jpeg",
+                "./assets/unidades_academicas/PrepaCuetzalan/imagen-3.jpeg",
+                "./assets/unidades_academicas/PrepaCuetzalan/imagen-4.jpeg",
+                "./assets/unidades_academicas/PrepaCuetzalan/imagen-5.jpeg",
+                "./assets/unidades_academicas/PrepaCuetzalan/imagen-6.jpeg",
+                "./assets/unidades_academicas/PrepaCuetzalan/imagen-7.jpeg",
+                "./assets/unidades_academicas/PrepaCuetzalan/imagen-8.jpeg",
+                "./assets/unidades_academicas/PrepaCuetzalan/imagen-9.jpeg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/share/1C6QXjx1Fh/",
+                "instagram" => "https://www.instagram.com/prepacuetzalancrzn?igsh=b3c0N3F6enpubXB6",
+                "web" => null
+            ],
+        ]
+    ),
+
+    "SimonBolivarIzucar" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Mixteca (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Simón Bolívar (Izúcar de Matamoros)",
+            "nombre_completo" => "Preparatoria Simón Bolívar Izúcar",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "La Preparatoria BUAP Campus Izúcar de Matamoros brinda a sus estudiantes una formación académica integral orientada al ingreso y desempeño exitoso en el nivel superior. Cuenta con una planta docente especializada y con instalaciones modernas que responden a las necesidades actuales del proceso de enseñanza-aprendizaje. El plantel dispone de laboratorios de ciencias, de tecnologías de la información y de lenguas, biblioteca física y virtual, auditorio, canchas deportivas y áreas de esparcimiento, lo que permite el desarrollo académico, cultural y deportivo del estudiantado. Desde los primeros semestres, las y los alumnos reciben orientación vocacional que les permite identificar sus intereses profesionales. En la etapa terminal, se ofrece una formación específica por áreas del conocimiento: Humanidades; Ciencias Experimentales y de la Salud; Matemáticas e Ingenierías; y Ciencias Sociales, facilitando una transición informada hacia la educación superior. Además de impulsar la excelencia académica, la preparatoria fomenta valores como el trabajo en equipo, la responsabilidad social, la inclusión, el respeto y el cuidado del medio ambiente, a través de proyectos multidisciplinarios, actividades culturales, deportivas y de integración comunitaria. La Preparatoria BUAP Izúcar de Matamoros es un referente educativo en la Mixteca Poblana y una opción sólida para quienes buscan una formación de calidad con sentido humano y crítico.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Simón Bolívar Izúcar",
+                "lat" => 18.634679373164392,
+                "lng" => -98.46938149427781 
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-1.png",
+                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-2.png",
+                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-3.png",
+                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-4.png",
+                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-5.png",
+                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-6.png",
+                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-7.png",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/share/17vkRQGZbq/",
+                "instagram" => "https://www.instagram.com/crmbuap?igsh=cWM0OHplY3ZqcXcy",
+                "web" => "https://crmixteca.buap.mx/"
+            ],
+        ]
+    ),
+
+    "PrepaChiautla" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Mixteca (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Chiautla",
+            "nombre_completo" => "Preparatoria Chiautla",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "La Preparatoria Chiautla de Tapia, adscrita al Complejo Regional Mixteca de la BUAP, representa una opción educativa sólida y pertinente para las y los jóvenes de la región. Ubicada estratégicamente en el municipio de Chiautla de Tapia, esta unidad académica ofrece una formación integral que articula el rigor académico con el desarrollo humano y social del estudiantado. El plantel cuenta con una planta docente capacitada y comprometida, especializada en las asignaturas que imparte, lo que garantiza procesos de enseñanza-aprendizaje de calidad. Sus instalaciones incluyen aulas adecuadas, espacios deportivos y áreas de convivencia que favorecen un ambiente escolar respetuoso, seguro y propicio para el aprendizaje. Uno de los principales valores de esta preparatoria es la diversidad de su comunidad estudiantil, integrada por jóvenes provenientes de distintos municipios del estado de Puebla y del estado de Morelos. Esta pluralidad cultural fortalece la convivencia, la tolerancia y el respeto, enriqueciendo la experiencia formativa más allá del aula. A lo largo del ciclo escolar, el alumnado participa en actividades académicas y extracurriculares como torneos deportivos, círculos de lectura, talleres, eventos científicos, pláticas orientadoras y excursiones educativas, lo que contribuye al desarrollo de competencias académicas, sociales y culturales. Estudiar en la Preparatoria Chiautla de Tapia es formarse con identidad, compromiso social y sentido de pertenencia universitaria. Sé Preparatoria Chiautla de Tapia, sé BUAP.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Chiautla",
+                "lat" => 18.319386455130093,
+                "lng" => -98.61514221075419
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaChiautla/imagen-1.png",
+                "./assets/unidades_academicas/PrepaChiautla/imagen-2.png",
+                "./assets/unidades_academicas/PrepaChiautla/imagen-3.png",
+                "./assets/unidades_academicas/PrepaChiautla/imagen-4.png",
+                "./assets/unidades_academicas/PrepaChiautla/imagen-5.png",
+                "./assets/unidades_academicas/PrepaChiautla/imagen-6.png",
+                "./assets/unidades_academicas/PrepaChiautla/imagen-7.png",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/share/17vkRQGZbq/",
+                "instagram" => "https://www.instagram.com/crmbuap?igsh=cWM0OHplY3ZqcXcy",
+                "web" => "https://crmixteca.buap.mx/"
+            ],
+        ]
+    ),
+
+    "PrepaTlatlauquitepec" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Nororiental (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Tlatlauquitepec",
+            "nombre_completo" => "Preparatoria Tlatlauquitepec",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en la Preparatoria Tlatlauquitepec del Complejo Regional Nororiental es una oportunidad que va más allá de cursar un bachillerato tradicional. Este sistema educativo se distingue por su enfoque de formación universitaria, el cual funciona como una verdadera plataforma de lanzamiento para el éxito académico y profesional de los estudiantes. Respaldada por una planta docente altamente preparada, con formación profesional y experiencia en sus áreas de conocimiento, la preparatoria no solo transmite contenidos, sino que guía a los estudiantes en el desarrollo de habilidades como la autonomía, el pensamiento crítico y la responsabilidad, competencias fundamentales para enfrentar con éxito la universidad y el mundo laboral. Desde su estructura académica hasta su metodología de enseñanza, la institución impulsa a los estudiantes a analizar, reflexionar y asumir un papel activo en su proceso de aprendizaje, promoviendo hábitos de estudio sólidos y una mentalidad orientada al crecimiento académico constante. De manera complementaria, la preparatoria mantiene un fuerte enfoque en la formación cultural, al ofrecer espacios que permiten a los estudiantes expresar y fortalecer su identidad. Destacan los grupos representativos de mariachi y danza, así como diversas actividades culturales que fomentan el aprecio por las tradiciones, la creatividad y la participación artística. Asimismo, la institución impulsa actividades deportivas que contribuyen al desarrollo integral del alumnado, fortaleciendo valores como el trabajo en equipo, la disciplina, el compromiso social y el bienestar físico. La Preparatoria Tlatlauquitepec cuenta con el apoyo de APOED, brindando acompañamiento y orientación educativa a los estudiantes que lo requieren, con el objetivo de favorecer la inclusión, el bienestar académico y la permanencia escolar, asegurando que todos tengan las mismas oportunidades de aprendizaje y desarrollo. No es solo un bachillerato, sino un modelo educativo con proyección universitaria, cultural e inclusiva, que prepara a los estudiantes para sobresalir en la licenciatura, en su vida profesional y en su formación integral como ciudadanos comprometidos. ",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Tlatlauquitepec",
+                "lat" => 19.85215886154586,
+                "lng" => -97.4955726556099
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaTlatlauquitepec/imagen-1.jpg",
+                "./assets/unidades_academicas/PrepaTlatlauquitepec/imagen-2.jpg",
+                "./assets/unidades_academicas/PrepaTlatlauquitepec/imagen-3.jpg",
+                "./assets/unidades_academicas/PrepaTlatlauquitepec/imagen-4.jpg",
+                "./assets/unidades_academicas/PrepaTlatlauquitepec/imagen-5.jpg",
+                "./assets/unidades_academicas/PrepaTlatlauquitepec/imagen-6.jpg",
+                "./assets/unidades_academicas/PrepaTlatlauquitepec/imagen-7.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/profile.php?id=100078804083110",
+                "instagram" => "https://www.instagram.com/prepabuap_tlatlauqui/",
+                "tiktok" => "https://www.tiktok.com/@prepa_tlatlauqui",
+                "web" => null
+            ],
+        ]
+    ),
+
+    "PrepaTeziutlan" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Nororiental (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Teziutlán",
+            "nombre_completo" => "Preparatoria Teziutlán",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Porque estudiar en la Preparatoria Teziutlán del Complejo Regional Nororiental de la BUAP significa elegir una formación sólida, actual y con visión de futuro, en un espacio diseñado para acompañar a los estudiantes en una de las etapas más importantes de su vida académica y personal. Aquí no solo se cursa el bachillerato: los estudiantes se preparan para dar el siguiente gran paso hacia la universidad y el mundo profesional. Formar parte de la BUAP proporciona el respaldo de una institución reconocida a nivel nacional e internacional por su calidad educativa. En la Preparatoria Teziutlán esto se traduce en planes de estudio actualizados, docentes capacitados y comprometidos con el aprendizaje, y un enfoque que impulsa el pensamiento crítico, la responsabilidad y la autonomía. Cada clase busca que los estudiantes comprendan, analicen y apliquen lo aprendido, no solo que memoricen. Además del ámbito académico, la preparatoria promueve una formación integral. A través de actividades culturales, deportivas, científicas y de participación social, se puede descubrir y fortalecer talentos, desarrollar habilidades sociales y aprender a trabajar en equipo. Estas experiencias enriquecen la vida estudiantil y fomentan el crecimiento como persona, no solo como estudiantes. La Preparatoria Teziutlán también se distingue por su sentido de comunidad. Es un espacio cercano, incluyente y respetuoso, donde se fomenta la convivencia, la identidad universitaria y el orgullo de ser parte de la BUAP.  Aquí hay acompañamiento, orientación y un ambiente que impulsa la confianza y la motivación para alcanzar todas las metas. Estudiar aquí es apostar por una educación que abre puertas, que conecta sueños con oportunidades reales y que prepara a nuestros estudiantes para enfrentar los retos del presente y del futuro con seguridad. Preparatoria Teziutlán BUAP: el lugar donde tu talento crece y tu futuro comienza.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Teziutlán",
+                "lat" => 19.813294566538183,
+                "lng" => -97.37599331407584
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-7.jpg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-1.jpg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-2.jpg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-3.jpg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-4.jpg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-5.jpg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-6.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/profile.php?id=61575032305773",
+                "instagram" => "https://www.instagram.com/preparatoria_buap_teziutlan/ ",
+                "tiktok" => "https://www.tiktok.com/@prepateziutlanbuap?is_from_webapp=1&sender_device=pc"
+            ],
+        ]
+    ),
+
+    "PrepaLibres" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Nororiental (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Libres",
+            "nombre_completo" => "Preparatoria Libres",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Porque es una institución con una planta docente calificada y comprometida en preparar a sus estudiantes a la etapa superior, en lo académico, lo personal y social teniendo una formación integral por medio de actividades deportivas, culturales y artísticas que les permitirá ser críticos, proactivos, seguros de sí mismos y con valores humanos. La preparatoria cuenta con la infraestructura y recursos académicos que generan un ambiente de aprendizaje y desarrollo favorable para sus estudiantes.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Libres",
+                "lat" => 19.464755216120608,
+                "lng" => -97.68719493000648
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaLibres/imagen-8.jpg",
+                "./assets/unidades_academicas/PrepaLibres/imagen-1.jpg",
+                "./assets/unidades_academicas/PrepaLibres/imagen-2.jpg",
+                "./assets/unidades_academicas/PrepaLibres/imagen-3.jpg",
+                "./assets/unidades_academicas/PrepaLibres/imagen-4.jpg",
+                "./assets/unidades_academicas/PrepaLibres/imagen-5.jpg",
+                "./assets/unidades_academicas/PrepaLibres/imagen-6.jpg",
+                "./assets/unidades_academicas/PrepaLibres/imagen-7.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/profile.php?id=100066529942009",
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
+
+    "BTAZacapoaxtla" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Bachilleratos Tecnológicos",
+            "nombre_corto" => "Bachillerato Tecnológico Agropecuario Zacapoaxtla (CRNO)",
+            "nombre_completo" => "Bachillerato Tecnológico Agropecuario Zacapoaxtla",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "El Bachillerato Tecnológico Agropecuario de Zacapoaxtla se posiciona como una institución educativa de calidad que integra la formación académica con la capacitación tecnológica en las áreas agropecuaria y pecuaria, en congruencia con las condiciones sociales, productivas y culturales de la región. Su modelo educativo está orientado a promover prácticas sustentables y una formación sólida con sentido social, que impulsa el desarrollo de habilidades y la construcción de proyectos de vida. Uno de los principales distintivos de la institución es el enfoque práctico de su proceso de enseñanza-aprendizaje, el cual permite que las y los estudiantes apliquen los conocimientos adquiridos en situaciones reales. A través de actividades formativas, proyectos escolares y experiencias productivas, el estudiantado desarrolla habilidades técnicas, pensamiento crítico y competencias que les permiten enfrentar los retos del sector agropecuario, así como continuar con su formación académica o incorporarse al ámbito laboral. Asimismo, el Bachillerato se caracteriza por brindar una atención personalizada, sustentada en la cercanía y el acompañamiento constante entre docentes y estudiantes. Este enfoque refleja el compromiso institucional con el aprendizaje significativo, la equidad y la inclusión, favoreciendo el desarrollo integral y la permanencia escolar. Beneficios  •	Los estudiantes pueden acceder a becas, como: Beca Alimenticia y la Beca Benito Juárez, que representan un apoyo económico importante para su permanencia escolar. •	La institución cuenta con un programa de tutorías académicas. •	Apoyo psicológico, promoviendo el bienestar emocional y un ambiente escolar sano e inclusivo. •	Maestros comprometidos, con vocación y experiencia, además de asesorías académicas para reforzar los aprendizajes y atender dudas. ",
+            "perfil_ingreso" => "BTAZ",
+            "perfil_egreso" => "BTAZ",
+            "ubicacion" => [
+                "nombre" => "BUAP Bachillerato Tecnológico Agropecuario Zacapoaxtla",
+                "lat" => 19.895301927381812,
+                "lng" => -97.5850271532404
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-1.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-2.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-3.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-4.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-5.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-6.jpeg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/profile.php?id=61575240562467",
+                "instagram" => "https://www.instagram.com/bachillerato_buap_zacapoaxtla/",
+                "web" => null
+            ],
+        ]
+    ),
+
+    "BTAIxtepec" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Bachilleratos Tecnológicos",
+            "nombre_corto" => "Bachillerato Tecnológico Agropecuario Ixtepec (CRNO)",
+            "nombre_completo" => "Bachillerato Tecnológico Agropecuario Ixtepec",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "El Bachillerato Tecnológico Agropecuario, perteneciente al Complejo Regional Zona Nororiental con sede Ixtepec, es un programa de educación media superior bajo un modelo de oferta bivalente que no solo permite al egresado obtener su certificado de Bachillerato para continuar sus estudios en el nivel superior, sino que además obtienen una cédula profesional como Técnico Agropecuario. Esta certificación oficial es una herramienta indispensable que facilita su inserción inmediata al campo laboral en el sector agropecuario. El Bachillerato cuenta con una planta docente joven, dinámico y con amplios conocimientos en las diferentes disciplinas que se cursan. Los alumnos reciben una formación técnica en las áreas de Producción Animal y Producción Agrícola, en el que desarrollan competencias para ser agentes de cambio y desarrollo en su comunidad y entorno. El estudiante no solo aprende el 'cómo', sino el 'porqué' de una producción responsable con el medio ambiente, combinado prácticas sustentables y sostenibles que garantizan la preservación de los recursos naturales y el equilibrio ecológico para las futuras generaciones. Más allá de la formación técnica profesional, nos distingue un profundo compromiso con la identidad. Ya que durante la formación académica se realizan actividades culturales que tienen como finalidad la redignificación activa de las lenguas originarias, esto a través de clases de lengua Tutunakú y música tradicional de la región, de esta manera fortalecemos el orgullo de pertenencia y el respeto por nuestro patrimonio cultural. Nuestras instalaciones son el escenario en donde la teoría se transforme en práctica diaria. Los estudiantes tienen acceso a espacios como parcelas y de ganado en el que aplican métodos de cuidado de cultivos y ganado, complementando su formación como técnicos agropecuarios. Con el compromiso de formar técnicos agropecuarios y que a su vez lideren proyectos productivos con impacto social y contribuir al progreso económico y social de su comunidad. ",
+            "perfil_ingreso" => "BTAI",
+            "perfil_egreso" => "BTAI",
+            "ubicacion" => [
+                "nombre" => "BUAP Bachillerato Tecnológico Agropecuario Ixtepec",
+                "lat" => 20.01567586326699,
+                "lng" => -97.65484571254876
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/BTAIxtepec/imagen-1.jpg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-2.jpg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-3.jpg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-4.jpg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-5.jpg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-6.jpg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-7.jpg",
+            ],
+            "redes" => [
+                "facebook" => null,
+                "instagram" => null,
+                "web" => "https://crzn.buap.mx/"
+            ],
+        ]
+    ),
+
+    "CabreraTecamachalco" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Enrique Cabrera Barroso Tecamachalco",
+            "nombre_completo" => "Preparatoria Enrique Cabrera Barroso Tecamachalco",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "La Preparatoria Regional Enrique Cabrera Barroso (PRECB) es una institución que tiene una oferta educativa de calidad en el estado de Puebla, pertenece a la Benemérita Universidad Autónoma de Puebla y con sus 53 años de experiencia ha sido germen de muchas generaciones de exitosos egresados y egresadas. La Preparatoria Regional “Enrique Cabrera Barroso” dota a sus estudiantes de conocimientos, habilidades y destrezas indispensables para el ingreso al Nivel Superior o bien para que se inserten la vida laboral; ya que en sus aulas no solo se enseñan declarativos los y las estudiantes aprenden a pensar críticamente y a resolver problemas. A través de sus talleres y actividades extracurriculares, los y las estudiantes tienen la oportunidad de descubrir sus pasiones y áreas de interés. La preparatoria ofrece espacios amplios, limpios y modernos, con los requerimientos necesarios para llevar a cabo el proceso de enseñanza aprendizaje según las exceptivas y demandas de la juventud actual.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Enrique Cabrera Barroso Tecamachalco",
+                "lat" => 18.883435738732796, 
+                "lng" => -97.74103162953776 
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-1.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-2.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-3.jpeg"
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/profile.php?id=100083093024654&locale=es_LA",
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
+
+
+
+
+
     "AlfonsoCalderonPuebla" => [
         "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
         "nombre_corto" => "Prep. Alfonso Calderón Moreno",
@@ -198,39 +553,27 @@ $unidadesAcademicas = [
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
-    "LazaroCardenasPuebla" => [
-        "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Gral. Lázaro Cárdenas del Río",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=LCR",
-        "nombre_completo" => "Prep. Gral. Lázaro Cárdenas del Río",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
     "PrepaSanMartin" => [
         "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
-        // "nombre_corto" => "Prep. Gral. Emiliano Zapata (San Martín Texmelucan)",
-        "nombre_corto" => "Preparatoria San Martín Texmelucan",
+        "nombre_corto" => "Prep. Gral. Emiliano Zapata (San Martín Texmelucan)",
         "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=EZSM",
         "nombre_completo" => "Prep. Gral. Emiliano Zapata San Martín",
         "duracion" => "Por definir",
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
-    "CabreraTecamachalco" => [
-        "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
-        // "nombre_corto" => "Prep. Regional Enrique Cabrera Barroso (Tecamachalco)",
-        "nombre_corto" => "Preparatoria Tecamachalco",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=RECB",
-        "nombre_completo" => "Prep. Regional Enrique Cabrera Barroso",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
+    // "CabreraTecamachalco" => [
+    //     "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
+    //     "nombre_corto" => "Prep. Regional Enrique Cabrera Barroso (Tecamachalco)",
+    //     "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=RECB",
+    //     "nombre_completo" => "Prep. Regional Enrique Cabrera Barroso",
+    //     "duracion" => "Por definir",
+    //     "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
+    //     "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
+    // ],
     "SimonBolivarAtlixco" => [
         "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
-        // "nombre_corto" => "Prep. Simón Bolivar (Atlixco)",
-        "nombre_corto" => "Preparatoria Atlixco",
+        "nombre_corto" => "Prep. Simón Bolivar (Atlixco)",
         "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=SBA",
         "nombre_completo" => "Prep. Simón Bolivar Atlixco",
         "duracion" => "Por definir",
@@ -248,6 +591,7 @@ $unidadesAcademicas = [
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
 
+    
     // --- CATEGORÍA: COMPLEJO REGIONAL NORTE ---
     "PrepaChignahuapan" => [
         "categoria" => "Complejo Regional Norte (Plan De Estudios Bachillerato General)",
@@ -274,44 +618,6 @@ $unidadesAcademicas = [
         "nombre_completo" => "Preparatoria Zacatlán",
         "duracion" => "Por definir",
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.931, "lng" => -97.960],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-
-    // --- CATEGORÍA: COMPLEJO REGIONAL NORORIENTAL ---
-    "PrepaCuetzalan" => [
-        "categoria" => "Complejo Regional Nororiental (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Cuetzalan",
-        "url_imagen" => "https://placehold.co/60x60/facc15/000000?text=CUET",
-        "nombre_completo" => "Preparatoria Cuetzalan",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 20.017, "lng" => -97.523],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "PrepaLibres" => [
-        "categoria" => "Complejo Regional Nororiental (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Libres",
-        "url_imagen" => "https://placehold.co/60x60/facc15/000000?text=LIB",
-        "nombre_completo" => "Preparatoria Libres",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.461, "lng" => -97.689],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "PrepaTeziutlan" => [
-        "categoria" => "Complejo Regional Nororiental (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Teziutlán",
-        "url_imagen" => "https://placehold.co/60x60/facc15/000000?text=TEZ",
-        "nombre_completo" => "Preparatoria Teziutlán",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.818, "lng" => -97.359],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "PrepaTlatlauquitepec" => [
-        "categoria" => "Complejo Regional Nororiental (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Tlatlauquitepec",
-        "url_imagen" => "https://placehold.co/60x60/facc15/000000?text=TLAT",
-        "nombre_completo" => "Preparatoria Tlatlauquitepec",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.852, "lng" => -97.493],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
 
@@ -371,26 +677,6 @@ $unidadesAcademicas = [
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
 
-    // --- CATEGORÍA: COMPLEJO REGIONAL MIXTECA ---
-    "PrepaChiautla" => [
-        "categoria" => "Complejo Regional Mixteca (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Chiautla de Tapia",
-        "url_imagen" => "https://placehold.co/60x60/a78bfa/ffffff?text=CHIA",
-        "nombre_completo" => "Preparatoria Chiautla de Tapia",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.299, "lng" => -98.599],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "SimonBolivarIzucar" => [
-        "categoria" => "Complejo Regional Mixteca (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Izúcar de Matamoros",
-        "url_imagen" => "https://placehold.co/60x60/a78bfa/ffffff?text=IZU",
-        "nombre_completo" => "Preparatoria Izúcar de Matamoros",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.600, "lng" => -98.465],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-
     // --- CATEGORÍA: COMPLEJO REGIONAL SUR ---
     "coyomeapan" => [
         "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
@@ -428,13 +714,22 @@ $unidadesAcademicas = [
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.667, "lng" => -97.650],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
+    "PreparatoriaADistancia" => [
+        "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
+        "nombre_corto" => "Preparatoria a distancia",
+        "url_imagen" => "https://placehold.co/60x60/fb923c/ffffff?text=TLA",
+        "nombre_completo" => "Prep. Vicente Guerrero",
+        "duracion" => "Por definir",
+        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.667, "lng" => -97.650],
+        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
+    ],
 
 
     // --- CATEGORÍA: bachilleratos tecnológicos ---
     "SanJoseChiapa" => [
         // "categoria" => "Complejo Regional Centro",
         "categoria" => "Bachilleratos Tecnológicos",
-        "nombre_corto" => "Bachillerato Tecnológico San José Chiapa",
+        "nombre_corto" => "Bachillerato Tecnológico San José Chiapa (CRC)",
         "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=BTSJC",
         "nombre_completo" => "BT San José Chiapa",
         "duracion" => "Por definir",
@@ -450,26 +745,6 @@ $unidadesAcademicas = [
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
-    "bt-ixtepec" => [
-        // "categoria" => "Complejo Regional Nororiental",
-        "categoria" => "Bachilleratos Tecnológicos",
-        "nombre_corto" => "Bachillerato Tecnológico Agropecuario Ixtepec",
-        "url_imagen" => "https://placehold.co/60x60/facc15/000000?text=BTAI",
-        "nombre_completo" => "BT Agropecuario Ixtepec",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 20.034, "lng" => -97.647],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "bt-zacapoaxtla" => [
-        // "categoria" => "Complejo Regional Nororiental",
-        "categoria" => "Bachilleratos Tecnológicos",
-        "nombre_corto" => "Bachillerato Tecnológico Agropecuario Zacapoaxtla",
-        "url_imagen" => "https://placehold.co/60x60/facc15/000000?text=BTAZ",
-        "nombre_completo" => "BT Agropecuario Zacapoaxtla",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.871, "lng" => -97.593],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
 ];
 
 
@@ -480,16 +755,14 @@ function obtenerOfertaAgrupada($unidades) {
         // MODIFICACIÓN: Ahora guardamos un arreglo con nombre e imagen, no solo el nombre.
         $agrupado[$datos['categoria']][$id] = [
             'nombre' => $datos['nombre_corto'],
-            // Usamos un operador ternario para evitar errores si alguna no tuviera imagen definida
-            'imagen' => isset($datos['url_imagen']) ? $datos['url_imagen'] : ''
         ];
     }
     // Definir el orden deseado de las categorías
     $orden = [
-        "Bachilleratos Tecnológicos",
-        "Programa Bachillerato Internacional",
         "Preparatorias Urbanas (Plan De Estudios Bachillerato General)", 
         "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
+        "Bachilleratos Tecnológicos",
+        "Programa Bachillerato Internacional",
         "Complejo Regional Norte (Plan De Estudios Bachillerato General)",
         "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
         "Complejo Regional Nororiental (Plan De Estudios Bachillerato General)",

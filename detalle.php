@@ -17,152 +17,8 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($unidad['nombre_completo']); ?></title>
-    <style>
-        /* --- ESTILOS BASE (Igual que antes) --- */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; color: #333; }
-        .main-header { background-color: #1e3a5f; color: white; padding: 15px 20px; font-size: 1.2rem; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2); text-transform: uppercase; display: flex; align-items: center;}
-        .back-link { color: white; text-decoration: none; margin-right: 15px; font-size: 1.5rem; display: flex; align-items: center; }
-        .container { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
-        .info-card { background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 25px; margin-bottom: 25px; }
-        .card-title { font-size: 1.3rem; color: #1e3a5f; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #eef6ff; font-weight: bold; }
-        .duracion-text { font-size: 1.2rem; font-weight: bold; color: #333; display: flex; align-items: center; }
-        .icon-clock { width: 24px; height: 24px; margin-right: 10px; fill: #1e3a5f; }
-        .map-container { width: 100%; height: 400px; border-radius: 6px; overflow: hidden; border: 1px solid #ddd; }
-        .map-frame { width: 100%; height: 100%; border: 0; }
-        
-        /* --- ESTILOS PLAN DE ESTUDIOS COMÚN (1ro - 4to) --- */
-        .plan-grid-comun { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; margin-bottom: 30px;}
-        @media (min-width: 768px) { .plan-grid-comun { grid-template-columns: repeat(2, 1fr); } }
-        @media (min-width: 1024px) { .plan-grid-comun { grid-template-columns: repeat(4, 1fr); } }
-
-        .semestre-block { border: 1px solid #e0e0e0; border-radius: 6px; background-color: #fafafa; overflow: hidden; height: 100%; }
-        .semestre-header { background-color: #1e3a5f; color: white; padding: 10px 15px; font-weight: bold; font-size: 1.1rem; }
-        .semestre-content { padding: 15px; }
-        .area-tronco-label { display: block; font-weight: bold; color: #555; margin-bottom: 8px; font-size: 0.95rem; border-bottom: 1px solid #eee; padding-bottom: 5px;}
-        .materias-list { list-style-type: disc; padding-left: 20px; margin: 0; }
-        .materias-list li { margin-bottom: 6px; font-size: 0.9rem; color: #444; line-height: 1.4; }
-
-        /* --- NUEVOS ESTILOS PARA ÁREAS PROPEDÉUTICAS (5to y 6to FUSIONADOS) --- */
-        .areas-section-title { font-size: 1.3rem; color: #1e3a5f; margin-top: 40px; margin-bottom: 10px; font-weight: bold; text-align: center;}
-        .areas-section-desc { text-align: center; color: #666; margin-bottom: 25px; font-size: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;}
-        
-        /* Grid para las tarjetas de áreas */
-        .areas-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 25px; }
-        @media (min-width: 900px) { .areas-grid { grid-template-columns: repeat(2, 1fr); } }
-
-        /* Bloque principal de un Área (contiene 5to y 6to) */
-        .area-propedeutica-block {
-            background-color: #fff;
-            border: 2px solid #1e3a5f; /* Borde más destacado */
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(30, 58, 95, 0.15);
-        }
-
-        .area-propedeutica-header {
-            background-color: #1e3a5f;
-            color: white;
-            padding: 12px 15px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.15rem;
-        }
-
-        /* Contenedor flexible para poner 5to y 6to lado a lado */
-        .semestres-fusionados-flex {
-            display: flex;
-            flex-direction: column; /* En móviles, uno debajo del otro */
-        }
-        @media (min-width: 600px) {
-            .semestres-fusionados-flex {
-                flex-direction: row; /* En tablet/escritorio, lado a lado */
-            }
-        }
-
-        /* Mitad del contenedor (cada semestre) */
-        .semestre-mitad {
-            flex: 1; /* Toman el mismo ancho */
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        @media (min-width: 600px) {
-            .semestre-mitad {
-                border-bottom: none;
-                border-right: 1px solid #eee; /* Línea divisoria vertical */
-            }
-            .semestre-mitad:last-child { border-right: none; }
-        }
-        
-        /* Título interno (5to Semestre / 6to Semestre) */
-        .sub-semestre-title {
-            display: block;
-            font-weight: bold;
-            color: #1e3a5f;
-            margin-bottom: 12px;
-            font-size: 1.05rem;
-        }
-        
-        /* --- ESTILOS NUEVOS PARA SECCIONES COMPLEMENTARIAS --- */
-
-        /* Listas estilizadas para Perfiles */
-        .profile-list { list-style: none; padding: 0; }
-        .profile-list li { 
-            position: relative; 
-            padding-left: 25px; 
-            margin-bottom: 10px; 
-            color: #444; 
-            line-height: 1.6; 
-        }
-        .profile-list li::before {
-            content: '✔'; /* O un icono SVG si prefieres */
-            position: absolute;
-            left: 0;
-            color: #1e3a5f;
-            font-weight: bold;
-        }
-
-        /* Galería de Imágenes */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        .gallery-item {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
-        .gallery-item:hover { transform: scale(1.03); }
-
-        /* Redes Sociales */
-        .social-container {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-        .social-btn {
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 0.95rem;
-            transition: opacity 0.2s;
-        }
-        .social-btn:hover { opacity: 0.9; }
-        .social-btn.facebook { background-color: #1877F2; }
-        .social-btn.instagram { background-color: #E4405F; }
-        .social-btn.twitter { background-color: #1DA1F2; }
-        .social-btn.web { background-color: #1e3a5f; }
-        .social-icon { width: 20px; height: 20px; fill: white; margin-right: 10px; }
-    </style>
+    <link rel="stylesheet" href="./assets/fonts/fonts.css">
+    <link rel="stylesheet" href="./css/detalle.css">
 </head>
 <body>
     <div class="main-header">
@@ -170,56 +26,15 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
         <?php echo htmlspecialchars($unidad['nombre_completo']); ?>
     </div>
 
-    <style>
-        /* ------------------------ TABS ------------------------ */
-        .tabs {
-            display: flex;
-            gap: 10px;
-            border-bottom: 2px solid #d0d4da;
-            margin-bottom: 20px;
-        }
-
-        .tab-btn {
-            background: #e9edf3;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 6px 6px 0 0;
-            cursor: pointer;
-            font-size: 0.95rem;
-            color: #1e3a5f;
-            font-weight: bold;
-        }
-
-        .tab-btn.active {
-            background: #1e3a5f;
-            color: white;
-        }
-
-        .tab-section {
-            display: none;
-            animation: fadeIn 0.25s ease-in-out;
-        }
-
-        .tab-section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-
     <div class="container">
 
         <!-- Barra de Tabs -->
         <div class="tabs">
             <button class="tab-btn active" data-tab-target="plan">Plan de Estudios</button>
-            <button class="tab-btn" data-tab-target="porque">¿Por qué estudiar este plan?</button>
+            <button class="tab-btn" data-tab-target="porque">¿Por qué estudiar con nosotros?</button>
             <button class="tab-btn" data-tab-target="ingreso">Perfil de Ingreso</button>
             <button class="tab-btn" data-tab-target="duracion">Duración y Modalidad</button>
             <button class="tab-btn" data-tab-target="egreso">Perfil de Egreso</button>
-            <button class="tab-btn" data-tab-target="campo">Campo Laboral</button>
             <button class="tab-btn" data-tab-target="ubicacion">Ubicación</button>
             <button class="tab-btn" data-tab-target="galeria">Galeria de Imágenes</button>
             <button class="tab-btn" data-tab-target="sociales">Redes Sociales</button>
@@ -307,14 +122,352 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
             </div>
         </div>
 
+        <div class="tab-section" data-tab="porque">
+            <div class="info-card">
+                <div class="card-title">¿Por qué estudiar con nosotros?</div>
+                <?php if (!empty($unidad['porque_estudiar'])): ?>
+                    <p class="why-section"><?php echo nl2br(htmlspecialchars($unidad['porque_estudiar'])); ?></p>
+                <?php endif; ?>
+            </div>
+        </div>
+
+        <div class="tab-section" data-tab="ingreso">
+            <div class="info-card">
+                <div class="card-title">Perfil de Ingreso</div>
+                <?php if ($unidad['perfil_ingreso'] == "MUM"): ?>
+                    <p>El MUM señala en el perfil de ingreso para el NMS:</p>
+                    <blockquote>
+                        “Que los y las aspirantes a ingresar al bachillerato de la BUAP cuenten con los conocimientos, habilidades, actitudes y valores adquiridos en la formación media básica, provenientes de diversas modalidades educativas.”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Lenguaje</li>
+                        <li>Ciencias Naturales</li>
+                        <li>Matemáticas</li>
+                        <li>Ciencias Sociales</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Lectura, comprensión, escritura y expresión</li>
+                        <li>Interpretación de símbolos matemáticos, solución de problemas, razonamiento matemático</li>
+                        <li>Ubicación en el espacio y tiempo</li>
+                        <li>Identificar los fenómenos físicos y químicos elementales</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Actitud cívica</li>
+                        <li>Respeto a las personas, a las ideas y a la naturaleza</li>
+                        <li>Compromiso</li>
+                        <li>Autonomía</li>
+                        <li>Colaboración</li>
+                        <li>Trabajo en equipo</li>
+                    </ul>
+                <?php elseif($unidad['perfil_ingreso'] == "BTSJC"): ?>
+                    <p>El Modelo Universitario Minerva (MUM) de la <strong>Benemérita Universidad Autónoma de Puebla (BUAP)</strong> señala en el perfil de ingreso para el Nivel Medio Superior:</p>
+                    <blockquote>
+                        “Que los y las aspirantes a ingresar al bachillerato cuenten con los conocimientos, habilidades, actitudes y valores adquiridos en la educación básica, que les permitan integrarse de manera responsable, crítica y participativa a la Educación Media Superior.”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Lenguaje y comunicación</li>
+                        <li>Matemáticas</li>
+                        <li>Ciencias Naturales</li>
+                        <li>Ciencias Sociales y Humanidades</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Lectura, comprensión y expresión oral y escrita</li>
+                        <li>Razonamiento lógico-matemático y solución de problemas</li>
+                        <li>Interpretación de fenómenos históricos, sociales y naturales</li>
+                        <li>Diálogo y trabajo colaborativo</li>
+                        <li>Pensamiento crítico</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Respeto a la diversidad cultural, social y de género</li>
+                        <li>Reconocimiento de la igualdad y la no discriminación</li>
+                        <li>Responsabilidad social</li>
+                        <li>Autonomía</li>
+                        <li>Compromiso</li>
+                        <li>Valoración de sí mismo y del entorno natural</li>
+                    </ul>
+                <?php elseif($unidad['perfil_ingreso'] == "BTSPZ"): ?>
+                    <p>El MUM de la <strong>Benemérita Universidad Autónoma de Puebla (BUAP)</strong> define el perfil de ingreso del Nivel Medio Superior como:</p>
+                    <blockquote>
+                        “La formación básica que permita al estudiantado integrarse de manera crítica, reflexiva y colaborativa al bachillerato.”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Lenguaje</li>
+                        <li>Matemáticas</li>
+                        <li>Ciencias Naturales</li>
+                        <li>Ciencias Sociales</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Expresión oral y escrita</li>
+                        <li>Razonamiento lógico</li>
+                        <li>Interpretación histórica y social</li>
+                        <li>Trabajo en equipo</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Respeto</li>
+                        <li>Autonomía</li>
+                        <li>Compromiso</li>
+                        <li>Responsabilidad social</li>
+                    </ul>                    
+                <?php elseif($unidad['perfil_ingreso'] == "BTAI"): ?>
+                    <p>El Modelo Universitario Minerva (MUM) de la <strong>Benemérita Universidad Autónoma de Puebla (BUAP)</strong> establece para el perfil de ingreso del Nivel Medio Superior:</p>
+                    <blockquote>
+                        “Que los y las aspirantes cuenten con una formación integral básica que favorezca su incorporación crítica, ética y participativa al bachillerato.”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Lenguaje y comunicación</li>
+                        <li>Matemáticas básicas</li>
+                        <li>Ciencias Naturales</li>
+                        <li>Ciencias Sociales</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Comprensión lectora y expresión escrita</li>
+                        <li>Razonamiento matemático</li>
+                        <li>Interpretación del entorno natural y social</li>
+                        <li>Trabajo colaborativo</li>
+                        <li>Pensamiento crítico</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Respeto a la diversidad</li>
+                        <li>Responsabilidad</li>
+                        <li>Autonomía</li>
+                        <li>Compromiso social</li>
+                        <li>Valoración de la naturaleza</li>
+                    </ul>
+                <?php elseif($unidad['perfil_ingreso'] == "BTAZ"): ?>
+                    <p>El Modelo Universitario Minerva (MUM) de la <strong>Benemérita Universidad Autónoma de Puebla (BUAP)</strong> establece que el perfil de ingreso al Nivel Medio Superior debe garantizar:</p>
+                    <blockquote>
+                        “Una formación integral básica que favorezca el pensamiento crítico, la participación social y el respeto a la diversidad.”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Lenguaje y comunicación</li>
+                        <li>Matemáticas</li>
+                        <li>Ciencias Naturales</li>
+                        <li>Ciencias Sociales</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Comprensión lectora</li>
+                        <li>Razonamiento matemático</li>
+                        <li>Interpretación del entorno</li>
+                        <li>Trabajo colaborativo</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Respeto a la diversidad</li>
+                        <li>Responsabilidad</li>
+                        <li>Autonomía</li>
+                        <li>Compromiso social</li>
+                    </ul>                    
+                <?php else: ?>
+                    <div>nothing here</div>
+                <?php endif; ?>
+            </div>
+        </div>
+
         <!-- ================== TAB DURACIÓN ================== -->
         <div class="tab-section" data-tab="duracion">
             <div class="info-card">
-                <div class="card-title">Duración del Programa</div>
+                <div class="card-title">Duración y Modalidad del Programa</div>
                 <div class="duracion-text">
-                    <svg class="icon-clock" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8 8-8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                    <?php echo htmlspecialchars($unidad['duracion']); ?>
+                    <?php if (!empty($unidad['duracion'])): ?>
+                        <?php echo htmlspecialchars($unidad['duracion']); ?>
+                    <?php else: ?>
+                        <ul class="profile-list">
+                            <li>Duración del Programa: 6 semestres</li>
+                            <li>Modalidad: Presencial</li>
+                        </ul>
+                    <?php endif; ?>
                 </div>
+            </div>
+        </div>
+
+        <div class="tab-section" data-tab="egreso">
+            <div class="info-card">
+                <div class="card-title">Perfil de Egreso</div>
+                <?php if ($unidad['perfil_egreso'] === "MUM"): ?>
+                    <p>El MUM señala que:</p>
+                    <blockquote>
+                        “Los y las alumnas que egresan de la institución han logrado un conocimiento y comprensión de sí mismos, una formación académica que les ha familiarizado con los avances científicos y tecnológicos, que les permite una visión interdisciplinaria e integral, que los hace sensibles a las problemáticas sociales, económicas, políticas, éticas, estéticas y ecológicas, que los prepara para su ingreso al nivel superior; y que sean capaces de interactuar en equipo, con una actitud fraterna, libre, justa, pacífica, tolerante y de respeto a la pluralidad. De manera que nuestros egresados deben poseer:”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Metodologías para detectar los orígenes más comunes del error de las diferentes disciplinas</li>
+                        <li>El carácter complejo multidimensional e interconectado de la realidad</li>
+                        <li>Los fundamentos de las ciencias naturales, sociales y humanas, así como de sus relaciones con la cultura</li>
+                        <li>La multiculturalidad planetaria y actitud fraterna, libre, justa, pacífica, tolerante y de respeto a la pluralidad nacional, para reconocerla y apreciarla más allá de los prejuicios etnocéntricos</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Hablar y escribir de manera clara, precisa y correcta en registro académico</li>
+                        <li>Tener comprensión lectora suficiente para emprender con éxito hacia sus estudios de licenciatura</li>
+                        <li>Leer comprensivamente textos en lengua extranjera</li>
+                        <li>Capacidad de análisis y síntesis</li>
+                        <li>Hábitos de estudio autodidactas</li>
+                        <li>Destrezas básicas en alguna actividad artística</li>
+                        <li>Capacidad de apreciación estética</li>
+                        <li>Práctica sistemática de alguna disciplina deportiva o psicofísica (integración mente-cuerpo)</li>
+                        <li>Desarrollo de su inteligencia emocional</li>
+                        <li>Capacidad de manejo pacífico de conflictos</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Capacidad de asombro ante la realidad interna y externa</li>
+                        <li>Apertura a las incertidumbres del conocimiento</li>
+                        <li>Búsqueda permanente del autoconocimiento</li>
+                        <li>Empatía con sus mensajes y apertura al diálogo</li>
+                        <li>Apertura, comprensión y tolerancia hacia la diversidad</li>
+                        <li>Respeto y aprecio por la diversidad biológica y su integración ecosistémica</li>
+                        <li>Participación activa en asuntos colectivos de su competencia</li>
+                        <li>Independencia de criterio</li>
+                        <li>Aprecio y respeto por las expresiones artísticas de las más diversas culturas</li>
+                        <li>Actitud responsable y crítica en los hábitos de consumo por sus implicaciones éticas, políticas, ecológicas y para la salud</li>
+                    </ul>
+                <?php elseif ($unidad['perfil_egreso'] === "BTSJC"): ?>
+                    <p>Perfil de egreso del Bachillerato Tecnológico de San José Chiapa:</p>
+                    <blockquote>
+                        “Al concluir su formación en el Nivel Medio Superior, el estudiantado integra saberes, desarrolla competencias disciplinares y socioemocionales, y actúa con responsabilidad ética, compromiso social y pensamiento crítico, en congruencia con los principios de la Nueva Escuela Mexicana.”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Integración de saberes interdisciplinarios</li>
+                        <li>Formación humanística con enfoque comunitario</li>
+                        <li>Uso ético de herramientas digitales</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Aprendizaje autónomo e investigación</li>
+                        <li>Resolución creativa de problemas</li>
+                        <li>Comunicación efectiva en distintos formatos</li>
+                        <li>Trabajo colaborativo presencial y virtual</li>
+                        <li>Gestión socioemocional</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Integridad</li>
+                        <li>Respeto y cultura de paz</li>
+                        <li>Responsabilidad digital</li>
+                        <li>Compromiso con la comunidad</li>
+                    </ul>
+                <?php elseif ($unidad['perfil_egreso'] === "BTSPZ"): ?>
+                    <p>Perfil de egreso del Bachillerato Tecnológico de San Pedro Zacachimalpa:</p>
+                    <blockquote>
+                        “El egresado integra saberes, desarrolla pensamiento crítico y actúa con ética, responsabilidad y compromiso social.”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Integración interdisciplinaria</li>
+                        <li>Formación humanística</li>
+                        <li>Herramientas digitales</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Aprendizaje autónomo</li>
+                        <li>Comunicación efectiva</li>
+                        <li>Resolución de problemas</li>
+                        <li>Trabajo colaborativo</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Integridad</li>
+                        <li>Respeto a la diversidad</li>
+                        <li>Cultura de paz</li>
+                    </ul>                    
+                <?php elseif ($unidad['perfil_egreso'] === "BTAI"): ?>
+                    <p>Perfil de egreso del Bachillerato Tecnológico Agropecuario de Ixtepec:</p>
+                    <blockquote>
+                        “La persona egresada se caracteriza por integrar conocimientos, habilidades y valores que le permiten desarrollarse en contextos presenciales y virtuales, con responsabilidad social y ética.”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Saberes interdisciplinarios</li>
+                        <li>Formación humanística</li>
+                        <li>Tecnologías digitales aplicadas al aprendizaje</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Aprendizaje autónomo</li>
+                        <li>Investigación básica</li>
+                        <li>Comunicación multimodal</li>
+                        <li>Resolución de problemas</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Ética</li>
+                        <li>Respeto</li>
+                        <li>Responsabilidad digital</li>
+                        <li>Compromiso comunitario</li>
+                    </ul>
+                <?php elseif ($unidad['perfil_egreso'] === "BTAZ"): ?>
+                    <p>Perfil de egreso del Bachillerato Tecnológico Agropecuario de Zacapoaxtla:</p>
+                    <blockquote>
+                        “El egresado desarrolla competencias académicas, digitales y socioemocionales que le permiten participar activamente en su comunidad con ética y responsabilidad.”
+                    </blockquote>
+
+                    <h3>Conocimientos:</h3>
+                    <ul class="profile-list">
+                        <li>Saberes integrados</li>
+                        <li>Formación humanística</li>
+                        <li>Tecnologías para el aprendizaje</li>
+                    </ul>
+
+                    <h3>Habilidades:</h3>
+                    <ul class="profile-list">
+                        <li>Aprendizaje autónomo</li>
+                        <li>Investigación básica</li>
+                        <li>Comunicación multimodal</li>
+                        <li>Resolución creativa de problemas</li>
+                    </ul>
+
+                    <h3>Actitudes y valores:</h3>
+                    <ul class="profile-list">
+                        <li>Ética</li>
+                        <li>Respeto</li>
+                        <li>Compromiso comunitario</li>
+                        <li>Responsabilidad digital</li>
+                    </ul>
+                <?php else: ?>
+                    <div>nothing here</div>
+                <?php endif; ?>
             </div>
         </div>
 
@@ -331,83 +484,9 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
             </div>
         </div>
 
-        <div class="tab-section" data-tab="porque">
-            <div class="info-card">
-                <div class="card-title">¿Por qué elegir este plan?</div>
-                <?php if (isset($unidad['porque_estudiar'])): ?>
-                    <p><?php echo nl2br(htmlspecialchars($unidad['porque_estudiar'])); ?></p>
-                <?php else: ?>
-                    <p>El <strong>Bachillerato Universitario (Plan 07)</strong> ofrece una formación integral diseñada para prepararte con excelencia académica.</p>
-                    <ul class="profile-list">
-                        <li><strong>Formación Propedéutica Especializada:</strong> En 5.º y 6.º semestre eliges un área de especialización (Salud, Ingenierías, Humanidades, etc.) que te prepara directamente para tu carrera universitaria.</li>
-                        <li><strong>Desarrollo de Habilidades Digitales:</strong> Integración de tecnologías y entornos digitales a lo largo de los 6 semestres.</li>
-                        <li><strong>Formación Integral:</strong> Incluye actividades culturales, emprendimiento y cultura física en todos los semestres.</li>
-                    </ul>
-                <?php endif; ?>
-            </div>
-        </div>
-
-        <div class="tab-section" data-tab="ingreso">
-            <div class="info-card">
-                <div class="card-title">Perfil de Ingreso</div>
-                <?php if (isset($unidad['perfil_ingreso']) && is_array($unidad['perfil_ingreso'])): ?>
-                    <ul class="profile-list">
-                        <?php foreach ($unidad['perfil_ingreso'] as $item): ?>
-                            <li><?php echo htmlspecialchars($item); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php else: ?>
-                    <p>Dirigido a egresados de nivel secundaria que cuenten con:</p>
-                    <ul class="profile-list">
-                        <li>Interés por continuar su formación académica en el nivel superior.</li>
-                        <li>Disposición para el trabajo colaborativo y el aprendizaje autónomo.</li>
-                        <li>Habilidades básicas de pensamiento matemático y comprensión lectora.</li>
-                    </ul>
-                <?php endif; ?>
-            </div>
-        </div>
-
-        <div class="tab-section" data-tab="egreso">
-            <div class="info-card">
-                <div class="card-title">Perfil de Egreso</div>
-                <p>Al concluir el bachillerato, el alumno habrá desarrollado competencias clave:</p>
-                
-                <?php if (isset($unidad['perfil_egreso']) && is_array($unidad['perfil_egreso'])): ?>
-                    <ul class="profile-list">
-                        <?php foreach ($unidad['perfil_egreso'] as $item): ?>
-                            <li><?php echo htmlspecialchars($item); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php else: ?>
-                    <ul class="profile-list">
-                        <li><strong>Dominio de Lengua Extranjera:</strong> Capacidad para comprender y producir textos en un segundo idioma (hasta nivel VI).</li>
-                        <li><strong>Investigación:</strong> Habilidades para la sistematización de datos y metodología de investigación.</li>
-                        <li><strong>Conciencia Social:</strong> Entendimiento de problemas socioeconómicos de México y la globalización.</li>
-                        <li><strong>Especialización:</strong> Conocimientos sólidos en el área propedéutica elegida (Ciencias, Humanidades, Ingenierías o Comunicación).</li>
-                    </ul>
-                <?php endif; ?>
-            </div>
-        </div>
-
-        <div class="tab-section" data-tab="campo">
-            <div class="info-card">
-                <div class="card-title">Continuidad Académica y Campo Laboral</div>
-                <p>
-                    La principal orientación de este plan es preparar al estudiante para el ingreso al <strong>Nivel Superior (Licenciaturas e Ingenierías)</strong>.
-                </p>
-                <p style="margin-top:15px;">Gracias a las salidas propedéuticas, el egresado está capacitado para ingresar a carreras afines a:</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-                    <span style="background:#eef6ff; color:#1e3a5f; padding:5px 10px; border-radius:4px; font-size:0.9rem;">Ingenierías y Ciencias Exactas</span>
-                    <span style="background:#eef6ff; color:#1e3a5f; padding:5px 10px; border-radius:4px; font-size:0.9rem;">Ciencias de la Salud (Medicina, Estomatología)</span>
-                    <span style="background:#eef6ff; color:#1e3a5f; padding:5px 10px; border-radius:4px; font-size:0.9rem;">Ciencias Sociales y Derecho</span>
-                    <span style="background:#eef6ff; color:#1e3a5f; padding:5px 10px; border-radius:4px; font-size:0.9rem;">Humanidades y Artes</span>
-                </div>
-            </div>
-        </div>
-
         <div class="tab-section" data-tab="galeria">
             <div class="info-card">
-                <div class="card-title">Galería de Instalaciones</div>
+                <div class="card-title">Galería de Imágenes</div>
                 <?php if (isset($unidad['galeria']) && !empty($unidad['galeria'])): ?>
                     <div class="gallery-grid">
                         <?php foreach ($unidad['galeria'] as $imgUrl): ?>
@@ -424,8 +503,8 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
 
         <div class="tab-section" data-tab="sociales">
             <div class="info-card">
-                <div class="card-title">Contacto y Redes Sociales</div>
-                <p>Mantente informado sobre noticias y convocatorias a través de nuestros canales oficiales:</p>
+                <div class="card-title">Redes Sociales</div>
+                <p>Mantente informado sobre noticias, actividades, procesos y convocatorias a través de nuestros canales oficiales:</p>
                 
                 <div class="social-container">
                     <?php if (isset($unidad['redes']['facebook'])): ?>
@@ -448,6 +527,15 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
                             Sitio Web
                         </a>
                     <?php endif; ?>
+
+                    <?php if (isset($unidad['redes']['tiktok'])): ?>
+                        <a href="<?php echo htmlspecialchars($unidad['redes']['tiktok']); ?>" target="_blank" class="social-btn tiktok">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <path d="M12.75 2h2.5c.2 1.9 1.7 3.4 3.6 3.6v2.5c-1.3-.1-2.5-.6-3.6-1.4v6.6c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.3 0 .7 0 1 .1v2.6c-.3-.1-.7-.2-1-.2-1.9 0-3.5 1.6-3.5 3.5S7.3 17 9.2 17s3.5-1.6 3.5-3.5V2z"/>
+                            </svg>
+                            TikTok
+                        </a>
+                    <?php endif; ?>
                 </div>
 
                 <?php if (!isset($unidad['redes']) || empty($unidad['redes'])): ?>
@@ -458,27 +546,22 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
         </div>
     </div>
 
-    <!-- JS de Tabs -->
     <script>
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
+        const tabs = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.tab-section');
 
-            const target = btn.dataset.tabTarget;
+        tabs.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.dataset.tabTarget;
 
-            // activar botón
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+                tabs.forEach(b => b.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
 
-            // mostrar sección correcta
-            document.querySelectorAll('.tab-section').forEach(sec => {
-                sec.classList.remove('active');
-                if (sec.dataset.tab === target) sec.classList.add('active');
+                btn.classList.add('active');
+                document.querySelector(`[data-tab="${target}"]`).classList.add('active');
             });
-
         });
-    });
+
     </script>
-
 </body>
-
 </html>

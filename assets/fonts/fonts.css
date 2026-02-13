@@ -1,0 +1,116 @@
+/* =========================
+    BUAP SANS – NORMAL
+========================= */
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSans-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSans-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSans-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSans-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSans-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSans-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSans-Extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSans-Superbold.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* =========================
+    BUAP SANS – ITÁLICA
+========================= */
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSansItalica-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSansItalica-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSansItalica-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSansItalica-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSansItalica-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BUAP Sans';
+    src: url('../fonts/BUAPSansItalica-Extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* =========================
+    FUENTE ESPECIAL (OPCIONAL)
+========================= */
+
+@font-face {
+    font-family: 'BUAP 802';
+    src: url('../fonts/BUAP802-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
