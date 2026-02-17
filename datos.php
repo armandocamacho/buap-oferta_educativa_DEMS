@@ -487,7 +487,7 @@ $unidadesAcademicas = [
         estructuraBaseUnidad(),
         [
             "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
-            "nombre_corto" => "Prep. Enrique Cabrera Barroso Tecamachalco",
+            "nombre_corto" => "Prep. Enrique Cabrera Barroso (Tecamachalco)",
             "nombre_completo" => "Preparatoria Enrique Cabrera Barroso Tecamachalco",
             "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
             "tronco_comun" => $TRONCO_COMUN_GENERAL,
@@ -503,7 +503,17 @@ $unidadesAcademicas = [
             "galeria" => [
                 "./assets/unidades_academicas/CabreraTecamachalco/imagen-1.jpeg",
                 "./assets/unidades_academicas/CabreraTecamachalco/imagen-2.jpeg",
-                "./assets/unidades_academicas/CabreraTecamachalco/imagen-3.jpeg"
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-3.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-4.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-5.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-6.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-7.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-8.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-9.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-10.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-11.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-12.jpeg",
+                "./assets/unidades_academicas/CabreraTecamachalco/imagen-13.jpeg",
             ],
             "redes" => [
                 "facebook" => "https://www.facebook.com/profile.php?id=100083093024654&locale=es_LA",
@@ -513,33 +523,253 @@ $unidadesAcademicas = [
         ]
     ),
 
+    "PrepaChignahuapan" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Norte (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Chignahuapan",
+            "nombre_completo" => "Preparatoria Chignahuapan",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en la Preparatoria Chignahuapan del Complejo Regional Norte BUAP significa formar parte de una comunidad educativa pública y autónoma comprometida con el desarrollo integral de sus estudiantes. Aquí no solo se adquieren conocimientos académicos sólidos, sino que se impulsa un proyecto formativo con sentido humanista, que reconoce a cada joven como una persona con potencial intelectual, social y emocional. Nuestro enfoque educativo promueve el pensamiento crítico, la reflexión ética y la responsabilidad social, preparando a los estudiantes para comprender su realidad y transformarla de manera positiva. La institución ofrece un entorno donde el aprendizaje va más allá del aula. Se fomenta el desarrollo holístico mediante actividades culturales, científicas, deportivas y artísticas que fortalecen habilidades, talentos y valores. El acompañamiento docente cercano y profesional garantiza una educación de calidad, centrada en el diálogo, la investigación y la participación activa del alumnado. Estudiar aquí es aprender a cuestionar, a argumentar y a construir conocimiento con autonomía. Además, al ser una universidad pública, la preparatoria defiende el acceso equitativo a la educación y promueve una formación inclusiva y plural. Los estudiantes se integran en una comunidad diversa que enriquece su visión del mundo y fortalece su compromiso con la sociedad. Elegir esta preparatoria es apostar por una educación que forma ciudadanos críticos, solidarios y capaces de enfrentar los retos del presente con creatividad, conciencia y liderazgo.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Chignahuapan",
+                "lat" => 19.850365808790023,
+                "lng" => -98.03385087474136
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-1.jpeg",
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-2.jpeg",
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-3.jpeg",
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-4.jpeg",
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-5.jpeg",
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-6.jpeg",
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-7.jpeg",
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-8.jpeg",
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-9.jpeg",
+                "./assets/unidades_academicas/PrepaChignahuapan/imagen-10.jpeg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/prepa.buap.chignahuapan",
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
+
+    "PrepaVenustianoCarranza" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Norte (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Venustiano Carranza",
+            "nombre_completo" => "Preparatoria Venustiano Carranza",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Elegir la Preparatoria Venustiano Carranza del Complejo Regional Norte BUAP representa una decisión estratégica para aquellos estudiantes que buscan una formación de excelencia respaldada por el prestigio de la máxima casa de estudios del Estado de Puebla. Esta institución se distingue por un ecosistema educativo donde la excelencia académica es el pilar fundamental; prueba de ello es la constante y destacada participación de sus alumnos en concursos de conocimiento, donde demuestran estar a la vanguardia competitiva del Nivel Medio Superior. No obstante, lo que realmente hace única a esta preparatoria es su compromiso con la formación de valores humanos esenciales. En nuestras aulas, trabajamos bajo los principios de igualdad y equidad de género, garantizando un entorno seguro, justo y respetuoso para todos los miembros de la comunidad. Fomentamos la empatía y la inclusión como ejes rectores de la convivencia diaria, asegurando que cada estudiante, sin importar su origen o condición, se sienta valorado y parte de un colectivo unido. Esta solidez ética se complementa con una vibrante vida estudiantil: desde la preservación de nuestras raíces en festividades como el Xantolo, hasta el desarrollo del talento en actividades artísticas y la disciplina demostrada en eventos deportivos, donde orgullosamente ocupamos los primeros lugares. La participación en desfiles y actos públicos refuerza este sentido de pertenencia y liderazgo social. Estudiar en este plantel garantiza un equilibrio perfecto entre el rigor científico, la riqueza cultural y una formación profundamente humana, preparando ciudadanos íntegros, empáticos y listos para transformar positivamente su entorno.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Venustiano Carranza",
+                "lat" => 20.47610250513977,
+                "lng" => -98.68550103611645
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-1.jpg",
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-2.jpg",
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-3.jpg",
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-4.jpg",
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-5.jpg",
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-6.jpg",
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-7.jpg",
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-8.jpeg",
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-9.jpeg",
+                "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-10.jpeg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/BUAP.prepa.VenustianoCarranza",
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
+
+    "PrepaZacatlan" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Zacatlán",
+            "nombre_completo" => "Preparatoria Zacatlán",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "En la Preparatoria Zacatlán del Complejo Regional Norte, promovemos la consolidación de un sistema de valores, acorde con la elevada misión de la Benemérita Universidad Autónoma de Puebla, fundamentada en aspectos éticos y sociales, promovemos una formación integral de calidad, que combina excelencia académica con el desarrollo humano. Aquí, los estudiantes no solo aprenden contenidos, sino que desarrollan habilidades críticas como el pensamiento analítico, la creatividad, la comunicación efectiva y el trabajo colaborativo. Además, contamos con un equipo docente altamente capacitado, comprometido con la enseñanza y el acompañamiento personalizado de cada alumno. La experiencia y vocación de nuestros maestros garantizan que el aprendizaje sea significativo, estimulante y adaptado a las necesidades de los jóvenes. De esta manera, cada estudiante encuentra en nuestra institución el apoyo necesario para alcanzar su máximo potencial. Estudiar en nuestra preparatoria significa integrarse a una comunidad educativa que valora la innovación y la excelencia, con programas de orientación vocacional, acceso a tecnologías de vanguardia y actividades que impulsan la creatividad, nuestros alumnos se preparan para continuar con éxito sus estudios en el Nivel Superior.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Zacatlán",
+                "lat" => 19.92688215443199,
+                "lng" => -97.975292905653
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-1.jpg",
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-2.jpg",
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-3.jpg",
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-4.jpg",
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-5.jpg",
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-6.jpg",
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-7.jpg",
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-8.jpg",
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-9.jpg",
+                "./assets/unidades_academicas/PrepaZacatlan/imagen-10.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/Buap.Zacatlan",
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
+
+    "AlfonsoCalderonPuebla" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Alfonso Calderón Moreno",
+            "nombre_completo" => "Preparatoria Alfonso Calderón Moreno",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en la Preparatoria Alfonso Calderón Moreno (BUAP) es elegir un espacio que combina formación académica sólida, vida estudiantil activa y un sentido claro de pertenencia universitaria. Aquí, la excelencia no se queda en el discurso: se vive en aulas donde se impulsa el pensamiento crítico, la disciplina de estudio y el acompañamiento cercano de docentes y tutores, con metas altas y resultados que se reflejan en el desempeño de nuestra comunidad. Uno de nuestros orgullos es la pista de atletismo con estándares internacionales, un entorno que eleva la educación física y el deporte a un nivel profesional. No se trata solo de “hacer ejercicio”: es entrenar con condiciones dignas, seguras y de calidad, desarrollar hábitos saludables y fortalecer valores como constancia, trabajo en  equipo y liderazgo. La pista se convierte en punto de encuentro para talentos deportivos y para quienes buscan un estilo de vida activo. Además, la Prepa Calderón ofrece actividades académicas, culturales, recreativas y de participación estudiantil que enriquecen tu experiencia: concursos, proyectos, ferias temáticas, eventos artísticos, deporte representativo, comités de organización y acciones de convivencia que fortalecen habilidades sociales y comunicativas. En cada actividad hay una oportunidad de descubrir tus intereses, ganar confianza y construir amistades. Estudiar aquí también significa tener acceso a orientación y apoyos institucionales, con una comunidad que promueve el respeto, la igualdad y la sana convivencia. Esta preparatoria te prepara para la universidad y para la vida: con conocimiento, identidad BUAP, experiencias memorables y espacios que inspiran a dar lo mejor de ti. También contamos con actividades y proyección: orientación vocacional, difusión de becas, talleres de bienestar, campañas solidarias y espacios de participación como la Unidad de Género y comités estudiantiles. Todo esto te permite aprender haciendo, asumir responsabilidades reales y sentir que tu voz cuenta dentro de la comunidad",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Alfonso Calderón Moreno",
+                "lat" => 19.066208023372155,
+                "lng" => -98.153538159602
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/AlfonsoCalderonPuebla/imagen-1.png",
+                "./assets/unidades_academicas/AlfonsoCalderonPuebla/imagen-2.png",
+                "./assets/unidades_academicas/AlfonsoCalderonPuebla/imagen-3.png",
+                "./assets/unidades_academicas/AlfonsoCalderonPuebla/imagen-4.png",
+                "./assets/unidades_academicas/AlfonsoCalderonPuebla/imagen-5.png",
+                "./assets/unidades_academicas/AlfonsoCalderonPuebla/imagen-6.png",
+                "./assets/unidades_academicas/AlfonsoCalderonPuebla/imagen-7.png",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/PrepaCalderon.Oficial?locale=es_LA",
+                "instagram" => "https://www.instagram.com/prepacalderonbuap/?hl=es",
+                "web" => null
+            ],
+        ]
+    ),
+
+    "SimonBolivarAtlixco" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Simón Bolivar (Atlixco)",
+            "nombre_completo" => "Preparatoria Simón Bolivar (Atlixco)",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "La Preparatoria Regional Simón Bolívar es un referente en primera opción por ser una institución educativa que ofrece educación de calidad y formación integral para los estudiantes, permitiendo a la vez el desarrollo de habilidades blandas, a través de diversas actividades extracurriculares, ambiente de aprendizaje positivo y estimulante, contamos con planes de estudio actualizados y ofrece diferentes áreas de formación propedéutica como Ciencias sociales y Económico Administrativas, Comunicación, Humanidades, Ingeniería y Ciencias exactas así como Ciencias Naturales y de la salud. Los estudiantes han destacado académicamente en Olimpiadas de conocimiento en el área de matemáticas y Filosofía, por mencionar algunas, y deportivamente en varias disciplinas, reflejando el esfuerzo y dedicación de la comunidad educativa. Contamos con una planta docente en constante preparación y actualización educativa, con el perfil requerido para impartir las asignaturas en las diferentes academias, con grados académicos que van desde licenciatura, maestrías y doctorados. Nuestras instalaciones tienen la infraestructura adecuada para recibir y compartir los conocimientos en los procesos de enseñanza-aprendizaje, y su personal de apoyo brinda atención inmediata a las necesidades de la comunidad de la preparatoria. Nuestro objetivo es formar jóvenes estudiantes íntegros en conocimientos y valores y con un sentido muy humano y de responsabilidad que los preparen para enfrentar los retos y desafíos que demanda una sociedad cambiante donde seguramente les tocará transitar como profesionistas.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Simón Bolivar (Atlixco)",
+                "lat" => 18.906904849517964,
+                "lng" => -98.40526754232992
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-1.png",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-2.png",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-3.png",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-4.png",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-5.jpeg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-6.jpeg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-7.jpeg",
+            ],
+            "redes" => [
+                "facebook" => null,
+                "instagram" => null,
+                "web" => "https://simonbolivar.buap.mx"
+            ],
+        ]
+    ),
+
+    "ZapataPuebla" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Gral. Emiliano Zapata Salazar",
+            "nombre_completo" => "Preparatoria Gral. Emiliano Zapata Salazar",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Los egresados de la Emiliano Zapata hoy se encuentran desempeñando importantes puestos en la política, la banca, el comercio, la cultura, la ciencia y la industria en Puebla y en México. Lo que aporta un beneficio para la sociedad global, la cual espera de nuestros egresados el mejor rendimiento académico y laboral. En el panorama general de las preparatorias universitarias, nuestros ex alumnos, han obtenido siempre los primeros lugares en el rendimiento escolar en cuanto a su ingreso a las unidades académicas profesionales. Ser egresado de la preparatoria Emiliano Zapata tiene la impronta de un alumnado crítico, reflexivo, propositivo y pensante. Valores educativos que se trabajan todos los días en nuestros salones de clases.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Gral. Emiliano Zapata Salazar",
+                "lat" => 19.04346052231807,
+                "lng" => -98.19524986606555
+            ],
+            "galeria" => [],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/prepazapatabuap",
+                "instagram" => "https://www.instagram.com/prepazapata_buap/",
+                "web" => null,
+            ],
+        ]
+    ),
+
+    "PrepaZapataSanMartin" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Gral. Emiliano Zapata (San Martín Texmelucan)",
+            "nombre_completo" => "Preparatoria Gral. Emiliano Zapata (San Martín Texmelucan)",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Los egresados de la Emiliano Zapata hoy se encuentran desempeñando importantes puestos en la política, la banca, el comercio, la cultura, la ciencia y la industria en Puebla y en México. Lo que aporta un beneficio para la sociedad global, la cual espera de nuestros egresados el mejor rendimiento académico y laboral. En el panorama general de las preparatorias universitarias, nuestros ex alumnos, han obtenido siempre los primeros lugares en el rendimiento escolar en cuanto a su ingreso a las unidades académicas profesionales. Ser egresado de la preparatoria Emiliano Zapata tiene la impronta de un alumnado crítico, reflexivo, propositivo y pensante. Valores educativos que se trabajan todos los días en nuestros salones de clases.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Gral. Emiliano Zapata (San Martín Texmelucan)",
+                "lat" => 19.302637552556433,
+                "lng" => -98.42797730305296
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaZapataSanMartin/imagen-1.jpg",
+                "./assets/unidades_academicas/PrepaZapataSanMartin/imagen-2.jpg",
+                "./assets/unidades_academicas/PrepaZapataSanMartin/imagen-3.jpg",
+                "./assets/unidades_academicas/PrepaZapataSanMartin/imagen-4.jpg",
+                "./assets/unidades_academicas/PrepaZapataSanMartin/imagen-5.jpg",
+                "./assets/unidades_academicas/PrepaZapataSanMartin/imagen-6.jpg",
+                "./assets/unidades_academicas/PrepaZapataSanMartin/imagen-7.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/prepazapata.texmelucan",
+                "instagram" => "https://www.instagram.com/pezsnmartintex/",
+                "tiktok" => "https://www.tiktok.com/@pezsanmartin"
+            ],
+        ]
+    ),
 
 
 
 
-    "AlfonsoCalderonPuebla" => [
-        "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Alfonso Calderón Moreno",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=ACM", // IMAGEN DE RELLENO
-        "nombre_completo" => "Preparatoria Alfonso Calderón Moreno",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
     "BenitoPuebla" => [
         "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
         "nombre_corto" => "Prep. Lic. Benito Juárez García",
         "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=BJU", // IMAGEN DE RELLENO
         "nombre_completo" => "Preparatoria Lic. Benito Juárez García",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "ZapataPuebla" => [
-        "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Gral. Emiliano Zapata Salazar",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=EZS",
-        "nombre_completo" => "Preparatoria Gral. Emiliano Zapata Salazar",
         "duracion" => "Por definir",
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
@@ -553,33 +783,6 @@ $unidadesAcademicas = [
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
-    "PrepaSanMartin" => [
-        "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Gral. Emiliano Zapata (San Martín Texmelucan)",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=EZSM",
-        "nombre_completo" => "Prep. Gral. Emiliano Zapata San Martín",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    // "CabreraTecamachalco" => [
-    //     "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
-    //     "nombre_corto" => "Prep. Regional Enrique Cabrera Barroso (Tecamachalco)",
-    //     "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=RECB",
-    //     "nombre_completo" => "Prep. Regional Enrique Cabrera Barroso",
-    //     "duracion" => "Por definir",
-    //     "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-    //     "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    // ],
-    "SimonBolivarAtlixco" => [
-        "categoria" => "Preparatorias Regionales (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Simón Bolivar (Atlixco)",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=SBA",
-        "nombre_completo" => "Prep. Simón Bolivar Atlixco",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
     "5demayo" => [
         // "categoria" => "Preparatoria",
         "categoria" => "Programa Bachillerato Internacional",
@@ -588,36 +791,6 @@ $unidadesAcademicas = [
         "nombre_completo" => "Bachillerato 5 de Mayo",
         "duracion" => "Por definir",
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-
-    
-    // --- CATEGORÍA: COMPLEJO REGIONAL NORTE ---
-    "PrepaChignahuapan" => [
-        "categoria" => "Complejo Regional Norte (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Chignahuapan",
-        "url_imagen" => "https://placehold.co/60x60/4ade80/ffffff?text=CHIG",
-        "nombre_completo" => "Preparatoria Chignahuapan",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.838, "lng" => -98.032],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "PrepaVenCarr" => [
-        "categoria" => "Complejo Regional Norte (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Venustiano Carranza",
-        "url_imagen" => "https://placehold.co/60x60/4ade80/ffffff?text=VC",
-        "nombre_completo" => "Preparatoria Venustiano Carranza",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 20.507, "lng" => -97.668],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "LazaroCardenasZacatlan" => [
-        "categoria" => "Complejo Regional Norte (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Zacatlán",
-        "url_imagen" => "https://placehold.co/60x60/4ade80/ffffff?text=ZAC",
-        "nombre_completo" => "Preparatoria Zacatlán",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.931, "lng" => -97.960],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
 
@@ -677,7 +850,30 @@ $unidadesAcademicas = [
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
 
-    // --- CATEGORÍA: COMPLEJO REGIONAL SUR ---
+
+    // --- CATEGORÍA: bachilleratos tecnológicos ---
+    "SanJoseChiapa" => [
+        // "categoria" => "Complejo Regional Centro",
+        "categoria" => "Bachilleratos Tecnológicos",
+        "nombre_corto" => "Bachillerato Tecnológico San José Chiapa (CRC)",
+        "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=BTSJC",
+        "nombre_completo" => "BT San José Chiapa",
+        "duracion" => "Por definir",
+        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.244, "lng" => -97.764],
+        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
+    ],
+    "bt-zacachimalpa" => [
+        "categoria" => "Bachilleratos Tecnológicos",
+        "nombre_corto" => "Bachillerato Tecnológico San Pedro Zacachimalpa",
+        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=BTSPZ",
+        "nombre_completo" => "Bachillerato Tecnológico San Pedro Zacachimalpa",
+        "duracion" => "Por definir",
+        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
+        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
+    ],
+
+
+        // --- CATEGORÍA: COMPLEJO REGIONAL SUR ---
     "coyomeapan" => [
         "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
         "nombre_corto" => "Prep. Coyomeapan",
@@ -725,26 +921,6 @@ $unidadesAcademicas = [
     ],
 
 
-    // --- CATEGORÍA: bachilleratos tecnológicos ---
-    "SanJoseChiapa" => [
-        // "categoria" => "Complejo Regional Centro",
-        "categoria" => "Bachilleratos Tecnológicos",
-        "nombre_corto" => "Bachillerato Tecnológico San José Chiapa (CRC)",
-        "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=BTSJC",
-        "nombre_completo" => "BT San José Chiapa",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.244, "lng" => -97.764],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "bt-zacachimalpa" => [
-        "categoria" => "Bachilleratos Tecnológicos",
-        "nombre_corto" => "Bachillerato Tecnológico San Pedro Zacachimalpa",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=BTSPZ",
-        "nombre_completo" => "Bachillerato Tecnológico San Pedro Zacachimalpa",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
 ];
 
 
