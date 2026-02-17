@@ -191,6 +191,31 @@
             }
         }
 
+        .filter-bar {
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .filter-bar input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 2px solid #1e3a5f;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.2s ease;
+            color: #1e3a5f;
+        }
+
+        .filter-bar input:focus {
+            border-color: #1e3a5f;
+            box-shadow: 0 0 0 2px rgba(30,58,95,0.1);
+        }
+        .filter-bar input::placeholder{
+            color:#1e3a5f
+        }
+
 
     </style>
 </head>
@@ -198,6 +223,15 @@
     <div class="main-header">NUESTRA OFERTA EDUCATIVA</div>
 
     <div class="container">
+
+        <div class="filter-bar">
+            <input 
+                type="text" 
+                id="filtroNombre" 
+                placeholder="Buscar por nombre corto..."
+            >
+        </div>
+
         <div class="layout-3cols">
 
             <?php foreach ($ofertaEducativa as $categoria => $items): ?>
@@ -228,7 +262,10 @@
                     <div class="grid-wrapper int-cols-<?php echo $colsInternas; ?>">
 
                         <?php foreach ($items as $id => $itemDatos): ?>
-                        <a href="detalle.php?id=<?php echo $id; ?>" class="card-link">
+                        <a  href="detalle.php?id=<?php echo $id; ?>" 
+                            class="card-link"
+                            data-nombre="<?php echo strtolower(htmlspecialchars($itemDatos['nombre'])); ?>"
+                        >
                             <div class="card-left-content">
                                 <span><?php echo htmlspecialchars($itemDatos['nombre']); ?></span>
                             </div>
@@ -243,5 +280,37 @@
 
         </div>
     </div>
+
+    <script>
+        document.getElementById("filtroNombre").addEventListener("keyup", function() {
+
+            const filtro = this.value.toLowerCase().trim();
+            const cards = document.querySelectorAll(".card-link");
+            const sections = document.querySelectorAll(".section-block");
+
+            cards.forEach(card => {
+                const nombre = card.dataset.nombre;
+
+                if (nombre.includes(filtro)) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // Ocultar secciones vacías
+            sections.forEach(section => {
+                const visibles = section.querySelectorAll(".card-link:not([style*='display: none'])");
+
+                if (visibles.length === 0) {
+                    section.style.display = "none";
+                } else {
+                    section.style.display = "block";
+                }
+            });
+
+        });
+    </script>
+
 </body>
 </html>

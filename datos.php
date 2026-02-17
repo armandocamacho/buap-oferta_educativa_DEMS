@@ -152,23 +152,28 @@ $unidadesAcademicas = [
             "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
             "tronco_comun" => $TRONCO_COMUN_GENERAL,
             "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
-            "porque_estudiar" => "",
+            "porque_estudiar" => "Porque aquí empieza tu mejor historia: La Preparatoria 2 de Octubre de 1968 BUAP te ofrece una formación integral diseñada para que desarrolles tu máximo potencial. No es solo un lugar para estudiar: es un espacio donde creces, te descubres y construyes el futuro que quieres. En nuestras aulas encontrarás calidad educativa, innovación constante y una sólida formación en valores. Aquí formamos jóvenes críticos, creativos y comprometidos, preparados para enfrentar con éxito los desafíos del presente y del futuro. Cultura que transforma: A través de talleres artísticos y culturales, podrás expresar ideas, descubrir talentos y fortalecer tu identidad. Nuestros espacios están pensados para que explores tu creatividad y te conectes con una comunidad vibrante y activa. Deporte que impulsa: Con instalaciones adecuadas y múltiples selectivos deportivos, te ofrecemos un ambiente donde la disciplina, el trabajo en equipo y el orgullo por representar a la BUAP se viven día a día. Somos cuna de talentos que destacan dentro y fuera de la institución. Una comunidad que te acompaña: Nuestro trato humano es parte de lo que nos distingue. Valoramos el respeto, la cercanía y el diálogo entre estudiantes, docentes y personal. Aquí encontrarás un ambiente donde te sentirás escuchado, apoyado y motivado. Resultados que hablan por sí solos: Con más del 90% de eficiencia terminal, nuestros estudiantes concluyen exitosamente sus estudios y acceden al nivel superior con bases sólidas, seguridad académica y visión de futuro. Estudiar en la Preparatoria 2 de Octubre de 1968 BUAP es elegir una educación completa, humana y llena de oportunidades. Es elegir prepararte para la universidad… pero también para la vida. Aquí te esperamos para que inicies una etapa increíble, llena de aprendizajes, amistades y logros que te acompañarán siempre.",
             "perfil_ingreso" => "MUM",
             "perfil_egreso" => "MUM",
             "ubicacion" => [
                 "nombre" => "BUAP Preparatoria 2 De Octubre de 1968",
-                "lat" => 19.025621511002914,
-                "lng" => -98.23040757401687
+                "lat" => 19.025688704025445,
+                "lng" => -98.23038933255336
             ],
             "galeria" => [
                 "./assets/unidades_academicas/2deOctubrePuebla/imagen-1.jpeg",
-                "./assets/unidades_academicas/2deOctubrePuebla/imagen-2.jpeg",
-                "./assets/unidades_academicas/2deOctubrePuebla/imagen-3.jpeg"
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-2.jpg",
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-3.jpg",
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-4.jpg",
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-5.jpg",
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-6.jpg",
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-7.jpg",
+                "./assets/unidades_academicas/2deOctubrePuebla/imagen-8.jpg",
             ],
             "redes" => [
-                "facebook" => null,
-                "instagram" => null,
-                "web" => null
+                "facebook" => "https://www.facebook.com/prepa2deoctubre",
+                "instagram" => "https://www.instagram.com/prepa2deoctubrebuap/?hl=es",
+                "web" => "https://prepa2deoctubrebuap.blogspot.com/"
             ],
         ]
     ),
@@ -248,8 +253,8 @@ $unidadesAcademicas = [
         estructuraBaseUnidad(),
         [
             "categoria" => "Complejo Regional Mixteca (Plan De Estudios Bachillerato General)",
-            "nombre_corto" => "Prep. Simón Bolívar (Izúcar de Matamoros)",
-            "nombre_completo" => "Preparatoria Simón Bolívar Izúcar",
+            "nombre_corto" => "Prep. Izúcar de Matamoros (CRM)",
+            "nombre_completo" => "Preparatoria Izúcar de Matamoros (CRM)",
             "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
             "tronco_comun" => $TRONCO_COMUN_GENERAL,
             "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
@@ -257,7 +262,7 @@ $unidadesAcademicas = [
             "perfil_ingreso" => "MUM",
             "perfil_egreso" => "MUM",
             "ubicacion" => [
-                "nombre" => "BUAP Preparatoria Simón Bolívar Izúcar",
+                "nombre" => "BUAP Preparatoria Izúcar de Matamoros (CRM)",
                 "lat" => 18.634679373164392,
                 "lng" => -98.46938149427781 
             ],
@@ -573,9 +578,9 @@ $unidadesAcademicas = [
             "perfil_ingreso" => "MUM",
             "perfil_egreso" => "MUM",
             "ubicacion" => [
-                "nombre" => "BUAP Preparatoria Venustiano Carranza",
-                "lat" => 20.47610250513977,
-                "lng" => -98.68550103611645
+                // "nombre" => "BUAP Preparatoria Venustiano Carranza",
+                // "lat" => 20.476484028539016,
+                // "lng" => -98.68506656186517
             ],
             "galeria" => [
                 "./assets/unidades_academicas/PrepaVenustianoCarranza/imagen-1.jpg",
@@ -600,7 +605,7 @@ $unidadesAcademicas = [
     "PrepaZacatlan" => array_merge(
         estructuraBaseUnidad(),
         [
-            "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
+            "categoria" => "Complejo Regional Norte (Plan De Estudios Bachillerato General)",
             "nombre_corto" => "Prep. Zacatlán",
             "nombre_completo" => "Preparatoria Zacatlán",
             "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
@@ -762,6 +767,219 @@ $unidadesAcademicas = [
         ]
     ),
 
+    "BT5DeMayo" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Programa Bachillerato Internacional",
+            "nombre_corto" => "Bachillerato 5 de Mayo",
+            "nombre_completo" => "Bachillerato 5 de Mayo",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Por su naturaleza curricular y pedagógica, el Programa del Diploma (PD) del Bachillerato Internacional (BI), es un programa educativo riguroso, desafiante académicamente y equilibrado en la formación integral del estudiantado. Este bachillerato resulta una experiencia educativa única, diseñada para formar personas perspicaces y de mente abierta, de modo que se les impulsa a generar colaboración intercultural, ser críticos y responsables, aportando soluciones a problemas complejos que aquejan a toda la humanidad. El enfoque holístico que presenta el modelo, incentiva a convertirse en generador de conocimiento a partir del desarrollo de diversas investigaciones en cada una de sus asignaturas, a la par de comprender la interconexión entre éstas y la realidad, fomentando una preparación para la educación superior y el mundo laboral, permitiendo una reflexión en torno a la relación entre su conocimiento y sus vivencias. Teoría del Conocimiento (TdC), Monografía y Creatividad, Actividad y Servicio (CAS), son un aspecto identitario y diferenciador del resto de programas educativos. Estos troncales presentan entre ellos una interacción dinámica que desafía a los estudiantes a cuestionar la naturaleza, los límites y las formas de conocimiento desde una perspectiva epistémico-social, a indagar teórica y metodológicamente un aspecto del mundo que sea de su interés y acortar las brechas entre el aprendizaje académico y experiencia propia. Todo lo anterior garantiza que el estudiantado se destaque académicamente tras una certificación internacional de su Nivel Medio Superior, a la par de que desarrolla competencias transversales –como habilidades comunicacionales e investigativas, de autoregulación emocional, gestión de tiempo y autodisciplina. Aunado a lo anterior, el PD del BI es aceptado por las universidades más prestigiosas del mundo, lo que ofrece al estudiantado una ventaja competitiva en sus proyectos futuros, además de que, como egresados, forman parte de una comunidad internacional de estudiantes BI y BUAP, preparados para afrontar retos actuales.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Bachillerato 5 de Mayo",
+                "lat" => 19.08383108357366,
+                "lng" => -98.26544016710511
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/BT5DeMayo/imagen-1.jpg",
+                "./assets/unidades_academicas/BT5DeMayo/imagen-2.jpg",
+                "./assets/unidades_academicas/BT5DeMayo/imagen-3.jpg",
+                "./assets/unidades_academicas/BT5DeMayo/imagen-4.jpg",
+                "./assets/unidades_academicas/BT5DeMayo/imagen-5.jpg",
+                "./assets/unidades_academicas/BT5DeMayo/imagen-6.jpg",
+                "./assets/unidades_academicas/BT5DeMayo/imagen-7.jpg",
+                "./assets/unidades_academicas/BT5DeMayo/imagen-8.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/profile.php?id=100057376994303",
+                "instagram" => "https://www.instagram.com/bachillerato5demayo/",
+                "tiktok" => "https://www.tiktok.com/@bachillerato.5.de3?is_from_webapp=1&sender_device=pc",
+                "web" => "https://b5m.buap.mx/"
+            ],
+        ]
+    ),
+
+    "PrepaCoyomeapan" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Coyomeapan",
+            "nombre_completo" => "Preparatoria Coyomeapan",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en las Preparatorias BUAP del Complejo Regional Sur significa formarte en una institución. pública con respaldo universitario, donde la enseñanza está orientada a desarrollar pensamiento crítico, habilidades de comunicación y bases académicas firmes para continuar estudios superiores. Al pertenecer a la BUAP, el alumnado se integra a un entorno con enfoque universitario desde el bachillerato, lo que favorece una transición más natural hacia licenciaturas y una mayor claridad en su proyecto de vida. Los planteles impulsa no solo el aprendizaje en el aula, sino también la participación en actividades culturales, académicas y deportivas que fortalecen el trabajo en equipo, la responsabilidad y el liderazgo. Su presencia en el sur del estado permite que jóvenes de la Region y municipios cercanos accedan a educación de calidad sin tener que desplazarse a otras ciudades, lo que amplía oportunidades educativas. Además, el crecimiento de sus instalaciones y su consolidación como parte del Complejo Regional Sur reflejan un compromiso continuo con mejores espacios y recursos para el aprendizaje. En conjunto, en las Preparatorias BUAP, en conjunto, representa una opción educativa sólida para quienes buscan una trayectoria académica consistente y una transición natural hacia estudios superiores.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Coyomeapan",
+                "lat" => 18.289200958360258,
+                "lng" => -96.99700487830727
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaCoyomeapan/imagen-1.png",
+                "./assets/unidades_academicas/PrepaCoyomeapan/imagen-2.png",
+                "./assets/unidades_academicas/PrepaCoyomeapan/imagen-3.png",
+                "./assets/unidades_academicas/PrepaCoyomeapan/imagen-4.png",
+                "./assets/unidades_academicas/PrepaCoyomeapan/imagen-5.png",
+                "./assets/unidades_academicas/PrepaCoyomeapan/imagen-6.png",
+                "./assets/unidades_academicas/PrepaCoyomeapan/imagen-7.png",
+                "./assets/unidades_academicas/PrepaCoyomeapan/imagen-8.png",
+            ],
+            "redes" => [
+                "facebook" => "",
+                "instagram" => "https://www.instagram.com/buap.crs/",
+                "tiktok" => "https://www.tiktok.com/@crsbuap",
+                "web" => ""
+            ],
+        ]
+    ),
+
+    "PrepaTehuacan" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Tehuacan",
+            "nombre_completo" => "Preparatoria Tehuacan",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en las Preparatorias BUAP del Complejo Regional Sur significa formarte en una institución. pública con respaldo universitario, donde la enseñanza está orientada a desarrollar pensamiento crítico, habilidades de comunicación y bases académicas firmes para continuar estudios superiores. Al pertenecer a la BUAP, el alumnado se integra a un entorno con enfoque universitario desde el bachillerato, lo que favorece una transición más natural hacia licenciaturas y una mayor claridad en su proyecto de vida. Los planteles impulsa no solo el aprendizaje en el aula, sino también la participación en actividades culturales, académicas y deportivas que fortalecen el trabajo en equipo, la responsabilidad y el liderazgo. Su presencia en el sur del estado permite que jóvenes de la Region y municipios cercanos accedan a educación de calidad sin tener que desplazarse a otras ciudades, lo que amplía oportunidades educativas. Además, el crecimiento de sus instalaciones y su consolidación como parte del Complejo Regional Sur reflejan un compromiso continuo con mejores espacios y recursos para el aprendizaje. En conjunto, en las Preparatorias BUAP, en conjunto, representa una opción educativa sólida para quienes buscan una trayectoria académica consistente y una transición natural hacia estudios superiores.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Tehuacan",
+                "lat" => 18.41789493675063,
+                "lng" => -97.36434057033742
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaTehuacan/imagen-1.png",
+                "./assets/unidades_academicas/PrepaTehuacan/imagen-2.png",
+                "./assets/unidades_academicas/PrepaTehuacan/imagen-3.png",
+                "./assets/unidades_academicas/PrepaTehuacan/imagen-4.png",
+                "./assets/unidades_academicas/PrepaTehuacan/imagen-5.png",
+                "./assets/unidades_academicas/PrepaTehuacan/imagen-6.png",
+                "./assets/unidades_academicas/PrepaTehuacan/imagen-7.png",
+            ],
+            "redes" => [
+                "facebook" => "",
+                "instagram" => "https://www.instagram.com/buap.crs/",
+                "tiktok" => "https://www.tiktok.com/@crsbuap",
+                "web" => ""
+            ],
+        ]
+    ),
+
+    "PrepaTlacotepec" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Tlacotepec",
+            "nombre_completo" => "Preparatoria Tlacotepec",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en las Preparatorias BUAP del Complejo Regional Sur significa formarte en una institución. pública con respaldo universitario, donde la enseñanza está orientada a desarrollar pensamiento crítico, habilidades de comunicación y bases académicas firmes para continuar estudios superiores. Al pertenecer a la BUAP, el alumnado se integra a un entorno con enfoque universitario desde el bachillerato, lo que favorece una transición más natural hacia licenciaturas y una mayor claridad en su proyecto de vida. Los planteles impulsa no solo el aprendizaje en el aula, sino también la participación en actividades culturales, académicas y deportivas que fortalecen el trabajo en equipo, la responsabilidad y el liderazgo. Su presencia en el sur del estado permite que jóvenes de la Region y municipios cercanos accedan a educación de calidad sin tener que desplazarse a otras ciudades, lo que amplía oportunidades educativas. Además, el crecimiento de sus instalaciones y su consolidación como parte del Complejo Regional Sur reflejan un compromiso continuo con mejores espacios y recursos para el aprendizaje. En conjunto, en las Preparatorias BUAP, en conjunto, representa una opción educativa sólida para quienes buscan una trayectoria académica consistente y una transición natural hacia estudios superiores.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Tlacotepec",
+                "lat" => 18.667797652925053,
+                "lng" => -97.63800238058445
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaTlacotepec/imagen-1.png",
+                "./assets/unidades_academicas/PrepaTlacotepec/imagen-2.png",
+                "./assets/unidades_academicas/PrepaTlacotepec/imagen-3.png",
+                "./assets/unidades_academicas/PrepaTlacotepec/imagen-4.png",
+                "./assets/unidades_academicas/PrepaTlacotepec/imagen-5.png",
+                "./assets/unidades_academicas/PrepaTlacotepec/imagen-6.png",
+                "./assets/unidades_academicas/PrepaTlacotepec/imagen-7.png",
+                "./assets/unidades_academicas/PrepaTlacotepec/imagen-8.png",
+            ],
+            "redes" => [
+                "facebook" => "",
+                "instagram" => "https://www.instagram.com/buap.crs/",
+                "tiktok" => "https://www.tiktok.com/@crsbuap",
+                "web" => ""
+            ],
+        ]
+    ),
+
+    "PrepaVicenteGuerrero" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Vicente Guerrero",
+            "nombre_completo" => "Preparatoria Vicente Guerrero",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en las Preparatorias BUAP del Complejo Regional Sur significa formarte en una institución. pública con respaldo universitario, donde la enseñanza está orientada a desarrollar pensamiento crítico, habilidades de comunicación y bases académicas firmes para continuar estudios superiores. Al pertenecer a la BUAP, el alumnado se integra a un entorno con enfoque universitario desde el bachillerato, lo que favorece una transición más natural hacia licenciaturas y una mayor claridad en su proyecto de vida. Los planteles impulsa no solo el aprendizaje en el aula, sino también la participación en actividades culturales, académicas y deportivas que fortalecen el trabajo en equipo, la responsabilidad y el liderazgo. Su presencia en el sur del estado permite que jóvenes de la Region y municipios cercanos accedan a educación de calidad sin tener que desplazarse a otras ciudades, lo que amplía oportunidades educativas. Además, el crecimiento de sus instalaciones y su consolidación como parte del Complejo Regional Sur reflejan un compromiso continuo con mejores espacios y recursos para el aprendizaje. En conjunto, en las Preparatorias BUAP, en conjunto, representa una opción educativa sólida para quienes buscan una trayectoria académica consistente y una transición natural hacia estudios superiores.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Vicente Guerrero",
+                "lat" => 18.538252130883237,
+                "lng" => -97.2021845567444
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaVicenteGuerrero/imagen-1.png",
+                "./assets/unidades_academicas/PrepaVicenteGuerrero/imagen-2.png",
+                "./assets/unidades_academicas/PrepaVicenteGuerrero/imagen-3.png",
+                "./assets/unidades_academicas/PrepaVicenteGuerrero/imagen-4.png",
+                "./assets/unidades_academicas/PrepaVicenteGuerrero/imagen-5.png",
+            ],
+            "redes" => [
+                "facebook" => "",
+                "instagram" => "https://www.instagram.com/buap.crs/",
+                "tiktok" => "https://www.tiktok.com/@crsbuap",
+                "web" => ""
+            ],
+        ]
+    ),
+
+    "CabreraPuebla" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Urbana Enrique Cabrera Barroso",
+            "nombre_completo" => "Preparatoria Urbana Enrique Cabrera Barroso",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Cuando se habla de las escuelas de la BUAP, el nombre de la Preparatoria Urbana “Enrique Cabrera Barroso” tiene un lugar especial, propicia que muchos estudiantes ingresen al nivel superior en muchas universidades importantes de México. Su valor consiste en prepararlos para desarrollarse en los ámbitos profesionales y también en la vida cotidiana, generando habilidades críticas, disciplina, ética y valores humanos que los hace ciudadanos propositivos y aptos para lograr metas que generen una mejor sociedad. La metodología en el proceso de la enseñanza en la Preparatoria Urbana “Enrique Cabrera Barroso” tiene un enfoque de aprendizaje activo. No todo es escuchar al profe, se participa en olimpiadas del conocimiento, proyectos de investigación y debates, estas actividades desarrollan lo que de verdad importa en el mundo laboral; resolver problemas, comunicar ideas y trabajar en equipo. El perfil de ingreso para las Preparatorias BUAP consiste en que las y los aspirantes al bachillerato de la BUAP cuenten con la disposición de transformarse en personas independientes y capaces de generar un cambio personal para el bienestar de la comunidad. El perfil de egreso tiene como objetivo, generar el conocimiento y comprensión de sí mismos, una formación académica en avances científicos y tecnológicos permitiendo una visión interdisciplinaria e integral que los hará sensibles a las problemáticas sociales, económicas, políticas, éticas, estéticas y ecológicas, que lo preparan para su ingreso al nivel superior;  que sean capaces de interactuar en equipo, con una actitud fraterna, libre, justa, pacífica, tolerante y de respeto a la pluralidad. Los egresados de la Preparatoria Urbana “Enrique Cabrera Barroso” poseen conocimientos, habilidades, actitudes y valores para enfrentar el futuro.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Urbana Enrique Cabrera Barroso",
+                "lat" => 19.003976017827807,
+                "lng" => -98.19486763533435
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/CabreraPuebla/imagen-1.jpeg",
+                "./assets/unidades_academicas/CabreraPuebla/imagen-2.jpeg",
+                "./assets/unidades_academicas/CabreraPuebla/imagen-3.jpeg",
+                "./assets/unidades_academicas/CabreraPuebla/imagen-4.jpeg",
+                "./assets/unidades_academicas/CabreraPuebla/imagen-5.jpeg",
+                "./assets/unidades_academicas/CabreraPuebla/imagen-6.jpeg",
+                "./assets/unidades_academicas/CabreraPuebla/imagen-7.jpeg",
+            ],
+            "redes" => [
+                "facebook" => null,
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
+
+
+
+
 
 
 
@@ -774,32 +992,13 @@ $unidadesAcademicas = [
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
     ],
-    "CabreraPuebla" => [
-        "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Urbana Enrique Cabrera Barroso",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=UECB",
-        "nombre_completo" => "Prep. Urbana Enrique Cabrera Barroso",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "5demayo" => [
-        // "categoria" => "Preparatoria",
-        "categoria" => "Programa Bachillerato Internacional",
-        "nombre_corto" => "Bachillerato 5 de Mayo",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=B5M",
-        "nombre_completo" => "Bachillerato 5 de Mayo",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
 
     // --- CATEGORÍA: COMPLEJO REGIONAL CENTRO ---
-    "AlfonsoCalderonAcajete" => [
+    "PrepaAcajete" => [
         "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Acajete",
+        "nombre_corto" => "Prep. Acajete (CRC)",
         "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=ACA",
-        "nombre_completo" => "Preparatoria Acajete",
+        "nombre_completo" => "Preparatoria Acajete (CRC)",
         "duracion" => "Por definir",
         "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.104, "lng" => -97.953],
         "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
@@ -873,52 +1072,15 @@ $unidadesAcademicas = [
     ],
 
 
-        // --- CATEGORÍA: COMPLEJO REGIONAL SUR ---
-    "coyomeapan" => [
-        "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Coyomeapan",
-        "url_imagen" => "https://placehold.co/60x60/fb923c/ffffff?text=COYO",
-        "nombre_completo" => "Preparatoria Coyomeapan",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.272, "lng" => -96.997],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "PrepaTehuacan" => [
-        "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Tehuacán",
-        "url_imagen" => "https://placehold.co/60x60/fb923c/ffffff?text=TEH",
-        "nombre_completo" => "Preparatoria Tehuacán",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.463, "lng" => -97.393],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "Tlacotepec" => [
-        "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Tlacotepec de Benito Juárez",
-        "url_imagen" => "https://placehold.co/60x60/fb923c/ffffff?text=TLA",
-        "nombre_completo" => "Prep. Tlacotepec de Benito Juárez",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.667, "lng" => -97.650],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "VicenteGuerrero" => [
-        "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Vicente Guerrero",
-        "url_imagen" => "https://placehold.co/60x60/fb923c/ffffff?text=TLA",
-        "nombre_completo" => "Prep. Vicente Guerrero",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.667, "lng" => -97.650],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "PreparatoriaADistancia" => [
-        "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Preparatoria a distancia",
-        "url_imagen" => "https://placehold.co/60x60/fb923c/ffffff?text=TLA",
-        "nombre_completo" => "Prep. Vicente Guerrero",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.667, "lng" => -97.650],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
+    // "PreparatoriaADistancia" => [
+    //     "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
+    //     "nombre_corto" => "Preparatoria a distancia",
+    //     "url_imagen" => "https://placehold.co/60x60/fb923c/ffffff?text=TLA",
+    //     "nombre_completo" => "Prep. Vicente Guerrero",
+    //     "duracion" => "Por definir",
+    //     "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.667, "lng" => -97.650],
+    //     "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
+    // ],
 
 
 ];
