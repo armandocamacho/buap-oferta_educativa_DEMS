@@ -139,6 +139,169 @@ $AREAS_PROPEDUTICAS_GENERALES = [
 ];
 
 
+/* =====================================================
+    OFERTA EDUCATIVA BACHILLERATOS TECNOLÓGICOS
+===================================================== */
+
+
+$PLAN_ESTUDIOS_BT_COMUN = [
+    "1er Semestre" => [
+        "Lengua y Comunicación I", 
+        "Inglés I", 
+        "Pensamiento Matemático I", 
+        "Cultura Digital I", 
+        "La Materia y sus Interacciones", 
+        "Humanidades I", 
+        "Ciencias Sociales I", 
+        "Orientación Vocacional y Profesiográfica", 
+        "Tutoría I"
+    ],
+    "2do Semestre" => [
+        "Lengua y Comunicación II", 
+        "Inglés II", 
+        "Pensamiento Matemático II", 
+        "Cultura Digital II", 
+        "Conservación de la Energía y sus Interacciones con la Materia", 
+        "Humanidades II", 
+        "Ciencias Sociales II", 
+        "Educación Integral en Sexualidad y Género", 
+        "Tutoría II"
+    ],
+    "3er Semestre" => [
+        "Lengua y Comunicación III", 
+        "Inglés III", 
+        "Pensamiento Matemático III", 
+        "Ecosistemas: Interacciones, Energía y Dinámica", 
+        "Conciencia Histórica I. Perspectivas del México Antiguo en los Contextos Globales", 
+        "Educación para la Salud", 
+        "Tutoría III"
+    ],
+    "4to Semestre" => [
+        "Lengua y Comunicación IV", 
+        "Inglés IV", 
+        "Formación Matemática I", 
+        "Reacciones Químicas: Conservación de la Materia en la Formación de Nuevas Sustancias", 
+        "Conciencia Histórica II. México Durante el Expansionismo Capitalista", 
+        "Actividades Físicas y Deportivas I", 
+        "Tutoría IV"
+    ],
+    "5to Semestre" => [
+        "Formación Matemática II", 
+        "La Energía en los Procesos de la Vida Diaria", 
+        "Conciencia Histórica III. La Realidad Actual en Perspectiva Histórica", 
+        "Comprensión y Producción de Textos en Lengua Extranjera I", 
+        "Actividades Físicas y Deportivas II", 
+        "Tutoría V"
+    ],
+    "6to Semestre" => [
+        "Formación Matemática III", 
+        "Organismos: Estructuras y Procesos. Herencia y Evolución Biológica", 
+        "Comprensión y Producción de Textos en Lengua Extranjera II", 
+        "Actividades Físicas y Deportivas III", 
+        "Tutoría VI"
+    ]
+];
+
+$OFERTA_SAN_JOSE_CHIAPA = [
+    "Técnico Profesional en Automatización y Control Industrial" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Metrología e Instrumentación", "Diseño y Manufactura"],
+        "3er Semestre" => ["Electrónica Digital", "Fundamentos Eléctricos I"],
+        "4to Semestre" => ["Sistemas Combinacionales", "Fundamentos Eléctricos II", "Planeación de Proyectos"],
+        "5to Semestre" => ["Sistemas Secuenciales", "Circuitos Electro Neumáticos", "Innovación y Emprendimiento"],
+        "6to Semestre" => ["Programación de PLCs", "Tecnologías Inalámbricas", "Desarrollo y Protección Tecnológica"]
+    ],
+    "Técnico Profesional en Procesos Industriales" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Introducción a Procesos", "Administración y Comunicación"],
+        "3er Semestre" => ["Procesos de Manufactura", "Planeación y Control de la Producción"],
+        "4to Semestre" => ["Cadena de Suministro y Logística", "Operación de Almacenes", "Planeación de Proyectos"],
+        "5to Semestre" => ["Calidad", "Productividad", "Innovación y Emprendimiento"],
+        "6to Semestre" => ["Mantenimiento Industrial", "Tecnologías Aplicadas a la Producción", "Modelado Técnico"]
+    ],
+    "Técnico Profesional en Desarrollo de Sistemas Informáticos" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Método Científico y Prototipos", "Sostenibilidad en Sistemas"],
+        "3er Semestre" => ["Introducción a los Sistemas y Tecnologías de la Información", "Introducción a la IA"],
+        "4to Semestre" => ["Diseño de Sistemas y Tecnologías de la Información Desarrolladas con IA", "Aplicaciones", "Planeación de Proyectos"],
+        "5to Semestre" => ["Análisis de Sistemas y Tecnologías de la Información", "Software I", "Innovación y Emprendimiento"],
+        "6to Semestre" => ["Implantación de Sistemas y Tecnologías de la Información", "Software II", "Correspondencia de Proyectos"]
+    ]
+];
+
+$OFERTA_ZACACHIMALPA = [
+    "Técnico Profesional como Asistente de Laboratorio Clínico" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Fundamentos de Química y Preparación de Soluciones", "Estructura y Función de las Células"],
+        "3er Semestre" => ["Microbiología General", "Toma y Manejo de Muestras Clínicas", "Manejo de Material y Equipo del Laboratorio Clínico (Control de Calidad)"],
+        "4to Semestre" => ["Detección de Hongos y Protozoarios", "Análisis de Orina y Exudados", "Análisis de Muestras Fecales"],
+        "5to Semestre" => ["Normatividad y Operatividad del Laboratorio Clínico (Bioética)", "Química Sanguínea", "Pruebas Hematológicas Serie Roja", "Pruebas Hematológicas Serie Blanca"],
+        "6to Semestre" => ["Detección de Bacterias y Virus", "Banco de Sangre", "Pruebas Especiales Inmunológicas", "Pruebas Especiales Homeostáticas"]
+    ],
+    "Técnico Profesional en Sistemas Industriales" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Metrología Eléctrica, Electrónica y Dimensional", "Dibujo Asistido por Computadora"],
+        "3er Semestre" => ["Programación I", "Procesos de Manufactura", "Electrónica Analógica y Digital"],
+        "4to Semestre" => ["Programación II", "Control de Máquinas Eléctricas", "Manufactura Asistida por Computadora"],
+        "5to Semestre" => ["Programación en PLC (Redes Industriales)", "Fundamentos de Análisis de Datos", "Sistemas Neumáticos e Hidráulicos", "Certificación 1"],
+        "6to Semestre" => ["Mantenimiento Industrial", "Robótica Industrial", "Instrumentación Virtual", "Certificación 2"]
+    ],
+    "Técnico Profesional en Mantenimiento de Computadoras y Desarrollo Web" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Introducción a la Programación", "Electrónica Analógica y Digital"],
+        "3er Semestre" => ["Administración de Proyectos de Software", "Desarrollo Front-End"],
+        "4to Semestre" => ["Programación Orientada a Objetos", "Estructuras de Datos", "Interfaces y Tarjetas de Adquisición de Datos", "Fundamentos de Redes"],
+        "5to Semestre" => ["Desarrollo Back-End", "Bases de Datos", "Configuración y Administración de Redes", "Certificación 1"],
+        "6to Semestre" => ["Desarrollo Móvil", "Desarrollo de Aplicaciones Web para I.4.0", "Mantenimiento de Equipo de Cómputo", "Certificación 2"]
+    ],
+    "Técnico Profesional en Gestión de la Calidad" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Introducción a la Gestión de la Calidad", "Fundamentos de Tecnologías Industriales"],
+        "3er Semestre" => ["Fundamentos de Programación y Automatización", "Procesos de Manufactura y Mantenimiento Industrial", "Introducción a Herramientas de la Transformación Digital"],
+        "4to Semestre" => ["Optimización de Procesos Industriales", "Normas Internacionales de Calidad y Certificación", "Metrología y Control de Instrumentos"],
+        "5to Semestre" => ["Bases de Datos y Gestión de la Información", "Costos y Análisis Financiero en la Gestión de Calidad", "Control Estadístico de la Calidad", "Certificación 1"],
+        "6to Semestre" => ["Auditorías y Evaluación de Sistemas de Calidad", "Gestión Financiera y Toma de Decisiones", "Gestión Integral de la Calidad", "Certificación 2"]
+    ]
+];
+
+$OFERTA_IXTEPEC = [
+    "Técnico Profesional en Producción Animal" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Zootecnia General"],
+        "3er Semestre" => ["Sistemas Agropecuarios Sustentables"],
+        "4to Semestre" => ["Nutrición Animal", "Etología y Bienestar Animal", "Anatomía y Fisiología Animal"],
+        "5to Semestre" => ["Genética Aplicada", "Reproducción Animal", "Medicina Preventiva"],
+        "6to Semestre" => ["Diseño y Evaluación de Proyectos", "Producción de Bovinos (carne y leche)", "Producción de Especies Alternativas", "Producción de Cerdos", "Producción de Aves (postura y engorda)", "Producción de Ovinos y Caprinos", "Salud Pública", "Producción Apícola"]
+    ],
+    "Técnico Profesional en Producción Agrícola" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Agrometeorología", "Topografía"],
+        "3er Semestre" => ["Mecanización Agrícola", "Botánica General"],
+        "4to Semestre" => ["Uso y Manejo del Agua", "Producción de Granos"],
+        "5to Semestre" => ["Fisiología Vegetal", "Edafología", "Fertilización Agrícola", "Producción de Forrajes"],
+        "6to Semestre" => ["Nutrición Vegetal", "Sistemas Agropecuarios Sustentables", "Agricultura de Precisión", "Diseño y Evaluación de Proyectos", "Genética Aplicada", "Producción Hortofrutícola", "Producción de Plantas Ornamentales", "Producción de Cultivos Hidropónicos"]
+    ]
+];
+
+$OFERTA_ZACAPOAXTLA = [
+    "Técnico Profesional en Producción Animal Sostenible" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Anatomía y Fisiología Animal", "Etología y Bienestar Animal"],
+        "3er Semestre" => ["Zootecnia General", "Sistemas Agropecuarios Sustentables"],
+        "4to Semestre" => ["Nutrición Animal", "Instalaciones Pecuarias", "Alimentos y Alimentación Animal"],
+        "5to Semestre" => ["Producción de Bovinos (carne y leche)", "Genética Aplicada", "Reproducción Animal", "Medicina Preventiva"],
+        "6to Semestre" => ["Diseño y Evaluación de Proyectos", "Producción de Especies Alternativas", "Producción de Cerdos", "Producción de Aves (postura y engorda)", "Producción de Ovinos y Caprinos", "Salud Pública", "Producción Apícola"]
+    ],
+    "Técnico Profesional en Agronomía Aplicada" => [
+        "1er Semestre" => ["Introducción a las Carreras Tecnológicas"],
+        "2do Semestre" => ["Fisiología Vegetal", "Botánica General"],
+        "3er Semestre" => ["Sistemas Agropecuarios Sustentables", "Fertilización Agrícola"],
+        "4to Semestre" => ["Mecanización Agrícola", "Agrometeorología", "Edafología", "Topografía"],
+        "5to Semestre" => ["Nutrición Vegetal", "Producción de Granos", "Uso y Manejo del Agua", "Producción Hortofrutícola", "Producción de Forrajes", "Genética Aplicada"],
+        "6to Semestre" => ["Producción de Plantas Ornamentales", "Producción de Cultivos Hidropónicos", "Agricultura de Precisión", "Diseño y Evaluación de Proyectos"]
+    ]
+];
+
 $unidadesAcademicas = [
 
     // --- CATEGORÍA: PREPARATORIAS URBANAS ---
@@ -239,7 +402,6 @@ $unidadesAcademicas = [
                 "./assets/unidades_academicas/PrepaCuetzalan/imagen-6.jpeg",
                 "./assets/unidades_academicas/PrepaCuetzalan/imagen-7.jpeg",
                 "./assets/unidades_academicas/PrepaCuetzalan/imagen-8.jpeg",
-                "./assets/unidades_academicas/PrepaCuetzalan/imagen-9.jpeg",
             ],
             "redes" => [
                 "facebook" => "https://www.facebook.com/share/1C6QXjx1Fh/",
@@ -249,7 +411,7 @@ $unidadesAcademicas = [
         ]
     ),
 
-    "SimonBolivarIzucar" => array_merge(
+    "PrepaIzucar" => array_merge(
         estructuraBaseUnidad(),
         [
             "categoria" => "Complejo Regional Mixteca (Plan De Estudios Bachillerato General)",
@@ -267,13 +429,13 @@ $unidadesAcademicas = [
                 "lng" => -98.46938149427781 
             ],
             "galeria" => [
-                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-1.png",
-                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-2.png",
-                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-3.png",
-                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-4.png",
-                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-5.png",
-                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-6.png",
-                "./assets/unidades_academicas/SimonBolivarIzucar/imagen-7.png",
+                "./assets/unidades_academicas/PrepaIzucar/imagen-1.png",
+                "./assets/unidades_academicas/PrepaIzucar/imagen-2.png",
+                "./assets/unidades_academicas/PrepaIzucar/imagen-3.png",
+                "./assets/unidades_academicas/PrepaIzucar/imagen-4.png",
+                "./assets/unidades_academicas/PrepaIzucar/imagen-5.png",
+                "./assets/unidades_academicas/PrepaIzucar/imagen-6.png",
+                "./assets/unidades_academicas/PrepaIzucar/imagen-7.png",
             ],
             "redes" => [
                 "facebook" => "https://www.facebook.com/share/17vkRQGZbq/",
@@ -370,13 +532,18 @@ $unidadesAcademicas = [
                 "lng" => -97.37599331407584
             ],
             "galeria" => [
-                "./assets/unidades_academicas/PrepaTeziutlan/imagen-7.jpg",
                 "./assets/unidades_academicas/PrepaTeziutlan/imagen-1.jpg",
                 "./assets/unidades_academicas/PrepaTeziutlan/imagen-2.jpg",
                 "./assets/unidades_academicas/PrepaTeziutlan/imagen-3.jpg",
-                "./assets/unidades_academicas/PrepaTeziutlan/imagen-4.jpg",
-                "./assets/unidades_academicas/PrepaTeziutlan/imagen-5.jpg",
-                "./assets/unidades_academicas/PrepaTeziutlan/imagen-6.jpg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-4.jpeg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-5.jpeg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-6.jpeg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-7.jpeg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-8.jpeg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-9.jpeg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-10.jpeg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-11.jpeg",
+                "./assets/unidades_academicas/PrepaTeziutlan/imagen-12.jpeg",
             ],
             "redes" => [
                 "facebook" => "https://www.facebook.com/profile.php?id=61575032305773",
@@ -417,73 +584,6 @@ $unidadesAcademicas = [
                 "facebook" => "https://www.facebook.com/profile.php?id=100066529942009",
                 "instagram" => null,
                 "web" => null
-            ],
-        ]
-    ),
-
-    "BTAZacapoaxtla" => array_merge(
-        estructuraBaseUnidad(),
-        [
-            "categoria" => "Bachilleratos Tecnológicos",
-            "nombre_corto" => "Bachillerato Tecnológico Agropecuario Zacapoaxtla (CRNO)",
-            "nombre_completo" => "Bachillerato Tecnológico Agropecuario Zacapoaxtla",
-            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
-            "tronco_comun" => $TRONCO_COMUN_GENERAL,
-            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
-            "porque_estudiar" => "El Bachillerato Tecnológico Agropecuario de Zacapoaxtla se posiciona como una institución educativa de calidad que integra la formación académica con la capacitación tecnológica en las áreas agropecuaria y pecuaria, en congruencia con las condiciones sociales, productivas y culturales de la región. Su modelo educativo está orientado a promover prácticas sustentables y una formación sólida con sentido social, que impulsa el desarrollo de habilidades y la construcción de proyectos de vida. Uno de los principales distintivos de la institución es el enfoque práctico de su proceso de enseñanza-aprendizaje, el cual permite que las y los estudiantes apliquen los conocimientos adquiridos en situaciones reales. A través de actividades formativas, proyectos escolares y experiencias productivas, el estudiantado desarrolla habilidades técnicas, pensamiento crítico y competencias que les permiten enfrentar los retos del sector agropecuario, así como continuar con su formación académica o incorporarse al ámbito laboral. Asimismo, el Bachillerato se caracteriza por brindar una atención personalizada, sustentada en la cercanía y el acompañamiento constante entre docentes y estudiantes. Este enfoque refleja el compromiso institucional con el aprendizaje significativo, la equidad y la inclusión, favoreciendo el desarrollo integral y la permanencia escolar. Beneficios  •	Los estudiantes pueden acceder a becas, como: Beca Alimenticia y la Beca Benito Juárez, que representan un apoyo económico importante para su permanencia escolar. •	La institución cuenta con un programa de tutorías académicas. •	Apoyo psicológico, promoviendo el bienestar emocional y un ambiente escolar sano e inclusivo. •	Maestros comprometidos, con vocación y experiencia, además de asesorías académicas para reforzar los aprendizajes y atender dudas. ",
-            "perfil_ingreso" => "BTAZ",
-            "perfil_egreso" => "BTAZ",
-            "ubicacion" => [
-                "nombre" => "BUAP Bachillerato Tecnológico Agropecuario Zacapoaxtla",
-                "lat" => 19.895301927381812,
-                "lng" => -97.5850271532404
-            ],
-            "galeria" => [
-                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-1.jpeg",
-                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-2.jpeg",
-                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-3.jpeg",
-                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-4.jpeg",
-                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-5.jpeg",
-                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-6.jpeg",
-            ],
-            "redes" => [
-                "facebook" => "https://www.facebook.com/profile.php?id=61575240562467",
-                "instagram" => "https://www.instagram.com/bachillerato_buap_zacapoaxtla/",
-                "web" => null
-            ],
-        ]
-    ),
-
-    "BTAIxtepec" => array_merge(
-        estructuraBaseUnidad(),
-        [
-            "categoria" => "Bachilleratos Tecnológicos",
-            "nombre_corto" => "Bachillerato Tecnológico Agropecuario Ixtepec (CRNO)",
-            "nombre_completo" => "Bachillerato Tecnológico Agropecuario Ixtepec",
-            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
-            "tronco_comun" => $TRONCO_COMUN_GENERAL,
-            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
-            "porque_estudiar" => "El Bachillerato Tecnológico Agropecuario, perteneciente al Complejo Regional Zona Nororiental con sede Ixtepec, es un programa de educación media superior bajo un modelo de oferta bivalente que no solo permite al egresado obtener su certificado de Bachillerato para continuar sus estudios en el nivel superior, sino que además obtienen una cédula profesional como Técnico Agropecuario. Esta certificación oficial es una herramienta indispensable que facilita su inserción inmediata al campo laboral en el sector agropecuario. El Bachillerato cuenta con una planta docente joven, dinámico y con amplios conocimientos en las diferentes disciplinas que se cursan. Los alumnos reciben una formación técnica en las áreas de Producción Animal y Producción Agrícola, en el que desarrollan competencias para ser agentes de cambio y desarrollo en su comunidad y entorno. El estudiante no solo aprende el 'cómo', sino el 'porqué' de una producción responsable con el medio ambiente, combinado prácticas sustentables y sostenibles que garantizan la preservación de los recursos naturales y el equilibrio ecológico para las futuras generaciones. Más allá de la formación técnica profesional, nos distingue un profundo compromiso con la identidad. Ya que durante la formación académica se realizan actividades culturales que tienen como finalidad la redignificación activa de las lenguas originarias, esto a través de clases de lengua Tutunakú y música tradicional de la región, de esta manera fortalecemos el orgullo de pertenencia y el respeto por nuestro patrimonio cultural. Nuestras instalaciones son el escenario en donde la teoría se transforme en práctica diaria. Los estudiantes tienen acceso a espacios como parcelas y de ganado en el que aplican métodos de cuidado de cultivos y ganado, complementando su formación como técnicos agropecuarios. Con el compromiso de formar técnicos agropecuarios y que a su vez lideren proyectos productivos con impacto social y contribuir al progreso económico y social de su comunidad. ",
-            "perfil_ingreso" => "BTAI",
-            "perfil_egreso" => "BTAI",
-            "ubicacion" => [
-                "nombre" => "BUAP Bachillerato Tecnológico Agropecuario Ixtepec",
-                "lat" => 20.01567586326699,
-                "lng" => -97.65484571254876
-            ],
-            "galeria" => [
-                "./assets/unidades_academicas/BTAIxtepec/imagen-1.jpg",
-                "./assets/unidades_academicas/BTAIxtepec/imagen-2.jpg",
-                "./assets/unidades_academicas/BTAIxtepec/imagen-3.jpg",
-                "./assets/unidades_academicas/BTAIxtepec/imagen-4.jpg",
-                "./assets/unidades_academicas/BTAIxtepec/imagen-5.jpg",
-                "./assets/unidades_academicas/BTAIxtepec/imagen-6.jpg",
-                "./assets/unidades_academicas/BTAIxtepec/imagen-7.jpg",
-            ],
-            "redes" => [
-                "facebook" => null,
-                "instagram" => null,
-                "web" => "https://crzn.buap.mx/"
             ],
         ]
     ),
@@ -691,13 +791,19 @@ $unidadesAcademicas = [
                 "lng" => -98.40526754232992
             ],
             "galeria" => [
-                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-1.png",
-                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-2.png",
-                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-3.png",
-                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-4.png",
-                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-5.jpeg",
-                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-6.jpeg",
-                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-7.jpeg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-1.jpg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-2.jpg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-3.jpg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-4.jpg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-5.jpg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-6.jpg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-7.jpg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-8.jpg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-9.png",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-10.jpeg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-11.jpeg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-12.jpeg",
+                "./assets/unidades_academicas/SimonBolivarAtlixco/imagen-13.png",
             ],
             "redes" => [
                 "facebook" => null,
@@ -977,110 +1083,380 @@ $unidadesAcademicas = [
         ]
     ),
 
+    "BenitoPuebla" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Lic. Benito Juárez García",
+            "nombre_completo" => "Preparatoria Lic. Benito Juárez García",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en la Preparatoria Licenciado Benito Juárez García de la Benemérita Universidad Autónoma de Puebla es una de las mejores decisiones para cualquier estudiante que busque excelencia académica, formación integral y prestigio institucional, ya que es la preparatoria más antigua de la universidad y cuenta con una sólida trayectoria formando generaciones exitosas. Su reconocimiento no solo se basa en su historia, sino en sus resultados académicos, con altos índices de eficiencia terminal y un desempeño destacado en evaluaciones, reflejo del compromiso de su planta docente, integrada por profesores capacitados que brindan asesorías, acompañamiento y orientación personalizada para potenciar el aprendizaje. Además, sus estudiantes han sobresalido en olimpiadas del conocimiento en áreas como química, matemáticas y ciencias, demostrando un fuerte impulso al pensamiento crítico y la investigación. En el ámbito deportivo, la institución también destaca por la obtención de medallas y reconocimientos en competencias estatales y nacionales en disciplinas como karate, atletismo, béisbol, basquetbol y voleibol, promoviendo valores como disciplina, constancia y trabajo en equipo. A esto se suma su infraestructura, con aulas equipadas, laboratorios para prácticas científicas, espacios deportivos, áreas culturales y recursos tecnológicos que favorecen un ambiente óptimo para el aprendizaje y el desarrollo integral. Asimismo, ofrece actividades culturales, artísticas y científicas que fortalecen habilidades sociales, liderazgo y responsabilidad. Todo ello convierte a esta preparatoria en una opción ideal para quienes desean ingresar bien preparados a la universidad y enfrentar con éxito los retos profesionales futuros, respaldados por el prestigio y la calidad educativa que distinguen a la BUAP.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Lic. Benito Juárez García",
+                "lat" => 19.01782428393198,
+                "lng" => -98.20152799317391
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/BenitoPuebla/imagen-1.jpg",
+                "./assets/unidades_academicas/BenitoPuebla/imagen-2.jpg",
+                "./assets/unidades_academicas/BenitoPuebla/imagen-3.jpg",
+                "./assets/unidades_academicas/BenitoPuebla/imagen-4.jpg",
+                "./assets/unidades_academicas/BenitoPuebla/imagen-5.jpg",
+                "./assets/unidades_academicas/BenitoPuebla/imagen-6.jpg",
+                "./assets/unidades_academicas/BenitoPuebla/imagen-7.jpg",
+                "./assets/unidades_academicas/BenitoPuebla/imagen-8.jpg",
+                "./assets/unidades_academicas/BenitoPuebla/imagen-9.jpg",
+                "./assets/unidades_academicas/BenitoPuebla/imagen-10.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/oficialprepabenitobuap",
+                "instagram" => "https://www.instagram.com/prepabenitojg/",
+                "web" => null
+            ],
+        ]
+    ),
 
+    "PrepaAcajete" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Acajete (CRC)",
+            "nombre_completo" => "Preparatoria Acajete (CRC)",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Siguiendo altos estándares de calidad educativa, la Preparatoria Acajete, perteneciente al Complejo Regional Centro de la Benemérita Universidad Autónoma de Puebla, te ofrece una formación integral que impulsa tu desarrollo académico, personal y social. Ten por seguro que descubrirás qué es lo que te apasiona, con la certeza de que obtendrás la mejor preparación para la universidad. La Preparatoria Acajete se distingue por contar con docentes altamente capacitados, programas académicos actualizados y un ambiente que fomenta valores, pensamiento crítico y responsabilidad social. Además, al formar parte de la BUAP, tendrás acceso a actividades culturales, deportivas y científicas que enriquecerán tu experiencia estudiantil y te permitirán construir bases sólidas para tu futuro profesional.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Acajete (CRC)",
+                "lat" => 19.095992702090463,
+                "lng" => -97.94968028950163
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaAcajete/imagen-1.jpg",
+                "./assets/unidades_academicas/PrepaAcajete/imagen-2.jpg",
+                "./assets/unidades_academicas/PrepaAcajete/imagen-3.jpg",
+                "./assets/unidades_academicas/PrepaAcajete/imagen-4.jpg",
+                "./assets/unidades_academicas/PrepaAcajete/imagen-5.jpg",
+                "./assets/unidades_academicas/PrepaAcajete/imagen-6.jpg",
+                "./assets/unidades_academicas/PrepaAcajete/imagen-7.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/PrepRegAcajeteBUAP?locale=es_LA",
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
 
+    "PrepaAcatzingo" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Acatzingo",
+            "nombre_completo" => "Preparatoria Acatzingo",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "La Preparatoria Acatzingo, perteneciente a la Benemérita Universidad Autónoma de Puebla (BUAP), ofrece una educación de calidad que prepara a los estudiantes para ser competitivos. Al estudiar en esta institución, los alumnos tienen la oportunidad de formar parte de la comunidad universitaria de la BUAP, accediendo a una amplia gama de recursos y oportunidades académicas. Además, la Preparatoria Acatzingo ha demostrado un compromiso con la excelencia educativa, como lo evidencian los logros de sus estudiantes en competencias tecnológicas, olimpiadas estatales de Biología y Filosofía, obteniendo primeros lugares en diversas categorías. La institución también se preocupa por el bienestar económico de sus alumnos, informando sobre becas disponibles, como la Beca Universal de Educación Media Superior “Benito Juárez”, destinada a estudiantes de preparatorias públicas.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Acatzingo",
+                "lat" => 18.995278672438335,
+                "lng" => -97.79583089423843
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaAcatzingo/imagen-1.jpg",
+                "./assets/unidades_academicas/PrepaAcatzingo/imagen-2.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/crc.acatzingo",
+                "instagram" => "https://www.instagram.com/prepa_acat_buap?igsh=MWFnZHFnc2JiOXJjbw%3D%3D&utm_source=qr",
+                "web" => null
+            ],
+        ]
+    ),
 
+    "PrepaAmozoc" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Amozoc",
+            "nombre_completo" => "Preparatoria Amozoc",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "* Reconocimiento Académico: Nuestra preparatoria es reconocida por su excelencia académica, lo que garantiza una educación de alta calidad que prepara a los estudiantes para el futuro. * Amplia Oferta Educativa: Nuestros programas y asignaturas permiten a los estudiantes explorar sus intereses y talentos, desde ciencias hasta humanidades. * Preparación para la Educación Superior: La preparatoria está alineada con los requisitos y estándares de la Educación Superior, facilitando esta transición a la educación superior. * Actividades Extracurriculares: Los estudiantes pueden participar en diversas actividades deportivas, culturales y artísticas que fomentan el desarrollo integral y el trabajo en equipo. * Ambiente Inclusivo y Diverso: La Preparatoria BUAP de Amozoc promueve un ambiente donde todos los estudiantes son bienvenidos, fomentando el respeto y la diversidad. * Apoyo Académico y Personal: Contamos con personal docente capacitado y programas de tutoría que ayudan a los estudiantes a alcanzar su máximo potencial, tanto académica como personalmente. * Ubicación Estratégica: Somos la sede más cercana a la Ciudad de Puebla lo que facilita el acceso para muchos estudiantes y hace más cómodo su traslado diario.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Amozoc",
+                "lat" => 19.049400548984035,
+                "lng" => -98.05576285356811
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaAmozoc/imagen-1.png",
+                "./assets/unidades_academicas/PrepaAmozoc/imagen-2.png",
+                "./assets/unidades_academicas/PrepaAmozoc/imagen-3.png",
+                "./assets/unidades_academicas/PrepaAmozoc/imagen-4.png",
+                "./assets/unidades_academicas/PrepaAmozoc/imagen-5.png",
+                "./assets/unidades_academicas/PrepaAmozoc/imagen-6.png",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/CRCAmozocBUAP?locale=es_LA",
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
 
+    "PrepaSerdan" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Ciudad Serdán",
+            "nombre_completo" => "Preparatoria Ciudad Serdán",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Elegir una institución educativa es una de las decisiones más importantes en la formación académica y personal, ya que de ella depende en gran medida el desarrollo de conocimientos, habilidades y valores que acompañarán al estudiante a lo largo de su vida. Por esta razón, considero que estudiar en esta escuela representa una excelente oportunidad de crecimiento integral, debido a su prestigio, calidad académica y ambiente formativo. Esta institución es reconocida a nivel estatal como una de las escuelas con mayor prestigio y nivel educativo, lo cual refleja su compromiso constante con la excelencia académica. Dicho reconocimiento se sustenta en la preparación y profesionalismo de sus docentes, quienes cuentan con la capacitación necesaria para guiar de manera efectiva el proceso de enseñanza-aprendizaje, fomentando el pensamiento crítico, la participación activa y el interés por el conocimiento. Otro aspecto fundamental es el ambiente escolar, el cual se caracteriza por ser tranquilo, respetuoso y propicio para el aprendizaje. Este entorno favorece la convivencia sana entre estudiantes y docentes, permitiendo que el alumnado se desarrolle con confianza, seguridad y motivación para alcanzar sus objetivos académicos. La escuela también destaca por su infraestructura, ya que cuenta con laboratorios de física, química y cómputo, espacios que permiten reforzar los conocimientos teóricos a través de la práctica. Estas instalaciones contribuyen significativamente a una comprensión más profunda de los contenidos, facilitando el aprendizaje significativo y el desarrollo de habilidades técnicas y científicas. Asimismo, las instalaciones son de nueva creación y están diseñadas con una visión de crecimiento continuo, lo que garantiza espacios modernos, funcionales y adecuados para las necesidades actuales y futuras de la comunidad estudiantil. Finalmente, los planes de estudio se encuentran estructurados bajo un modelo semestral basado en competencias, integrando áreas del conocimiento y materias complementarias. Este enfoque busca desarrollar actitudes, habilidades y valores, promoviendo una formación integral que combina una sólida preparación académica con el desarrollo personal y la responsabilidad social, formando estudiantes comprometidos con su entorno y su futuro.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Ciudad Serdán",
+                "lat" => 18.97961438335572,
+                "lng" => -97.45216367487116
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaSerdan/imagen-1.jpg",
+                "./assets/unidades_academicas/PrepaSerdan/imagen-2.jpg",
+                "./assets/unidades_academicas/PrepaSerdan/imagen-3.jpg",
+                "./assets/unidades_academicas/PrepaSerdan/imagen-4.jpg",
+                "./assets/unidades_academicas/PrepaSerdan/imagen-5.jpg",
+                "./assets/unidades_academicas/PrepaSerdan/imagen-6.jpg",
+                "./assets/unidades_academicas/PrepaSerdan/imagen-7.jpg",
+                "./assets/unidades_academicas/PrepaSerdan/imagen-8.jpg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/SerdanCRC?locale=es_LA",
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
 
+    "PrepaTepeaca" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. Tepeaca",
+            "nombre_completo" => "Preparatoria Tepeaca",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en la Preparatoria Tepeaca del Complejo Regional Centro, es una excelente decisión para quienes buscan una formación académica sólida y con respaldo institucional. Este plantel forma parte de la Benemérita Universidad Autónoma de Puebla (BUAP), una de las universidades públicas más reconocidas del país, lo que garantiza una excelente calidad educativa. Elegir esta preparatoria significa que vas a acceder a una educación media superior de calidad, con docentes altamente capacitados y planes de estudio alineados a los estándares académicos de la BUAP. Además, al pertenecer a una universidad de prestigio, los estudiantes se familiarizan desde temprana edad con un ambiente universitario que fomenta la responsabilidad, el pensamiento crítico y la preparación para continuar estudios superiores. En esta preparatoria, no solo nos enfocamos en fomentar la educación basada en el aprendizaje académico, sino también en el desarrollo de habilidades como el pensamiento crítico, la responsabilidad, el trabajo en equipo y la formación en valores. Además, promueve actividades culturales, deportivas y académicas que fortalecen el crecimiento personal de los estudiantes. Otro aspecto importante que podemos resaltar para elegir esta preparatoria es que su ubicación en el municipio de Tepeaca, permite a los jóvenes continuar con sus estudios cerca de su comunidad, sin la necesidad de tener que trasladarse a la ciudad, reduciendo así gastos de traslado y manteniendo el vínculo cercano a su entorno familiar y social. Además, sus costos son accesibles, lo que permite que la comunidad estudiantil, pueda continuar con sus estudios. Esto convierte a la preparatoria en una alternativa inclusiva y comprometida con el derecho a la educación. Finalmente, estudiar en esta preparatoria significa formar parte de una institución con prestigio, compromiso social y reconocimiento oficial. Es una opción que brinda herramientas sólidas para construir un proyecto de vida exitoso y prepararse de manera adecuada para los retos académicos y profesionales del futuro.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria Tepeaca",
+                "lat" => 18.99331540624872,
+                "lng" => -97.90115705982899
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaTepeaca/imagen-1.png",
+                "./assets/unidades_academicas/PrepaTepeaca/imagen-2.png",
+                "./assets/unidades_academicas/PrepaTepeaca/imagen-3.png",
+                "./assets/unidades_academicas/PrepaTepeaca/imagen-4.png",
+                "./assets/unidades_academicas/PrepaTepeaca/imagen-5.png",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/ComplejoRegionalCentrosedeTepeaca?locale=es_LA",
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
 
-    "BenitoPuebla" => [
-        "categoria" => "Preparatorias Urbanas (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Lic. Benito Juárez García",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=BJU", // IMAGEN DE RELLENO
-        "nombre_completo" => "Preparatoria Lic. Benito Juárez García",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
+    "PrepaElSeco" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Prep. San Salvador El Seco",
+            "nombre_completo" => "Preparatoria San Salvador El Seco",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
+            "tronco_comun" => $TRONCO_COMUN_GENERAL,
+            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "porque_estudiar" => "Estudiar en la Preparatoria BUAP Campus San Salvador El Seco representa una oportunidad educativa de alto valor tanto para jóvenes de este municipio como de las comunidades cercanas. Esta unidad forma parte del Complejo Regional Centro de la Benemérita Universidad Autónoma de Puebla (BUAP), una institución pública reconocida en todo el estado por su compromiso con la calidad académica y la formación integral de sus estudiantes. Una de las principales ventajas de elegir esta preparatoria es su ubicación geográfica estratégica: al estar dentro de San Salvador El Seco, los estudiantes pueden cursar sus estudios de nivel medio superior sin tener que desplazarse largas distancias a la ciudad de Puebla u otros municipios, lo que reduce gastos y facilita la permanencia en el sistema educativo para quienes tienen responsabilidades familiares o laborales. Además, el hecho de estar adscrita a la BUAP significa que la preparatoria cuenta con respaldo educativo y académico de una universidad pública consolidada, con estándares que favorecen una formación sólida en áreas fundamentales para la educación media superior. Esto incluye acceso a un currículo alineado con exigencias modernas y personal docente calificado, lo cual prepara a los estudiantes de forma competitiva para continuar sus estudios superiores. La presencia de este campus también contribuye al desarrollo social y cultural de la región, convirtiéndose en un punto de encuentro donde los jóvenes no solo adquieren conocimientos, sino también valores, habilidades y experiencias que fortalecen su identidad y su sentido de pertenencia comunitaria. Estudiar aquí es, por tanto, una forma de invertir en tu futuro académico y profesional mientras contribuyes al desarrollo local.",
+            "perfil_ingreso" => "MUM",
+            "perfil_egreso" => "MUM",
+            "ubicacion" => [
+                "nombre" => "BUAP Preparatoria San Salvador El Seco",
+                "lat" => 19.144461451931516,
+                "lng" => -97.63526231012277
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/PrepaElSeco/imagen-1.png",
+                "./assets/unidades_academicas/PrepaElSeco/imagen-2.png",
+                "./assets/unidades_academicas/PrepaElSeco/imagen-3.png",
+                "./assets/unidades_academicas/PrepaElSeco/imagen-4.png",
+                "./assets/unidades_academicas/PrepaElSeco/imagen-5.png",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/CRCElSeco?locale=es_LA",
+                "instagram" => "https://www.instagram.com/buap_crc_el_seco/",
+                "web" => null
+            ],
+        ]
+    ),
 
-    // --- CATEGORÍA: COMPLEJO REGIONAL CENTRO ---
-    "PrepaAcajete" => [
-        "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Acajete (CRC)",
-        "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=ACA",
-        "nombre_completo" => "Preparatoria Acajete (CRC)",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.104, "lng" => -97.953],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "PrepaAcatzingo" => [
-        "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Acatzingo",
-        "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=ACAT",
-        "nombre_completo" => "Preparatoria Acatzingo",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.979, "lng" => -97.783],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "Amozoc" => [
-        "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Amozoc",
-        "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=AMO",
-        "nombre_completo" => "Preparatoria Amozoc",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.039, "lng" => -98.044],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "CabreraSerdan" => [
-        "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Ciudad Serdán",
-        "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=CS",
-        "nombre_completo" => "Preparatoria Ciudad Serdán",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.987, "lng" => -97.446],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "PrepaElSeco" => [
-        "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. San Salvador El Seco",
-        "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=SSES",
-        "nombre_completo" => "Preparatoria San Salvador El Seco",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.135, "lng" => -97.640],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "2deOctubreTepeaca" => [
-        "categoria" => "Complejo Regional Centro (Plan De Estudios Bachillerato General)",
-        "nombre_corto" => "Prep. Tepeaca",
-        "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=TEP",
-        "nombre_completo" => "Preparatoria Tepeaca",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.965, "lng" => -97.900],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
+    "BTZacachimalpa" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Bachilleratos Tecnológicos",
+            "nombre_corto" => "Bachillerato Tecnológico San Pedro Zacachimalpa",
+            "nombre_completo" => "Bachillerato Tecnológico San Pedro Zacachimalpa",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_BT_COMUN,
+            "tronco_comun" => [],
+            "areas_propedeuticas" => [],
+            "nuestra_oferta_educativa" => $OFERTA_ZACACHIMALPA,
+            "porque_estudiar" => "Estudiar en el Bachillerato Tecnológico representa una etapa fundamental en la formación académica y personal de las y los estudiantes, ya que brinda la oportunidad de prepararse de manera integral para los retos de la vida actual. Esta modalidad educativa no solo fortalece los conocimientos generales en áreas como matemáticas, ciencias, comunicación y humanidades, sino que también permite adquirir competencias técnicas especializadas que responden a las necesidades del entorno laboral y social. A lo largo de su formación, la comunidad estudiantil desarrolla habilidades prácticas, pensamiento crítico, trabajo en equipo y responsabilidad, elementos esenciales para desempeñarse con éxito en distintos ámbitos. El enfoque tecnológico les acerca a herramientas, procesos y conocimientos propios de un campo profesional específico, lo que facilita su inserción en el mercado laboral al concluir los estudios. De esta manera, se cuenta con una preparación que permite generar ingresos, adquirir experiencia y contribuir al desarrollo de la comunidad. Además, el Bachillerato Tecnológico no limita las posibilidades académicas, sino que las amplía. Al concluir esta etapa, las y los estudiantes pueden decidir continuar con estudios superiores en universidades o institutos tecnológicos, aprovechando la base sólida que han construido. La formación recibida orienta mejor en la elección de una carrera profesional, pues se cuenta con una idea más clara de habilidades, intereses y metas. En conclusión, estudiar en el Bachillerato Tecnológico proporciona herramientas académicas, técnicas y personales que fortalecen el proyecto de vida, abriendo puertas tanto en el ámbito laboral como en el educativo.",
+            "perfil_ingreso" => "BTAZ",
+            "perfil_egreso" => "BTAZ",
+            "ubicacion" => [
+                "nombre" => "BUAP Bachillerato Tecnológico San Pedro Zacachimalpa",
+                "lat" => 18.9375887440641,
+                "lng" => -98.15718618510564
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/BTZacachimalpa/imagen-1.jpg",
+                "./assets/unidades_academicas/BTZacachimalpa/imagen-2.jpg",
+                "./assets/unidades_academicas/BTZacachimalpa/imagen-3.jpg",
+                "./assets/unidades_academicas/BTZacachimalpa/imagen-4.jpg",
+                "./assets/unidades_academicas/BTZacachimalpa/imagen-5.jpg",
+                "./assets/unidades_academicas/BTZacachimalpa/imagen-6.jpg",
+            ],
+            "redes" => [
+                "facebook" => null,
+                "instagram" => null,
+                "tiktok" => null,
+                "web" => null
+            ],
+        ]
+    ),
 
+    "BTSanJoseChiapa" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Bachilleratos Tecnológicos",
+            "nombre_corto" => "Bachillerato Tecnológico San José Chiapa (CRC)",
+            "nombre_completo" => "Bachillerato Tecnológico San José Chiapa (CRC)",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_BT_COMUN,
+            "tronco_comun" => [],
+            "areas_propedeuticas" => [],
+            "nuestra_oferta_educativa" => $OFERTA_SAN_JOSE_CHIAPA,
+            "porque_estudiar" => "El Bachillerato Tecnológico de San José Chiapa forma parte del Complejo Regional Centro de la BUAP y está ubicado en la Capital de la Tecnología y la Sostenibilidad, San José Chiapa. Este plantel atiende a estudiantes de diversos municipios cercanos a la zona de Audi, donde se ha dado un desarrollo industrial importante. Su plan de estudios está alineado a los programas de ingeniería que se imparten en la sede como son Ingeniería en Automatización y Autotrónica (IAA), Ingeniería en Sistemas y Tecnologías de Información Industrial (ISTII), Ingeniería en Procesos de Gestión Industriales (IPGI) e Ingeniería en Tecnologías de Semiconductores, lo que permite a los estudiantes incorporarse con mayor facilidad no sólo al ámbito académico sino al ámbito laboral, ya que prepara a los estudiantes para desempeñarse en roles tecnológicos a un nivel técnico dentro del sector productivo en áreas afines.",
+            "perfil_ingreso" => "BTSJC",
+            "perfil_egreso" => "BTSJC",
+            "ubicacion" => [
+                "nombre" => "BUAP Bachillerato Tecnológico San José Chiapa (CRC)",
+                "lat" => 19.21081344502439,
+                "lng" => -97.77497322323309
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/BTSanJoseChiapa/imagen-1.jpg",
+                "./assets/unidades_academicas/BTSanJoseChiapa/imagen-2.jpg",
+                "./assets/unidades_academicas/BTSanJoseChiapa/imagen-3.jpg",
+                "./assets/unidades_academicas/BTSanJoseChiapa/imagen-4.jpg",
+                "./assets/unidades_academicas/BTSanJoseChiapa/imagen-5.jpg",
+                "./assets/unidades_academicas/BTSanJoseChiapa/imagen-6.jpg",
+                "./assets/unidades_academicas/BTSanJoseChiapa/imagen-7.jpg",
+            ],
+            "redes" => [
+                "facebook" => null,
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
 
-    // --- CATEGORÍA: bachilleratos tecnológicos ---
-    "SanJoseChiapa" => [
-        // "categoria" => "Complejo Regional Centro",
-        "categoria" => "Bachilleratos Tecnológicos",
-        "nombre_corto" => "Bachillerato Tecnológico San José Chiapa (CRC)",
-        "url_imagen" => "https://placehold.co/60x60/f87171/ffffff?text=BTSJC",
-        "nombre_completo" => "BT San José Chiapa",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.244, "lng" => -97.764],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
-    "bt-zacachimalpa" => [
-        "categoria" => "Bachilleratos Tecnológicos",
-        "nombre_corto" => "Bachillerato Tecnológico San Pedro Zacachimalpa",
-        "url_imagen" => "https://placehold.co/60x60/3b82f6/ffffff?text=BTSPZ",
-        "nombre_completo" => "Bachillerato Tecnológico San Pedro Zacachimalpa",
-        "duracion" => "Por definir",
-        "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 19.0414, "lng" => -98.2063],
-        "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    ],
+    "BTAZacapoaxtla" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Bachilleratos Tecnológicos",
+            "nombre_corto" => "Bachillerato Tecnológico Agropecuario Zacapoaxtla (CRNO)",
+            "nombre_completo" => "Bachillerato Tecnológico Agropecuario Zacapoaxtla",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_BT_COMUN,
+            "tronco_comun" => [],
+            "areas_propedeuticas" => [],
+            "nuestra_oferta_educativa" => $OFERTA_ZACAPOAXTLA,
+            "porque_estudiar" => "El Bachillerato Tecnológico Agropecuario de Zacapoaxtla se posiciona como una institución educativa de calidad que integra la formación académica con la capacitación tecnológica en las áreas agropecuaria y pecuaria, en congruencia con las condiciones sociales, productivas y culturales de la región. Su modelo educativo está orientado a promover prácticas sustentables y una formación sólida con sentido social, que impulsa el desarrollo de habilidades y la construcción de proyectos de vida. Uno de los principales distintivos de la institución es el enfoque práctico de su proceso de enseñanza-aprendizaje, el cual permite que las y los estudiantes apliquen los conocimientos adquiridos en situaciones reales. A través de actividades formativas, proyectos escolares y experiencias productivas, el estudiantado desarrolla habilidades técnicas, pensamiento crítico y competencias que les permiten enfrentar los retos del sector agropecuario, así como continuar con su formación académica o incorporarse al ámbito laboral. Asimismo, el Bachillerato se caracteriza por brindar una atención personalizada, sustentada en la cercanía y el acompañamiento constante entre docentes y estudiantes. Este enfoque refleja el compromiso institucional con el aprendizaje significativo, la equidad y la inclusión, favoreciendo el desarrollo integral y la permanencia escolar. Beneficios  •	Los estudiantes pueden acceder a becas, como: Beca Alimenticia y la Beca Benito Juárez, que representan un apoyo económico importante para su permanencia escolar. •	La institución cuenta con un programa de tutorías académicas. •	Apoyo psicológico, promoviendo el bienestar emocional y un ambiente escolar sano e inclusivo. •	Maestros comprometidos, con vocación y experiencia, además de asesorías académicas para reforzar los aprendizajes y atender dudas. ",
+            "perfil_ingreso" => "BTAZ",
+            "perfil_egreso" => "BTAZ",
+            "ubicacion" => [
+                "nombre" => "BUAP Bachillerato Tecnológico Agropecuario Zacapoaxtla",
+                "lat" => 19.895301927381812,
+                "lng" => -97.5850271532404
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-1.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-2.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-3.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-4.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-5.jpeg",
+                "./assets/unidades_academicas/BTAZacapoaxtla/imagen-6.jpeg",
+            ],
+            "redes" => [
+                "facebook" => "https://www.facebook.com/profile.php?id=61575240562467",
+                "instagram" => "https://www.instagram.com/bachillerato_buap_zacapoaxtla/",
+                "web" => null
+            ],
+        ]
+    ),
 
-
-    // "PreparatoriaADistancia" => [
-    //     "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
-    //     "nombre_corto" => "Preparatoria a distancia",
-    //     "url_imagen" => "https://placehold.co/60x60/fb923c/ffffff?text=TLA",
-    //     "nombre_completo" => "Prep. Vicente Guerrero",
-    //     "duracion" => "Por definir",
-    //     "ubicacion" => ["nombre" => "Ubicación pendiente", "lat" => 18.667, "lng" => -97.650],
-    //     "plan_estudios_comun" => ["Información" => ["Plan de estudios en proceso de carga."]]
-    // ],
+    "BTAIxtepec" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Bachilleratos Tecnológicos",
+            "nombre_corto" => "Bachillerato Tecnológico Agropecuario Ixtepec (CRNO)",
+            "nombre_completo" => "Bachillerato Tecnológico Agropecuario Ixtepec",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_BT_COMUN,
+            "tronco_comun" => [],
+            "areas_propedeuticas" => [],
+            "nuestra_oferta_educativa" => $OFERTA_IXTEPEC,
+            "porque_estudiar" => "El Bachillerato Tecnológico Agropecuario, perteneciente al Complejo Regional Zona Nororiental con sede Ixtepec, es un programa de educación media superior bajo un modelo de oferta bivalente que no solo permite al egresado obtener su certificado de Bachillerato para continuar sus estudios en el nivel superior, sino que además obtienen una cédula profesional como Técnico Agropecuario. Esta certificación oficial es una herramienta indispensable que facilita su inserción inmediata al campo laboral en el sector agropecuario. El Bachillerato cuenta con una planta docente joven, dinámico y con amplios conocimientos en las diferentes disciplinas que se cursan. Los alumnos reciben una formación técnica en las áreas de Producción Animal y Producción Agrícola, en el que desarrollan competencias para ser agentes de cambio y desarrollo en su comunidad y entorno. El estudiante no solo aprende el 'cómo', sino el 'porqué' de una producción responsable con el medio ambiente, combinado prácticas sustentables y sostenibles que garantizan la preservación de los recursos naturales y el equilibrio ecológico para las futuras generaciones. Más allá de la formación técnica profesional, nos distingue un profundo compromiso con la identidad. Ya que durante la formación académica se realizan actividades culturales que tienen como finalidad la redignificación activa de las lenguas originarias, esto a través de clases de lengua Tutunakú y música tradicional de la región, de esta manera fortalecemos el orgullo de pertenencia y el respeto por nuestro patrimonio cultural. Nuestras instalaciones son el escenario en donde la teoría se transforme en práctica diaria. Los estudiantes tienen acceso a espacios como parcelas y de ganado en el que aplican métodos de cuidado de cultivos y ganado, complementando su formación como técnicos agropecuarios. Con el compromiso de formar técnicos agropecuarios y que a su vez lideren proyectos productivos con impacto social y contribuir al progreso económico y social de su comunidad. ",
+            "perfil_ingreso" => "BTAI",
+            "perfil_egreso" => "BTAI",
+            "ubicacion" => [
+                "nombre" => "BUAP Bachillerato Tecnológico Agropecuario Ixtepec",
+                "lat" => 20.01567586326699,
+                "lng" => -97.65484571254876
+            ],
+            "galeria" => [
+                "./assets/unidades_academicas/BTAIxtepec/imagen-1.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-2.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-3.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-4.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-5.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-6.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-7.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-8.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-9.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-10.jpeg",
+                "./assets/unidades_academicas/BTAIxtepec/imagen-11.jpeg",
+            ],
+            "redes" => [
+                "facebook" => null,
+                "instagram" => null,
+                "web" => "https://crzn.buap.mx/"
+            ],
+        ]
+    ),
 
 
 ];

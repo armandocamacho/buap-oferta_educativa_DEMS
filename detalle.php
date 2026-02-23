@@ -119,6 +119,36 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
                     </div>
                 <?php endif; ?>
 
+                <?php if (isset($unidad['nuestra_oferta_educativa']) && !empty($unidad['nuestra_oferta_educativa'])): ?>
+                    <h3 class="areas-section-title">Nuestra Oferta Educativa</h3>
+                    <p class="areas-section-desc">
+                        A la par de las materias de tronco común, el alumno cursará las siguientes materias correspondientes a su componente de formación laboral según la carrera técnica elegida:
+                    </p>
+
+                    <div class="areas-grid" style="grid-template-columns: 1fr;"> 
+                        <?php foreach ($unidad['nuestra_oferta_educativa'] as $nombreCarrera => $semestresCarrera): ?>
+                            <div class="area-propedeutica-block" style="margin-bottom: 20px;">
+                                <div class="area-propedeutica-header semestre-header">
+                                    <strong><?php echo htmlspecialchars($nombreCarrera); ?></strong>
+                                </div>
+                                
+                                <div class="semestres-fusionados-flex" style="flex-wrap: wrap; display: flex; border: 1px solid #eaeaea; border-top: none; border-radius: 0 0 8px 8px;">
+                                    <?php foreach ($semestresCarrera as $semestreKey => $materiasTecnicas): ?>
+                                        <div class="semestre-mitad" style="flex: 1 1 30%; min-width: 250px; padding: 15px; border: 1px solid #f0f0f0; background:#fff;">
+                                            <span class="sub-semestre-title" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--secondary-color);"><?php echo htmlspecialchars($semestreKey); ?></span>
+                                            <ul class="materias-list">
+                                                <?php foreach ($materiasTecnicas as $materia): ?>
+                                                    <li><?php echo htmlspecialchars($materia); ?></li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
             </div>
         </div>
 
@@ -166,126 +196,65 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
                         <li>Trabajo en equipo</li>
                     </ul>
                 <?php elseif($unidad['perfil_ingreso'] == "BTSJC"): ?>
-                    <p>El Modelo Universitario Minerva (MUM) de la <strong>Benemérita Universidad Autónoma de Puebla (BUAP)</strong> señala en el perfil de ingreso para el Nivel Medio Superior:</p>
                     <blockquote>
-                        “Que los y las aspirantes a ingresar al bachillerato cuenten con los conocimientos, habilidades, actitudes y valores adquiridos en la educación básica, que les permitan integrarse de manera responsable, crítica y participativa a la Educación Media Superior.”
+                        Es deseable que los y las aspirantes al ingresar al bachillerato de la BUAP cuenten con una formación que les permita insertarse en el nivel medio.
                     </blockquote>
-
-                    <h3>Conocimientos:</h3>
+                    <h3>Perfil deseable:</h3>
                     <ul class="profile-list">
-                        <li>Lenguaje y comunicación</li>
-                        <li>Matemáticas</li>
-                        <li>Ciencias Naturales</li>
-                        <li>Ciencias Sociales y Humanidades</li>
+                        <li>Se reconocen como ciudadanas y ciudadanos.</li>
+                        <li>Viven, reconocen y valoran la diversidad étnica, cultural, lingüística, sexual, política, social y de género.</li>
+                        <li>Se reconocen como personas que gozan de los mismos derechos para vivir una vida digna, libre de discriminación.</li>
+                        <li>Valoran sus potencialidades cognitivas, físicas y afectivas.</li>
+                        <li>Desarrollan una forma propia de pensar.</li>
+                        <li>Se perciben a sí mismas y a sí mismos como parte de la naturaleza.</li>
+                        <li>Interpretan fenómenos, hechos y situaciones históricas, culturales, naturales y sociales.</li>
+                        <li>Interactúan en procesos de diálogo con respeto y aprecio a la diversidad de capacidades, condiciones, necesidades, intereses y visiones al trabajar de manera cooperativa.</li>
+                        <li>Intercambian ideas, cosmovisiones y perspectivas mediante distintos lenguajes.</li>
+                        <li>Desarrollan el pensamiento crítico que les permita valorar los conocimientos y saberes de las ciencias y humanidades.</li>
                     </ul>
-
-                    <h3>Habilidades:</h3>
+                <?php elseif($unidad['perfil_ingreso'] == "BTAI"): ?>
+                    <p>Es deseable que los y las aspirantes a ingresar al bachillerato de la BUAP cuenten con la formación que marca el perfil de egreso de la educación básica:</p>
                     <ul class="profile-list">
-                        <li>Lectura, comprensión y expresión oral y escrita</li>
-                        <li>Razonamiento lógico-matemático y solución de problemas</li>
-                        <li>Interpretación de fenómenos históricos, sociales y naturales</li>
-                        <li>Diálogo y trabajo colaborativo</li>
-                        <li>Pensamiento crítico</li>
-                    </ul>
-
-                    <h3>Actitudes y valores:</h3>
-                    <ul class="profile-list">
-                        <li>Respeto a la diversidad cultural, social y de género</li>
-                        <li>Reconocimiento de la igualdad y la no discriminación</li>
-                        <li>Responsabilidad social</li>
-                        <li>Autonomía</li>
-                        <li>Compromiso</li>
-                        <li>Valoración de sí mismo y del entorno natural</li>
+                        <li>1. Se reconocen como ciudadanas y ciudadanos.</li>
+                        <li>2. Viven, reconocen y valoran la diversidad étnica, cultural, lingüística, sexual, política, social y de género.</li>
+                        <li>3. Se reconocen como personas que gozan de los mismos derechos para vivir una vida digna, libre de discriminación.</li>
+                        <li>4. Valoran sus potencialidades cognitivas, físicas y afectivas.</li>
+                        <li>5. Desarrollan una forma propia de pensar.</li>
+                        <li>6. Se perciben a sí mismas y a sí mismos como parte de la naturaleza.</li>
+                        <li>7. Interpretan fenómenos, hechos y situaciones históricas, culturales, naturales y sociales.</li>
+                        <li>8. Interactúan en procesos de diálogo con respeto y aprecio a la diversidad de capacidades, condiciones, necesidades, intereses y visiones al trabajar de manera cooperativa.</li>
+                        <li>9. Intercambian ideas, cosmovisiones y perspectivas mediante distintos lenguajes.</li>
+                        <li>10. Desarrollan el pensamiento crítico que les permita valorar los conocimientos y saberes de las ciencias y humanidades.</li>
                     </ul>
                 <?php elseif($unidad['perfil_ingreso'] == "BTSPZ"): ?>
-                    <p>El MUM de la <strong>Benemérita Universidad Autónoma de Puebla (BUAP)</strong> define el perfil de ingreso del Nivel Medio Superior como:</p>
-                    <blockquote>
-                        “La formación básica que permita al estudiantado integrarse de manera crítica, reflexiva y colaborativa al bachillerato.”
-                    </blockquote>
-
-                    <h3>Conocimientos:</h3>
+                    <p>Es deseable que los y las aspirantes a ingresar al bachillerato de la BUAP cuenten con la formación que marca el perfil de egreso de la educación básica:</p>
                     <ul class="profile-list">
-                        <li>Lenguaje</li>
-                        <li>Matemáticas</li>
-                        <li>Ciencias Naturales</li>
-                        <li>Ciencias Sociales</li>
-                    </ul>
-
-                    <h3>Habilidades:</h3>
-                    <ul class="profile-list">
-                        <li>Expresión oral y escrita</li>
-                        <li>Razonamiento lógico</li>
-                        <li>Interpretación histórica y social</li>
-                        <li>Trabajo en equipo</li>
-                    </ul>
-
-                    <h3>Actitudes y valores:</h3>
-                    <ul class="profile-list">
-                        <li>Respeto</li>
-                        <li>Autonomía</li>
-                        <li>Compromiso</li>
-                        <li>Responsabilidad social</li>
+                        <li>1. Se reconocen como ciudadanas y ciudadanos.</li>
+                        <li>2. Viven, reconocen y valoran la diversidad étnica, cultural, lingüística, sexual, política, social y de género.</li>
+                        <li>3. Se reconocen como personas que gozan de los mismos derechos para vivir una vida digna, libre de discriminación.</li>
+                        <li>4. Valoran sus potencialidades cognitivas, físicas y afectivas.</li>
+                        <li>5. Desarrollan una forma propia de pensar.</li>
+                        <li>6. Se perciben a sí mismas y a sí mismos como parte de la naturaleza.</li>
+                        <li>7. Interpretan fenómenos, hechos y situaciones históricas, culturales, naturales y sociales.</li>
+                        <li>8. Interactúan en procesos de diálogo con respeto y aprecio a la diversidad de capacidades, condiciones, necesidades, intereses y visiones al trabajar de manera cooperativa.</li>
+                        <li>9. Intercambian ideas, cosmovisiones y perspectivas mediante distintos lenguajes.</li>
+                        <li>10. Desarrollan el pensamiento crítico que les permita valorar los conocimientos y saberes de las ciencias y humanidades.</li>
                     </ul>                    
-                <?php elseif($unidad['perfil_ingreso'] == "BTAI"): ?>
-                    <p>El Modelo Universitario Minerva (MUM) de la <strong>Benemérita Universidad Autónoma de Puebla (BUAP)</strong> establece para el perfil de ingreso del Nivel Medio Superior:</p>
-                    <blockquote>
-                        “Que los y las aspirantes cuenten con una formación integral básica que favorezca su incorporación crítica, ética y participativa al bachillerato.”
-                    </blockquote>
-
-                    <h3>Conocimientos:</h3>
-                    <ul class="profile-list">
-                        <li>Lenguaje y comunicación</li>
-                        <li>Matemáticas básicas</li>
-                        <li>Ciencias Naturales</li>
-                        <li>Ciencias Sociales</li>
-                    </ul>
-
-                    <h3>Habilidades:</h3>
-                    <ul class="profile-list">
-                        <li>Comprensión lectora y expresión escrita</li>
-                        <li>Razonamiento matemático</li>
-                        <li>Interpretación del entorno natural y social</li>
-                        <li>Trabajo colaborativo</li>
-                        <li>Pensamiento crítico</li>
-                    </ul>
-
-                    <h3>Actitudes y valores:</h3>
-                    <ul class="profile-list">
-                        <li>Respeto a la diversidad</li>
-                        <li>Responsabilidad</li>
-                        <li>Autonomía</li>
-                        <li>Compromiso social</li>
-                        <li>Valoración de la naturaleza</li>
-                    </ul>
                 <?php elseif($unidad['perfil_ingreso'] == "BTAZ"): ?>
-                    <p>El Modelo Universitario Minerva (MUM) de la <strong>Benemérita Universidad Autónoma de Puebla (BUAP)</strong> establece que el perfil de ingreso al Nivel Medio Superior debe garantizar:</p>
-                    <blockquote>
-                        “Una formación integral básica que favorezca el pensamiento crítico, la participación social y el respeto a la diversidad.”
-                    </blockquote>
+                    <p>Es deseable que las y los aspirantes a ingresar al bachillerato de la BUAP cuenten con la formación que marca el perfil de egreso de la educación básica:</p>
 
-                    <h3>Conocimientos:</h3>
                     <ul class="profile-list">
-                        <li>Lenguaje y comunicación</li>
-                        <li>Matemáticas</li>
-                        <li>Ciencias Naturales</li>
-                        <li>Ciencias Sociales</li>
+                        <li>1. Se reconocen como ciudadanas y ciudadanos.</li>
+                        <li>2. Viven, reconocen y valoran la diversidad étnica, cultural, lingüística, sexual, política, social y de género.</li>
+                        <li>3. Se reconocen como personas que gozan de los mismos derechos para vivir una vida digna, libre de discriminación.</li>
+                        <li>4. Valoran sus potencialidades cognitivas, físicas y afectivas.</li>
+                        <li>5. Desarrollan una forma propia de pensar.</li>
+                        <li>6. Se perciben a sí mismas y a sí mismos como parte de la naturaleza.</li>
+                        <li>7. Interpretan fenómenos, hechos y situaciones históricas, culturales, naturales y sociales.</li>
+                        <li>8. Interactúan en procesos de diálogo con respeto y aprecio a la diversidad de capacidades, condiciones, necesidades, intereses y visiones al trabajar de manera cooperativa.</li>
+                        <li>9.  Intercambian ideas, cosmovisiones y perspectivas mediante distintos lenguajes.</li>
+                        <li>10. Desarrollan el pensamiento crítico que les permita valorar los conocimientos y saberes de las ciencias y humanidades</li>
                     </ul>
-
-                    <h3>Habilidades:</h3>
-                    <ul class="profile-list">
-                        <li>Comprensión lectora</li>
-                        <li>Razonamiento matemático</li>
-                        <li>Interpretación del entorno</li>
-                        <li>Trabajo colaborativo</li>
-                    </ul>
-
-                    <h3>Actitudes y valores:</h3>
-                    <ul class="profile-list">
-                        <li>Respeto a la diversidad</li>
-                        <li>Responsabilidad</li>
-                        <li>Autonomía</li>
-                        <li>Compromiso social</li>
-                    </ul>                    
                 <?php else: ?>
                     <div>nothing here</div>
                 <?php endif; ?>
@@ -354,117 +323,73 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
                         <li>Actitud responsable y crítica en los hábitos de consumo por sus implicaciones éticas, políticas, ecológicas y para la salud</li>
                     </ul>
                 <?php elseif ($unidad['perfil_egreso'] === "BTSJC"): ?>
-                    <p>Perfil de egreso del Bachillerato Tecnológico de San José Chiapa:</p>
-                    <blockquote>
-                        “Al concluir su formación en el Nivel Medio Superior, el estudiantado integra saberes, desarrolla competencias disciplinares y socioemocionales, y actúa con responsabilidad ética, compromiso social y pensamiento crítico, en congruencia con los principios de la Nueva Escuela Mexicana.”
-                    </blockquote>
+                    <p>El perfil de egreso de la Educación Media Superior se define como la suma de los aprendizajes de trayectoria de cada uno de los recursos sociocognitivos, áreas de conocimiento y de los propósitos de la formación socioemocional que conforma la estructura curricular del MCCEMS a través de las distintas Unidades Académicas Curriculares (UAC), que contribuyen a dotar de identidad a la EMS, favoreciendo al desarrollo integral de las y los adolescentes y jóvenes, para construir y conformar una ciudadanía responsable y comprometida con los problemas de su comunidad, región y país y que tenga los elementos necesarios para poder decidir por su presente y futuro con bienestar y en una cultura de paz. Responsables con ellos mismos, con los demás y con la transformación de la sociedad en la que viven y responden a las características biopsicosocioculturales de las alumnas y los alumnos, así como a constantes cambios de los diversos contextos, plurales y multiculturales.</p>
 
-                    <h3>Conocimientos:</h3>
+                    <p>De acuerdo con lo anterior, al egresar contarán con las siguientes habilidades y valores:</p>
+
                     <ul class="profile-list">
-                        <li>Integración de saberes interdisciplinarios</li>
-                        <li>Formación humanística con enfoque comunitario</li>
-                        <li>Uso ético de herramientas digitales</li>
+                        <li>1. Comprende la necesidad de la integración de saberes para lograr desarrollarse en un mundo complejo de acuerdo con los principios de la NEM.</li>
+                        <li>2. Integra en su vida una formación humanística, que iniciando desde la solución de problemas comunitarios lo lleve a comprender similitudes y diferencias con otros lugares y a nivel global.</li>
+                        <li>3. Adquiere nuevas estrategias de aprendizaje que le ayudarán en la adquisición del aprendizaje autónomo (AA) y la investigación.</li>
+                        <li>4. Asume la diversidad de opiniones en el aula como riqueza para comprender la diversidad y adoptar parte de ellas para configurar su código de valores.</li>
+                        <li>5. Desarrolla habilidades para el aprendizaje autogestivo, adaptándose a distintos entornos de formación y utilizando herramientas digitales para investigar, analizar y construir su conocimiento.</li>
+                        <li>6. Se desenvuelve en ambientes presenciales y virtuales, desarrollando competencias para el trabajo remoto, colaborativo y asincrónico, integrando nuevas tecnologías a su vida académica y profesional.</li>
+                        <li>7. Evalúa información de diversas fuentes, distingue entre hechos y opiniones, y desarrolla estrategias para resolver problemas de forma creativa en entornos digitales y físicos.</li>
+                        <li>8. Se expresa con claridad en distintos contextos y plataformas, utilizando lenguaje escrito, oral, visual y multimedia, adaptando su mensaje al entorno híbrido.</li>
+                        <li>9. Gestiona su tiempo, emociones y relaciones interpersonales, favoreciendo la resiliencia y el bienestar en entornos digitales y físicos.</li>
+                        <li>10. Actúa con integridad y respeto en comunidades presenciales y digitales, promoviendo la seguridad, privacidad y un comportamiento ético en la era digital.</li>
                     </ul>
+                <?php elseif ($unidad['perfil_egreso'] === "BTAI"): ?>
+                    <p>El perfil de egreso de la Educación Media Superior se define como la suma de los aprendizajes de trayectoria de cada uno de los recursos sociocognitivos, áreas de conocimiento y de los propósitos de la formación socioemocionales que conforman la estructura curricular del MCCEMS a través de las distintas Unidades Académicas Curriculares (UAC), que contribuyen a dotar de identidad a la EMS, favoreciendo al desarrollo integral de las y los adolescentes y jóvenes, para construir y conformar una ciudadanía responsable y comprometida con los problemas de su comunidad, región y país y que tenga los elementos necesarios para poder decidir por su presente y futuro con bienestar y en una cultura de paz. Responsables con ellos mismos, con los demás y con la transformación de la sociedad en la que viven y responden a las características biopsicosocioculturales de las y los estudiantes, así como a constantes cambios de los diversos contextos, plurales y multiculturales.</p>
 
-                    <h3>Habilidades:</h3>
-                    <ul class="profile-list">
-                        <li>Aprendizaje autónomo e investigación</li>
-                        <li>Resolución creativa de problemas</li>
-                        <li>Comunicación efectiva en distintos formatos</li>
-                        <li>Trabajo colaborativo presencial y virtual</li>
-                        <li>Gestión socioemocional</li>
-                    </ul>
+                    <p>De acuerdo con lo anterior, al egresar contarán con las siguientes habilidades y valores:</p>
 
-                    <h3>Actitudes y valores:</h3>
                     <ul class="profile-list">
-                        <li>Integridad</li>
-                        <li>Respeto y cultura de paz</li>
-                        <li>Responsabilidad digital</li>
-                        <li>Compromiso con la comunidad</li>
+                        <li>1. Comprende la necesidad de la integración de saberes para lograr desarrollarse en un mundo complejo de acuerdo con los principios de la NEM.</li>
+                        <li>2. Integra en su vida una formación humanística, que iniciando desde la solución de problemas comunitarios lo lleve a comprender similitudes y diferencias con otros lugares y a nivel global.</li>
+                        <li>3. Adquiere nuevas estrategias de aprendizaje que le ayudarán en la adquisición del aprendizaje autónomo (AA) y la investigación.</li>
+                        <li>4. Asume la diversidad de opiniones en el aula como riqueza para comprender la diversidad y adoptar parte de ellas para configurar su código de valores.</li>
+                        <li>5. Desarrolla habilidades para el aprendizaje autogestivo, adaptándose a distintos entornos de formación y utilizando herramientas digitales para investigar, analizar y construir su conocimiento.</li>
+                        <li>6. Se desenvuelve en ambientes presenciales y virtuales, desarrollando competencias para el trabajo remoto, colaborativo y asincrónico, integrando nuevas tecnologías a su vida académica y profesional.</li>
+                        <li>7. Evalúa información de diversas fuentes, distingue entre hechos y opiniones, y desarrolla estrategias para resolver problemas de forma creativa en entornos digitales y físicos.</li>
+                        <li>8. Se expresa con claridad en distintos contextos y plataformas, utilizando lenguaje escrito, oral, visual y multimedia, adaptando su mensaje al entorno híbrido.</li>
+                        <li>9. Gestiona su tiempo, emociones y relaciones interpersonales, favoreciendo la resiliencia y el bienestar en entornos digitales y físicos.</li>
+                        <li>10.  Actúa con integridad y respeto en comunidades presenciales y digitales, promoviendo la seguridad, privacidad y un comportamiento ético en la era digital.</li>
                     </ul>
                 <?php elseif ($unidad['perfil_egreso'] === "BTSPZ"): ?>
-                    <p>Perfil de egreso del Bachillerato Tecnológico de San Pedro Zacachimalpa:</p>
-                    <blockquote>
-                        “El egresado integra saberes, desarrolla pensamiento crítico y actúa con ética, responsabilidad y compromiso social.”
-                    </blockquote>
+                    <p>El perfil de egreso de la Educación Media Superior se define como la suma de los aprendizajes de trayectoria de cada uno de los recursos sociocognitivos, áreas de conocimiento y de los propósitos de la formación socioemocionales que conforman la estructura curricular del MCCEMS a través de las distintas Unidades de Aprendizaje Curricular (UAC), que contribuyen a dotar de identidad a la EMS, favoreciendo al desarrollo integral de las y los adolescentes y jóvenes, para construir y conformar una ciudadanía responsable y comprometida con los problemas de su comunidad, región y país y que tenga los elementos necesarios para poder decidir por su presente y futuro con bienestar y en una cultura de paz. Responsables con ellos mismos, con los demás y con la transformación de la sociedad en la que viven y responden a las características biopsicosocioculturales de las y los estudiantes, así como a constantes cambios de los diversos contextos, plurales y multiculturales.</p>
 
-                    <h3>Conocimientos:</h3>
-                    <ul class="profile-list">
-                        <li>Integración interdisciplinaria</li>
-                        <li>Formación humanística</li>
-                        <li>Herramientas digitales</li>
-                    </ul>
+                    <p>De acuerdo con lo anterior, al egresar contarán con las siguientes habilidades y valores:</p>
 
-                    <h3>Habilidades:</h3>
                     <ul class="profile-list">
-                        <li>Aprendizaje autónomo</li>
-                        <li>Comunicación efectiva</li>
-                        <li>Resolución de problemas</li>
-                        <li>Trabajo colaborativo</li>
-                    </ul>
-
-                    <h3>Actitudes y valores:</h3>
-                    <ul class="profile-list">
-                        <li>Integridad</li>
-                        <li>Respeto a la diversidad</li>
-                        <li>Cultura de paz</li>
+                        <li>1. Comprende la necesidad de la integración de saberes para lograr desarrollarse en un mundo complejo de acuerdo con los principios de la NEM.</li>
+                        <li>2. Integra en su vida una formación humanística, que iniciando desde la solución de problemas comunitarios lo lleve a comprender similitudes y diferencias con otros lugares y a nivel global.</li>
+                        <li>3. Adquiere nuevas estrategias de aprendizaje que le ayudarán en la adquisición del aprendizaje autónomo y la investigación.</li>
+                        <li>4. Asume la diversidad de opiniones en el aula como riqueza para comprender la diversidad y adoptar parte de ellas para configurar su código de valores.</li>
+                        <li>5. Desarrolla habilidades para el aprendizaje autogestivo, adaptándose a distintos entornos de formación y utilizando herramientas digitales para investigar, analizar y construir su conocimiento.</li>
+                        <li>6. Se desenvuelve en ambientes presenciales y virtuales, desarrollando competencias para el trabajo remoto, colaborativo y asincrónico, integrando nuevas tecnologías a su vida académica y profesional.</li>
+                        <li>7. Evalúa información de diversas fuentes, distingue entre hechos y opiniones, y desarrolla estrategias para resolver problemas de forma creativa en entornos digitales y físicos.</li>
+                        <li>8. Se expresa con claridad en distintos contextos y plataformas, utilizando lenguaje escrito, oral, visual y multimedia, adaptando su mensaje al entorno híbrido.</li>
+                        <li>9. Gestiona su tiempo, emociones y relaciones interpersonales, favoreciendo la resiliencia y el bienestar en entornos digitales y físicos.</li>
+                        <li>10. Actúa con integridad y respeto en comunidades presenciales y digitales, promoviendo la seguridad, privacidad y un comportamiento ético en la era digital.</li>
                     </ul>                    
-                <?php elseif ($unidad['perfil_egreso'] === "BTAI"): ?>
-                    <p>Perfil de egreso del Bachillerato Tecnológico Agropecuario de Ixtepec:</p>
-                    <blockquote>
-                        “La persona egresada se caracteriza por integrar conocimientos, habilidades y valores que le permiten desarrollarse en contextos presenciales y virtuales, con responsabilidad social y ética.”
-                    </blockquote>
-
-                    <h3>Conocimientos:</h3>
-                    <ul class="profile-list">
-                        <li>Saberes interdisciplinarios</li>
-                        <li>Formación humanística</li>
-                        <li>Tecnologías digitales aplicadas al aprendizaje</li>
-                    </ul>
-
-                    <h3>Habilidades:</h3>
-                    <ul class="profile-list">
-                        <li>Aprendizaje autónomo</li>
-                        <li>Investigación básica</li>
-                        <li>Comunicación multimodal</li>
-                        <li>Resolución de problemas</li>
-                    </ul>
-
-                    <h3>Actitudes y valores:</h3>
-                    <ul class="profile-list">
-                        <li>Ética</li>
-                        <li>Respeto</li>
-                        <li>Responsabilidad digital</li>
-                        <li>Compromiso comunitario</li>
-                    </ul>
                 <?php elseif ($unidad['perfil_egreso'] === "BTAZ"): ?>
-                    <p>Perfil de egreso del Bachillerato Tecnológico Agropecuario de Zacapoaxtla:</p>
-                    <blockquote>
-                        “El egresado desarrolla competencias académicas, digitales y socioemocionales que le permiten participar activamente en su comunidad con ética y responsabilidad.”
-                    </blockquote>
+                    <p>El perfil de egreso de la EMS se define como la suma de los aprendizajes de trayectoria de cada uno de los recursos sociocognitivos, áreas de conocimiento y de los propósitos de la formación socioemocionales que conforman la estructura curricular del MCCEMS a través de las distintas Unidades Académicas Curriculares (UAC), que contribuyen a dotar de identidad a la EMS, favoreciendo al desarrollo integral de las y los adolescentes y jóvenes, para construir y conformar una ciudadanía responsable y comprometida con los problemas de su comunidad, región y país y que tenga los elementos necesarios para poder decidir por su presente y futuro con bienestar y en una cultura de paz. Responsables con ellos mismos, con los demás y con la transformación de la sociedad en la que viven y responden a las características biopsicosocioculturales de las alumnas y los alumnos, así como a constantes cambios de los diversos contextos, plurales y multiculturales.</p>
 
-                    <h3>Conocimientos:</h3>
-                    <ul class="profile-list">
-                        <li>Saberes integrados</li>
-                        <li>Formación humanística</li>
-                        <li>Tecnologías para el aprendizaje</li>
-                    </ul>
+                    <p>De acuerdo con lo anterior, al egresar contarán con las siguientes habilidades y valores:</p>
 
-                    <h3>Habilidades:</h3>
                     <ul class="profile-list">
-                        <li>Aprendizaje autónomo</li>
-                        <li>Investigación básica</li>
-                        <li>Comunicación multimodal</li>
-                        <li>Resolución creativa de problemas</li>
-                    </ul>
-
-                    <h3>Actitudes y valores:</h3>
-                    <ul class="profile-list">
-                        <li>Ética</li>
-                        <li>Respeto</li>
-                        <li>Compromiso comunitario</li>
-                        <li>Responsabilidad digital</li>
-                    </ul>
+                        <li>Comprende la necesidad de la integración de saberes para lograr desarrollarse en un mundo complejo de acuerdo con los principios de la NEM.</li>
+                        <li>Integra en su vida una formación humanística, que iniciando desde la solución de problemas comunitarios lo lleve a comprender similitudes y diferencias con otros lugares y a nivel global.</li>
+                        <li>Adquiere nuevas estrategias de aprendizaje que le ayudarán en la adquisición del Aprendizaje Autónomo (AA) y la investigación.</li>
+                        <li>Asume la diversidad de opiniones en el aula como riqueza para comprender la diversidad y adoptar parte de ellas para configurar su código de valores.</li>
+                        <li>Desarrolla habilidades para el aprendizaje autogestivo, adaptándose a distintos entornos de formación y utilizando herramientas digitales para investigar, analizar y construir su conocimiento.</li>
+                        <li>Se desenvuelve en ambientes presenciales y virtuales, desarrollando competencias para el trabajo remoto, colaborativo y asincrónico, integrando nuevas tecnologías a su vida académica y profesional.</li>
+                        <li>Evalúa información de diversas fuentes, distingue entre hechos y opiniones, y desarrolla estrategias para resolver problemas de forma creativa en entornos digitales y físicos.</li>
+                        <li>Se expresa con claridad en distintos contextos y plataformas, utilizando lenguaje escrito, oral, visual y multimedia, adaptando su mensaje al entorno híbrido.</li>
+                        <li>Gestiona su tiempo, emociones y relaciones interpersonales, favoreciendo la resiliencia y el bienestar en entornos digitales y físicos.</li>
+                        <li>Actúa con integridad y respeto en comunidades presenciales y digitales, promoviendo la seguridad, privacidad y un comportamiento ético en la era digital.</li>
+                    </ul>                    
                 <?php else: ?>
                     <div>nothing here</div>
                 <?php endif; ?>
