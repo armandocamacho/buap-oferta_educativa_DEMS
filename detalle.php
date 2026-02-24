@@ -255,6 +255,14 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
                         <li>9.  Intercambian ideas, cosmovisiones y perspectivas mediante distintos lenguajes.</li>
                         <li>10. Desarrollan el pensamiento crítico que les permita valorar los conocimientos y saberes de las ciencias y humanidades</li>
                     </ul>
+                <?php elseif($unidad['perfil_ingreso'] == "PAD"): ?>
+                    <p>El aspirante para ingresar al bachillerato universitario habrá desarrollado las competencias que se señalan para la educación básica y que son resultado de una formación que destaca la necesidad de fortalecer las competencias para la vida, que no solo considera lo cognitivo, sino lo afectivo, lo social, la naturaleza y la vida democrática. Y que son básicamente:</p>
+                    <ul class="profile-list">
+                        <li>Competencias para el aprendizaje permanente</li>
+                        <li>Competencias para el manejo de la información </li>
+                        <li>Competencias para el manejo de situaciones </li>
+                        <li>Competencias para la convivencia y competencias para la vida en sociedad Asimismo manejará los conocimientos básicos en las diferentes áreas, necesarios para el desenvolvimiento en el Nivel Medio Superior. Todo esto será evaluado en el examen para el ingreso al bachillerato y el puntaje obtenido determinará el mismo.</li>
+                    </ul>
                 <?php else: ?>
                     <div>nothing here</div>
                 <?php endif; ?>
@@ -390,6 +398,8 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
                         <li>Gestiona su tiempo, emociones y relaciones interpersonales, favoreciendo la resiliencia y el bienestar en entornos digitales y físicos.</li>
                         <li>Actúa con integridad y respeto en comunidades presenciales y digitales, promoviendo la seguridad, privacidad y un comportamiento ético en la era digital.</li>
                     </ul>                    
+                <?php elseif($unidad['perfil_egreso'] == "PAD"): ?>
+                    <p>Los alumnos que egresan de la Institución han logrado un conocimiento y comprensión de sí mismos, una formación académica que les ha familiarizado con los avances científicos y tecnológicos, que les permite una visión interdisciplinaria e integral que los hace sensibles a la problemática presente en los ámbitos social, económico, político, ético, estético y ecológico, que los prepara para su desarrollo en la vida diaria y el ejercicio de una ciudadanía con responsabilidad y también para ingreso al nivel superior; capaces de interactuar en equipo con una actitud fraterna, libre, justa, pacífica, tolerante y de respeto a la pluralidad.</p>
                 <?php else: ?>
                     <div>nothing here</div>
                 <?php endif; ?>
@@ -400,12 +410,18 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
         <div class="tab-section" data-tab="ubicacion">
             <div class="info-card">
                 <div class="card-title">Ubicación</div>
-                <p><strong><?php echo htmlspecialchars($unidad['ubicacion']['nombre']); ?></strong></p>
-                <div class="map-container">
-                    <iframe class="map-frame" loading="lazy" allowfullscreen
-                        src="https://www.google.com/maps?q=<?php echo $unidad['ubicacion']['lat']; ?>,<?php echo $unidad['ubicacion']['lng']; ?>&hl=es;z=16&output=embed">
-                    </iframe>
-                </div>
+                <?php if (!empty($unidad['ubicacion'])): ?>
+                    <p><strong><?php echo htmlspecialchars($unidad['ubicacion']['nombre']); ?></strong></p>
+                    <div class="map-container">
+                        <iframe class="map-frame" loading="lazy" allowfullscreen
+                            src="https://www.google.com/maps?q=<?php echo $unidad['ubicacion']['lat']; ?>,<?php echo $unidad['ubicacion']['lng']; ?>&hl=es;z=16&output=embed">
+                        </iframe>
+                    </div>
+                <?php else: ?>
+                    <p style="text-align:center; color:#888; padding: 20px;">
+                        Información No Disponible en este momento
+                    </p>
+                <?php endif; ?>
             </div>
         </div>
 

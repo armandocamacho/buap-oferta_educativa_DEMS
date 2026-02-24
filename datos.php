@@ -302,6 +302,50 @@ $OFERTA_ZACAPOAXTLA = [
     ]
 ];
 
+
+
+/* =====================================================
+    PLAN DE ESTUDIOS PREPARATORIA A DISTANCIA
+===================================================== */
+
+$PLAN_ESTUDIOS_PAD = [
+    "Primer Año - Otoño" => [
+        'Propedéutico Requisito de Ingreso',
+        'TAC Compartir Información "C" y "CE"',
+        'La Química en mi Vida "CE" "C" "M"',
+        'Uso mi Idioma para Expresarme "C" y "CS"',
+        'Haciendo mi Vida Sustentable "CE"',
+        'Conociendo mi Salud a través de la Estadística "CE" "M" "C"',
+        'La Ética y Yo "C" y "H"'
+    ],
+    "Primer Año - Primavera" => [
+        'Conociendo otra Lengua "C"',
+        'Mi mundo en Representaciones Simbólicas y Algoritmicas "CE" "M" "CS"',
+        'Argumentación y Asertividad "CS" "C" "H"',
+        'México y el Mundo Contemporáneo "CS"',
+        'Apreciando el Arte a través de la Historia "C" y "CS"',
+        'Ética en el Mundo Actual "C" y "CE"'
+    ],
+    "Segundo Año - Otoño" => [
+        'El Mundo y Yo "C" y "CS"',
+        'Matemáticas en la Naturaleza "CE" "M" "CS"',
+        'Aplicando Herramientas Ofimáticas "C" y "M"',
+        'Comprendiendo el Origen de la vida para Explicar el Mundo "CE" y "CS"',
+        'Expresión en otra lengua "C"',
+        'Mi Administración y su Impacto en los Procesos Sociales Actuales "CS" y "M"'
+    ],
+    "Segundo Año - Primavera" => [
+        'Producción en otra Lengua "C"',
+        'Aplicando el Cálculo en la Naturaleza y la Sociedad "CE" "M" "CS" "H"',
+        'Estrategias de Estudio "C" y "H"',
+        'Dinero y el Mundo Contemporáneo "CS" "C" "H" "M"',
+        'Explicando el Movimiento en los Fenómenos Mecánicos y Naturales "C" "CE" "M"'
+    ]
+];
+
+
+
+
 $unidadesAcademicas = [
 
     // --- CATEGORÍA: PREPARATORIAS URBANAS ---
@@ -359,14 +403,14 @@ $unidadesAcademicas = [
                 "lng" => -98.21979723921858
             ],
             "galeria" => [
-                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-1.jpeg",
-                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-2.jpeg",
+                // "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-1.jpeg",
+                // "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-2.jpeg",
                 "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-3.jpeg",
-                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-4.jpeg",
+                // "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-4.jpeg",
                 "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-5.jpeg",
-                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-6.jpeg",
-                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-7.jpeg",
-                "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-8.jpeg",
+                // "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-6.jpeg",
+                // "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-7.jpeg",
+                // "./assets/unidades_academicas/LazaroCardenasPuebla/imagen-8.jpeg",
             ],
             "redes" => [
                 "facebook" => null,
@@ -1458,6 +1502,29 @@ $unidadesAcademicas = [
         ]
     ),
 
+    "PrepaADistancia" => array_merge(
+        estructuraBaseUnidad(),
+        [
+            "categoria" => "Complejo Regional Sur (Plan De Estudios Bachillerato General)",
+            "nombre_corto" => "Preparatoria a Distancia",
+            "nombre_completo" => "Preparatoria a Distancia",
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_PAD,
+            "tronco_comun" => [],
+            "areas_propedeuticas" => [],
+            "nuestra_oferta_educativa" => "",
+            "porque_estudiar" => "El Plan de estudios de la Preparatoria a Distancia BUAP se propone para atender personas adultas de 20 años en adelante en una primera etapa. Considerando que es una necesidad atender a las personas adultas que ya se encuentran trabajando pero que requieren de contar con estudios de Nivel Medio Superior. Cumpliendo con el perfil por competencias ",
+            "perfil_ingreso" => "PAD",
+            "perfil_egreso" => "PAD",
+            "ubicacion" => [],
+            "galeria" => [],
+            "duracion" => "2 años",
+            "redes" => [
+                "facebook" => null,
+                "instagram" => null,
+                "web" => null
+            ],
+        ]
+    ),
 
 ];
 

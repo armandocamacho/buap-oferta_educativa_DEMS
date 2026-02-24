@@ -53,8 +53,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oferta Educativa</title>
+    <title>Oferta Educativa DEMS | Preparatorias y Bachilleratos BUAP</title>
+    <meta name="description" content="Consulta la oferta educativa de la Dirección de Educación Media Superior (DEMS) de la BUAP. Preparatorias urbanas, regionales, bachilleratos tecnológicos y programa internacional.">    
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
+    <link rel="shortcut icon" href="./assets/escudo-buap.png" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Oferta Educativa DEMS | Preparatorias BUAP">
+    <meta property="og:description" content="Consulta todas las preparatorias, complejos regionales y bachilleratos tecnológicos de la Dirección de Educación Media Superior de la BUAP.">
+    <meta property="og:url" content="https://bsu.buap.mx/f5x">
+    <meta property="og:image" content="https://bsu.buap.mx/f5y">
+    <meta property="og:site_name" content="BUAP - DEMS">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Oferta Educativa DEMS | BUAP">
+    <meta name="twitter:description" content="Conoce la oferta educativa de nivel medio superior de la BUAP.">
+    <meta name="twitter:image" content="https://bsu.buap.mx/f5y">
 
     <style>
 
@@ -92,20 +109,50 @@
         .span-2 { grid-column: span 2; }
         .span-3 { grid-column: span 3; }
 
+        .buapHeader {
+            background: #1e3a5f; 
+            color:white;
+            width: 100%;
+            height: 120px;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+            align-items:center;
+            padding:12px ;
+
+        }
+        .buapHeader-imageContainer {
+            height:100%;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            align-items:center;
+        }
+        .buapHeader-imageContainer-img {
+            max-width:100%;
+            max-height:100%;
+        }
+
         .main-header { 
             background: #1e3a5f; 
             width: min(1200px, 90%);
-            border-radius:15px 15px 0 0; 
             margin:auto; 
             color: #fff; 
             padding: 25px 20px; 
             font-size: 1.4rem; 
             font-weight: 900; 
+            margin-top:60px;
+        }
+
+        .sub-header{
+            font-size: 1.2rem; 
+            margin-top:10px;
+            font-weight: 700; 
         }
 
         .container {
             width: min(1200px, 90%);
-            margin: 100px auto; 
+            margin: 50px auto; 
         }
 
         .section-title {
@@ -165,10 +212,46 @@
         }
         .card-left-content { display: flex; align-items: center; gap:8px; color:#1e3a5f; }
 
+        .banner-admision {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 300px;
+            gap: 10px;
+        }
+
+        .banner-admision__item {
+            display: block;
+            overflow: hidden;
+        }
+
+        .banner-admision__item--big {
+            flex: 2; /* 2/3 */
+        }
+
+        .banner-admision__item--small {
+            flex: 1; /* 1/3 */
+        }
+
+        .banner-admision__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            object-position:top;
+        }
+
+
         @media (max-width: 1279px) {
             .main-header { 
                 font-size: 1.4rem;
             }
+
+            .sub-header{
+                font-size: 1.2rem; 
+            }
+
             .section-title {
                 font-size: 1rem; 
             }
@@ -177,6 +260,10 @@
         @media (max-width: 767px) {
             .main-header { 
                 font-size: 1.2rem;
+            }
+
+            .sub-header{
+                font-size: 1rem; 
             }
 
             .layout-3cols {
@@ -189,6 +276,17 @@
             .int-cols-1, .int-cols-2, .int-cols-3 {
                 grid-template-columns: 1fr;
             }
+
+            .banner-admision {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .banner-admision__item {
+                width: 100%;
+                height: 220px;
+            }
+
         }
 
         .filter-bar {
@@ -216,11 +314,47 @@
             color:#1e3a5f
         }
 
-
     </style>
 </head>
 <body>
-    <div class="main-header">NUESTRA OFERTA EDUCATIVA</div>
+
+    <header class="buapHeader">
+        <div class="buapHeader-imageContainer">
+            <img class="buapHeader-imageContainer-img" src="./assets/escudo_negativo.png"
+                alt="logo_buap_cyan">
+        </div>
+        <div style="text-align:center;">
+            <span style="font-weight:bold;">OFERTA EDUCATIVA <br> DEMS</span>
+        </div>
+    </header>
+
+
+    <div class="banner-admision">
+        <a href="https://bsu.buap.mx/f5Z" target="_blank" 
+        class="banner-admision__item banner-admision__item--big">
+            <img 
+                src="./assets/admision-2026.jpg" 
+                alt="admision buap 2026"
+                class="banner-admision__img"
+            >
+        </a>
+
+        <a href="https://admision.buap.mx/sites/default/files/Admision_2026/0.Documentos/Fechas_importantes_admision_2026.pdf" 
+        target="_blank"
+        class="banner-admision__item banner-admision__item--small">
+            <img 
+                src="./assets/fechas.png" 
+                alt="fechas admision buap 2026"
+                class="banner-admision__img"
+            >
+        </a>
+    </div>
+
+
+    <h1 class="main-header">
+        NUESTRA OFERTA EDUCATIVA
+        <div class="sub-header">Direccion de Educación Media Superior</div>
+    </h1>
 
     <div class="container">
 
@@ -280,6 +414,11 @@
 
         </div>
     </div>
+
+    <footer style="width:100%; display:flex; justify-content:center;">
+        <img style="width:100%; max-width:1200px;" src="./assets/dems.png" alt="cintillo_dems">
+    </footer>
+
 
     <script>
         document.getElementById("filtroNombre").addEventListener("keyup", function() {
