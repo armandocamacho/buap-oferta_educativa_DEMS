@@ -343,6 +343,99 @@ $PLAN_ESTUDIOS_PAD = [
     ]
 ];
 
+/* =====================================================
+    PLAN DE ESTUDIOS BACHILLERATO INTERNACIONAL (BI)
+===================================================== */
+
+$PLAN_ESTUDIOS_BI = [
+    "Primer Año" => [
+        "Lengua y Literatura",
+        "Lengua y Cultura Extranjera con Laboratorio",
+        "Pensamiento y lenguaje matemático",
+        "Análisis Integral de las sociedades",
+        "Herramientas Digitales y su aplicación",
+        "Ciencias Naturales",
+        "Metodología de la Ciencia",
+        "Filosofía y pensamiento crítico",
+        "Práctica y colaboración ciudadana",
+        "Tutoría I",
+        "Educación integral en sexualidad y género",
+        "Actividades Físicas y Deportivas I"
+    ],
+    "Segundo Año" => [
+        "Grupo 1: Estudios de Lengua y Literatura",
+        "Grupo 2: Adquisición de Lenguas",
+        "Grupo 5: Matemáticas",
+        "Monografía I",
+        "Grupo 4: Ciencias",
+        "Optativa I",
+        "Grupo 3: Individuos y Sociedades",
+        "Teoría del Conocimiento I",
+        "Creatividad, Actividad y Servicio I",
+        "Tutoría II",
+        "Orientación Educativa I",
+        "Actividades Físicas y Deportivas II"
+    ],
+    "Tercer Año" => [
+        "Grupo 1: Estudios de Lengua y Literatura",
+        "Grupo 2: Adquisición de Lenguas",
+        "Grupo 5: Matemáticas",
+        "Monografía II",
+        "Grupo 4: Ciencias",
+        "Optativa II",
+        "Grupo 3: Individuos y Sociedades",
+        "Teoría del Conocimiento II",
+        "Creatividad, Actividad y Servicio II",
+        "Tutoría III",
+        "Orientación Educativa II",
+        "Actividades Físicas y Deportivas III"
+    ]
+];
+
+$GRUPOS_ASIGNATURAS_BI = [
+    "Grupo 1: Estudios de Lengua y Literatura" => [
+        "Literatura y Representación Teatral I y II NM",
+        "Lengua A: Literatura I y II NM y NS"
+    ],
+    "Grupo 2: Adquisición de Lenguas" => [
+        "Lengua ab initio I y II NM",
+        "Lengua B I y II NM y NS",
+        "Lenguas Clásicas I y II NM y NS"
+    ],
+    "Grupo 3: Individuos y Sociedades" => [
+        "Antropología Social y Cultural I y II NM y NS",
+        "Economía I y II NM y NS",
+        "Filosofía I y II NM y NS",
+        "Geografía I y II NM y NS",
+        "Gestión Empresarial I y II NM y NS",
+        "Historia I y II NM y NS",
+        "Lengua y Cultura I y II NM",
+        "Política Global I y II NM y NS",
+        "Psicología I y II NM y NS",
+        "Religiones del Mundo I y II NM",
+        "Sociedad Digital I y II NM y NS"
+    ],
+    "Grupo 4: Ciencias" => [
+        "Biología I y II NM y NS",
+        "Ciencias del Deporte, el Ejercicio y la Salud I y II NM y NS",
+        "Física I y II NM y NS",
+        "Informática I y II NM y NS",
+        "Química I y II NM y NS",
+        "Sistemas Ambientales y Sociedades I y II NM y NS",
+        "Tecnología del Diseño I y II NM y NS"
+    ],
+    "Grupo 5: Matemáticas" => [
+        "Matemáticas: Análisis y Enfoques I y II NM y NS",
+        "Matemáticas: Aplicaciones e Interpretación I y II NM y NS"
+    ],
+    "Grupo 6: Artes (Optativas)" => [
+        "Artes Visuales I y II NM y NS",
+        "Cine I y II NM y NS",
+        "Danza I y II NM y NS",
+        "Música I y II NM y NS",
+        "Teatro I y II NM y NS"
+    ]
+];
 
 
 
@@ -923,9 +1016,9 @@ $unidadesAcademicas = [
             "categoria" => "Programa Bachillerato Internacional",
             "nombre_corto" => "Bachillerato 5 de Mayo",
             "nombre_completo" => "Bachillerato 5 de Mayo",
-            "plan_estudios_comun" => $PLAN_ESTUDIOS_COMUN,
-            "tronco_comun" => $TRONCO_COMUN_GENERAL,
-            "areas_propedeuticas" => $AREAS_PROPEDUTICAS_GENERALES,
+            "plan_estudios_comun" => $PLAN_ESTUDIOS_BI,
+            "areas_propedeuticas" => $GRUPOS_ASIGNATURAS_BI,
+            "tronco_comun" => [],
             "porque_estudiar" => "Por su naturaleza curricular y pedagógica, el Programa del Diploma (PD) del Bachillerato Internacional (BI), es un programa educativo riguroso, desafiante académicamente y equilibrado en la formación integral del estudiantado. Este bachillerato resulta una experiencia educativa única, diseñada para formar personas perspicaces y de mente abierta, de modo que se les impulsa a generar colaboración intercultural, ser críticos y responsables, aportando soluciones a problemas complejos que aquejan a toda la humanidad. El enfoque holístico que presenta el modelo, incentiva a convertirse en generador de conocimiento a partir del desarrollo de diversas investigaciones en cada una de sus asignaturas, a la par de comprender la interconexión entre éstas y la realidad, fomentando una preparación para la educación superior y el mundo laboral, permitiendo una reflexión en torno a la relación entre su conocimiento y sus vivencias. Teoría del Conocimiento (TdC), Monografía y Creatividad, Actividad y Servicio (CAS), son un aspecto identitario y diferenciador del resto de programas educativos. Estos troncales presentan entre ellos una interacción dinámica que desafía a los estudiantes a cuestionar la naturaleza, los límites y las formas de conocimiento desde una perspectiva epistémico-social, a indagar teórica y metodológicamente un aspecto del mundo que sea de su interés y acortar las brechas entre el aprendizaje académico y experiencia propia. Todo lo anterior garantiza que el estudiantado se destaque académicamente tras una certificación internacional de su Nivel Medio Superior, a la par de que desarrolla competencias transversales –como habilidades comunicacionales e investigativas, de autoregulación emocional, gestión de tiempo y autodisciplina. Aunado a lo anterior, el PD del BI es aceptado por las universidades más prestigiosas del mundo, lo que ofrece al estudiantado una ventaja competitiva en sus proyectos futuros, además de que, como egresados, forman parte de una comunidad internacional de estudiantes BI y BUAP, preparados para afrontar retos actuales.",
             "perfil_ingreso" => "MUM",
             "perfil_egreso" => "MUM",

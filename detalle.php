@@ -84,10 +84,10 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
 
                 <?php endif; ?>
 
-                <?php if (isset($unidad['areas_propedeuticas']) && !empty($unidad['areas_propedeuticas'])): ?>
-                    <h3 class="areas-section-title">Áreas de Formación Propedéutica (Terminales)</h3>
+<?php if (isset($unidad['areas_propedeuticas']) && !empty($unidad['areas_propedeuticas'])): ?>
+                    <h3 class="areas-section-title">Áreas de Formación Propedéutica / Grupos de Asignaturas</h3>
                     <p class="areas-section-desc">
-                        El alumno deberá elegir una de las siguientes áreas. Las materias correspondientes al área elegida se cursarán de forma seriada durante el <strong>5.º y 6.º Semestre</strong>.
+                        El alumno deberá elegir una de las siguientes áreas o grupos. En el plan general, estas materias se cursarán durante el <strong>5.º y 6.º Semestre</strong>.
                     </p>
 
                     <div class="areas-grid">
@@ -95,29 +95,44 @@ if ($unidadId && isset($unidadesAcademicas[$unidadId])) {
                             <div class="area-propedeutica-block">
                                 <div class="area-propedeutica-header"><?php echo htmlspecialchars($nombreArea); ?></div>
                                 
-                                <div class="semestres-fusionados-flex">
-                                    <div class="semestre-mitad" style="background:#f9fafb;">
-                                        <span class="sub-semestre-title">5.º Semestre</span>
-                                        <ul class="materias-list">
-                                            <?php foreach ($semestresArea['5to'] as $materia): ?>
-                                                <li><?php echo htmlspecialchars($materia); ?></li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </div>
+                                <div class="semestres-fusionados-flex" style="display: flex; flex-wrap: wrap;">
+                                    <?php 
+                                    // Determinamos si el arreglo tiene llaves asociativas ('5to', '6to') o si es una lista continua
+                                    $esAsociativo = array_keys($semestresArea) !== range(0, count($semestresArea) - 1);
+                                    ?>
 
-                                    <div class="semestre-mitad" style="background:#fff;">
-                                        <span class="sub-semestre-title">6.º Semestre</span>
-                                        <ul class="materias-list">
-                                            <?php foreach ($semestresArea['6to'] as $materia): ?>
-                                                <li><?php echo htmlspecialchars($materia); ?></li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </div>
+                                    <?php if ($esAsociativo): ?>
+                                        <?php foreach ($semestresArea as $keySemestre => $materias): ?>
+                                            <div class="semestre-mitad" style="flex: 1 1 45%; background: <?php echo $keySemestre === '5to' ? '#f9fafb' : '#fff'; ?>;">
+                                                <span class="sub-semestre-title">
+                                                    <?php 
+                                                    if ($keySemestre === '5to') echo '5.º Semestre';
+                                                    elseif ($keySemestre === '6to') echo '6.º Semestre';
+                                                    else echo htmlspecialchars($keySemestre);
+                                                    ?>
+                                                </span>
+                                                <ul class="materias-list">
+                                                    <?php foreach (($materias ?? []) as $materia): ?>
+                                                        <li><?php echo htmlspecialchars($materia); ?></li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <div class="semestre-mitad" style="flex: 1 1 100%; background:#fff;">
+                                            <ul class="materias-list">
+                                                <?php foreach (($semestresArea ?? []) as $materia): ?>
+                                                    <li><?php echo htmlspecialchars($materia); ?></li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
+
 
                 <?php if (isset($unidad['nuestra_oferta_educativa']) && !empty($unidad['nuestra_oferta_educativa'])): ?>
                     <h3 class="areas-section-title">Nuestra Oferta Educativa</h3>
